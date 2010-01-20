@@ -29,25 +29,30 @@ use inc::Module::Install;
 # ================================================================
 # build dependency(-ies)
 # ================================================================
-    build_requires  'Module::Install'               => '0.80';
+    build_requires  'Module::Install'                   => '0.80';
         # to avoid YAML::Tiny problem
-    build_requires  'Module::Load'                  => '0';
+    build_requires  'Module::Load'                      => '0';
         # is in perl 5.009_004
 
 # ================================================================
 # general dependency(-ies)
 # ================================================================
-    requires        'DateTime'                      => '0';
-    requires        'DateTime::Locale'              => '0';
-    requires        'DateTime::TimeZone'            => '0';
-#   requires        'Memoize'                       => '0';
+    requires        'Class::Inspector'                  => '0';
+    requires        'DateTime'                          => '0';
+    requires        'DateTime::Locale'                  => '0';
+    requires        'DateTime::TimeZone'                => '0';
+#   requires        'Memoize'                           => '0';
         # perl 5.007_003
-    requires        'Moose'                         => '0.89_01';
+    requires        'Module::Pluggable::Object'         => '0';
+    requires        'Moose'                             => '0.89_01';
         # for Moose::Meta::Attribute::Native
-    requires        'MooseX::Clone'                 => '0';
-    requires        'MooseX::Types::DateTime'       => '0';
-    requires        'Sub::Name'                     => '0';
-    requires        'namespace::clean'              => '0.08';
+    requires        'MooseX::Clone'                     => '0';
+    requires        'MooseX::Types::DateTimeX'          => '0';
+    requires        'MooseX::Types::Locale::Country'    => '0';
+    requires        'MooseX::Types::Locale::Language'   => '0';
+    requires        'Regexp::Assemble'                  => '0';
+    requires        'Sub::Name'                         => '0';
+    requires        'namespace::clean'                  => '0.08';
         # cf. MooseX-Types-DateTime
 
 # ================================================================
@@ -56,43 +61,47 @@ use inc::Module::Install;
     features (
         'Yada yada yada' => [
             -default => 0,
-        #   recommends( 'English'                       => '0' ),
+        #   recommends( 'English'                           => '0' ),
                 # perl 5
-        #   recommends( 'List::Util'                    => '0' ),
+        #   recommends( 'List::Util'                        => '0' ),
                 # perl 5.007_003
+        ],
+        'Optmize File::Spec processes' => [
+            -default => 0,
+            recommends( 'File::Spec::Memoized'              => '0' ),
         ],
     );
 
 # ================================================================
 # test dependency(-ies)
 # ================================================================
-#   test_requires   'Perl::Critic'                  => '0.094';
+#   test_requires   'Perl::Critic'                      => '0.094';
         # for author tests
-#   test_requires   'Test::CPAN::Meta'              => '0.12';
+#   test_requires   'Test::CPAN::Meta'                  => '0.12';
         # for author tests
-    test_requires   'Test::Class'                   => '0';
-    test_requires   'Test::Exception'               => '0.27';
+    test_requires   'Test::Class'                       => '0';
+    test_requires   'Test::Exception'                   => '0.27';
         # cf. MooseX-Types-DateTime
-#   test_requires   'Test::Kwalitee'                => '0';
+#   test_requires   'Test::Kwalitee'                    => '0';
         # for author tests
-#   test_requires   'Test::Moose'                   => '0';
+#   test_requires   'Test::Moose'                       => '0';
         # was included by Moose
-    test_requires   'Test::More'                    => '0';
-#   test_requires   'Test::mysqld'                  => '0';
-#   test_requires   'Test::NoTabs'                  => '0';
+    test_requires   'Test::More'                        => '0';
+#   test_requires   'Test::mysqld'                      => '0';
+#   test_requires   'Test::NoTabs'                      => '0';
         # for author tests
-#   test_requires   'Test::Perl::Critic'            => '0';
+#   test_requires   'Test::Perl::Critic'                => '0';
         # for author tests
-#   test_requires   'Test::Pod'                     => '1.40';
+#   test_requires   'Test::Pod'                         => '1.40';
         # for author tests
-#   test_requires   'Test::Pod::Coverage'           => '1.08';
+#   test_requires   'Test::Pod::Coverage'               => '1.08';
         # for author tests
-    test_requires   'Test::Requires'                => '0';
-#   test_requires   'Test::Synopsis'                => '0.06';
+    test_requires   'Test::Requires'                    => '0';
+#   test_requires   'Test::Synopsis'                    => '0.06';
         # for author tests
-#   test_requires   'Test::UseAllModules'           => '0';
+#   test_requires   'Test::UseAllModules'               => '0';
         # for author tests
-    test_requires   'Test::Warn'                    => '0';
+    test_requires   'Test::Warn'                        => '0';
 
 # ================================================================
 # test(s)
@@ -142,7 +151,7 @@ L<http://ttt.ermitejo.com/>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2009 by MORIYA Masaki (a.k.a. Gardejo),
+Copyright (c) 2009-2010 by MORIYA Masaki (a.k.a. Gardejo),
 L<http://ttt.ermitejo.com/>.
 
 This distribution is free software;
