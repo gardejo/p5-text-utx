@@ -6,7 +6,7 @@ package Text::UTX::Component::Locale;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -17,12 +17,14 @@ use warnings;
 # ****************************************************************
 
 use Moose;
+use MooseX::StrictConstructor;
 
 
 # ****************************************************************
 # internal dependency(-ies)
 # ****************************************************************
 
+use Text::UTX::Type::Locale qw(LocaleString);
 use Text::UTX::Type::Locale::Country qw(Country);
 use Text::UTX::Type::Locale::Language qw(Language);
 
@@ -35,12 +37,22 @@ use namespace::clean;
 
 
 # ****************************************************************
+# consuming role(s)
+# ****************************************************************
+
+with qw(
+    MooseX::Clone
+);
+
+
+# ****************************************************************
 # attribute(s)
 # ****************************************************************
 
 has 'locale' => (
     is          => 'rw',
-    isa         => 'Str',
+    isa         => LocaleString,
+    coerce      => 1,
     lazy_build  => 1,
     trigger     => sub {
         $_[0]->clear_language;
@@ -49,6 +61,9 @@ has 'locale' => (
 );
 
 has 'language' => (
+    traits      => [qw(
+        Clone
+    )],
     is          => 'rw',
     isa         => Language,
     coerce      => 1,
@@ -59,42 +74,31 @@ has 'language' => (
 );
 
 has 'country' => (
+    traits      => [qw(
+        Clone
+    )],
     is          => 'rw',
     isa         => Country,
     coerce      => 1,
-    # lazy_build  => 1,
-    predicate   => 'has_country',
-    clearer     => 'clear_country',
+    lazy_build  => 1,
     trigger     => sub {
         $_[0]->clear_locale;
     },
 );
 
+has 'delimiter' => (
+    is          => 'ro',
+    isa         => 'Str',
+    init_arg    => undef,
+    lazy_build  => 1,
+);
 
-# ****************************************************************
-# hook(s) on construction
-# ****************************************************************
-
-around BUILDARGS => sub {
-    my ($next, $class, @init_args) = @_;
-
-    return $class->$next(
-          scalar @init_args != 1        ? @init_args
-        : ref $init_args[0] eq 'ARRAY'  ? (
-            language => $init_args[0]->[0],
-            ( defined $init_args[0]->[1]
-                ? ( country => $init_args[0]->[1] ) : () )
-        )
-        : ref $init_args[0] eq 'HASH'   ? (
-            language => $init_args[0]->{language},
-            ( defined $init_args[0]->{country}
-                ? ( country => $init_args[0]->{country} ) : () )
-        )
-        : ref $init_args[0] eq 'SCALAR' ? ( locale => ${ $init_args[0] } )
-        : ref $init_args[0] eq q{}      ? ( locale =>    $init_args[0]   )
-        :                                 @init_args
-    );
-};
+has 'delimiter_pattern' => (
+    is          => 'ro',
+    isa         => 'RegexpRef',
+    init_arg    => undef,
+    lazy_build  => 1,
+);
 
 
 # ****************************************************************
@@ -102,51 +106,40 @@ around BUILDARGS => sub {
 # ****************************************************************
 
 sub _build_locale {
-    my $self = shift;
+    return
+        if ! $_[0]->has_language || ! defined $_[0]->language;
 
-    return join '_', (
-        lc $self->language->code,
-        ( $self->has_country ? uc $self->country->code : () ),
+    return join $_[0]->delimiter, (
+        lc $_[0]->language->code,
+        ( $_[0]->has_country ? uc $_[0]->country->code : () ),
     );
 }
 
 sub _build_language {
-    my $self = shift;
+    return
+        if ! $_[0]->has_locale || ! defined $_[0]->locale;
 
-    my ($language, $country) = split m{ [\-_] }xms, $self->locale;
+    (my $language, undef) = split $_[0]->delimiter_pattern, $_[0]->locale;
 
     return $language;
 }
 
-# sub _build_country {
-#     my $self = shift;
-# 
-#     my ($language, $country) = split m{ [\-_] }xms, $self->locale;
-# 
-#     return
-#         unless defined $country;
-#     return $country;
-# }
-
-around country => sub {
-    my ($next, $self, $argument) = @_;
-
-    # setter
-    return $self->$next($argument)
-        if defined $argument;
-
-    # getter : already exists
-    return $self->$next
-        if $self->has_country;
-
-    # getter : lazy building
-    my ($language, $country) = split m{ [\-_] }xms, $self->locale;
-
+sub _build_country {
     return
-        unless defined $country;
+        if ! $_[0]->has_locale || ! defined $_[0]->locale;
 
-    return $self->$next($country);
-};
+    (undef, my $country) = split $_[0]->delimiter_pattern, $_[0]->locale;
+
+    return $country;
+}
+
+sub _build_delimiter {
+    return '_';
+}
+
+sub _build_delimiter_pattern {
+    return qr{ [\-_] }xms;
+}
 
 
 # ****************************************************************

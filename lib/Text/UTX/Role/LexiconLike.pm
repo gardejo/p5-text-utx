@@ -6,7 +6,7 @@ package Text::UTX::Role::LexiconLike;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -80,9 +80,6 @@ has 'miscellanies' => (
         get_miscellany    => 'FETCH',
         has_miscellany    => 'EXISTS',
     },
-    # default     => sub {
-    #     [];
-    # },
     lazy_build  => 1,
 );
 
@@ -140,7 +137,7 @@ has 'index' => (
 
 sub _build_last_modified {
     # Note: I venture use quated 'DateTime'
-    #       for to distinguish the class name to the type constraint
+    #       for to distinguish the class name to the type constraint.
     return 'DateTime'->now(time_zone => 'local');
 }
 
@@ -187,7 +184,7 @@ __END__
 
 =head1 NAME
 
-Text::UTX::Role::StreamLike - 
+Text::UTX::Role::LexiconLike - 
 
 =head1 SYNOPSIS
 

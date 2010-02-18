@@ -6,7 +6,7 @@ package Text::UTX::Utility::Class;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -17,13 +17,6 @@ use warnings;
 # ****************************************************************
 
 use Moose::Role;
-
-
-# ****************************************************************
-# general dependency(-ies)
-# ****************************************************************
-
-use Class::Inspector;
 
 
 # ****************************************************************
@@ -41,8 +34,7 @@ sub ensure_class_loaded {
     my ($invocant, $class) = @_;
 
     return
-        if ! defined $class
-        || ! Class::Inspector->installed($class);
+        unless defined $class;
 
     Class::MOP::load_class($class)
         unless Class::MOP::is_class_loaded($class);
@@ -85,6 +77,8 @@ Text::UTX::Utility::Class - Class related utility methods for Text::UTX
     with qw(
         Text::UTX::Utility::Class
     );
+
+    # yada yada yada
 
 =head1 DESCRIPTION
 

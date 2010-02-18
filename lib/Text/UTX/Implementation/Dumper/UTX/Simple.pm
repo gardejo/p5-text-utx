@@ -6,7 +6,7 @@ package Text::UTX::Implementation::Dumper::UTX::Simple;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -62,28 +62,6 @@ with qw(
 # inherited attribute(s)
 # ****************************************************************
 
-=for comment
-
-has '+columns' => (
-    traits      => [qw(
-        Array
-    )],
-    isa         => 'ArrayRef[Str]',
-    handles     => {
-        count_columns => 'count',
-    },
-    default     => sub {
-        [];
-    },
-);
-
-=cut
-
-
-# ****************************************************************
-# inherited attribute(s)
-# ****************************************************************
-
 has '+lines' => (
     lazy_build  => 1,
 );
@@ -129,7 +107,7 @@ sub dump {
 
     $self->add_lines(@$header_lines, @$body_lines);
 
-    # Note: add \n to the last line
+    # Note: Adding "\n" to the last line.
     $self->add_line(q{});
 
     return $self->as_string;

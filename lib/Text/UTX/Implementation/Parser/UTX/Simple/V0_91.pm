@@ -6,7 +6,7 @@ package Text::UTX::Implementation::Parser::UTX::Simple::V0_91;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -30,6 +30,7 @@ use namespace::clean -except => [qw(meta)];
 # consuming role(s)
 # ****************************************************************
 
+# Fixme: Adapt this class to UTX-S 0.91
 with qw(
     Text::UTX::Implementation::Parser::UTX::Simple
     Text::UTX::Implementation::Parser::UTX::Simple::Latest::Header

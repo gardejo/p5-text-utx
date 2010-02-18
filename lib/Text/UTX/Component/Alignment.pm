@@ -6,7 +6,7 @@ package Text::UTX::Component::Alignment;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -17,6 +17,7 @@ use warnings;
 # ****************************************************************
 
 use Moose;
+use MooseX::StrictConstructor;
 
 
 # ****************************************************************
@@ -34,20 +35,29 @@ use namespace::clean;
 
 
 # ****************************************************************
+# consuming role(s)
+# ****************************************************************
+
+with qw(
+    MooseX::Clone
+);
+
+
+# ****************************************************************
 # attribute(s)
 # ****************************************************************
 
 has 'alignment' => (
-    is          => 'rw',
-    isa         => 'Str',
+    is          => 'ro',
+    isa         => 'Maybe[Str]',
     lazy_build  => 1,
-    trigger     => sub {
-        $_[0]->clear_source;
-        $_[0]->clear_target;
-    },
+    init_arg    => undef,
 );
 
 has 'source' => (
+    traits      => [qw(
+        Clone
+    )],
     is          => 'rw',
     isa         => Locale,
     coerce      => 1,
@@ -58,42 +68,31 @@ has 'source' => (
 );
 
 has 'target' => (
+    traits      => [qw(
+        Clone
+    )],
     is          => 'rw',
     isa         => Locale,
     coerce      => 1,
-    # lazy_build  => 1,
-    predicate   => 'has_target',
-    clearer     => 'clear_target',
+    lazy_build  => 1,
     trigger     => sub {
         $_[0]->clear_alignment;
     },
 );
 
+has 'delimiter' => (
+    is          => 'ro',
+    isa         => 'Str',
+    init_arg    => undef,
+    lazy_build  => 1,
+);
 
-# ****************************************************************
-# hook(s) on construction
-# ****************************************************************
-
-around BUILDARGS => sub {
-    my ($next, $class, @init_args) = @_;
-
-    return $class->$next(
-          scalar @init_args != 1        ? @init_args
-        : ref $init_args[0] eq 'ARRAY'  ? (
-            source => $init_args[0]->[0],
-            ( defined $init_args[0]->[1]
-                ? ( target => $init_args[0]->[1] ) : () )
-        )
-        : ref $init_args[0] eq 'HASH'   ? (
-            source => $init_args[0]->{source},
-            ( defined $init_args[0]->{target}
-                ? ( target => $init_args[0]->{target} ) : () )
-        )
-        : ref $init_args[0] eq 'SCALAR' ? ( alignment => ${ $init_args[0] } )
-        : ref $init_args[0] eq q{}      ? ( alignment =>    $init_args[0]   )
-        :                                 @init_args
-    );
-};
+has 'delimiter_pattern' => (
+    is          => 'ro',
+    isa         => 'RegexpRef',
+    init_arg    => undef,
+    lazy_build  => 1,
+);
 
 
 # ****************************************************************
@@ -101,51 +100,40 @@ around BUILDARGS => sub {
 # ****************************************************************
 
 sub _build_alignment {
-    my $self = shift;
+    return
+        if ! $_[0]->has_source || ! defined $_[0]->source;
 
-    return join '/', (
-        $self->source->locale,
-        ( $self->has_target ? $self->target->locale : () ),
+    return join $_[0]->delimiter, (
+        $_[0]->source->locale,
+        ( $_[0]->has_target ? $_[0]->target->locale : () ),
     );
 }
 
 sub _build_source {
-    my $self = shift;
+    return
+        if ! $_[0]->has_alignment || ! defined $_[0]->alignment;
 
-    my ($source, $target) = split m{ / }xms, $self->alignment;
+    (my $source, undef) = split $_[0]->delimiter, $_[0]->alignment;
 
     return $source;
 }
 
-# sub _build_target {
-#     my $self = shift;
-# 
-#     my ($source, $target) = split m{ / }xms, $self->alignment;
-# 
-#     return
-#         unless defined $target;
-#     return $target;
-# }
-
-around target => sub {
-    my ($next, $self, $argument) = @_;
-
-    # setter
-    return $self->$next($argument)
-        if defined $argument;
-
-    # getter : already exists
-    return $self->$next
-        if $self->has_target;
-
-    # getter : lazy building
-    my ($source, $target) = split m{ / }xms, $self->alignment;
-
+sub _build_target {
     return
-        unless defined $target;
+        if ! $_[0]->has_alignment || ! defined $_[0]->alignment;
 
-    return $self->$next( $target );
-};
+    (undef, my $target) = split $_[0]->delimiter, $_[0]->alignment;
+
+    return $target;
+}
+
+sub _build_delimiter {
+    return '/';
+}
+
+sub _build_delimiter_pattern {
+    return qr{ / }xms;
+}
 
 
 # ****************************************************************

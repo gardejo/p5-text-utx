@@ -6,7 +6,7 @@ package Text::UTX::Implementation::Loader::LWP::UserAgent;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -17,6 +17,7 @@ use warnings;
 # ****************************************************************
 
 use Moose;
+use MooseX::Types::URI qw(Uri);
 
 
 # ****************************************************************
@@ -38,31 +39,19 @@ use namespace::clean -except => [qw(meta)];
 # consuming role(s)
 # ****************************************************************
 
+# Note: We should not consume roles at once.
 with qw(
-    Text::UTX::Role::HasLines
     Text::UTX::Implementation::Stream::LWP::UserAgent
+    Text::UTX::Role::HasLines
 );
 
-# method(s)
 with qw(
     Text::UTX::Role::Loadable
 );
 
-# interface(s)
 with qw(
     Text::UTX::Interface::Loader
 );
-
-
-# ****************************************************************
-# inherited attribute(s)
-# ****************************************************************
-
-# has '+stream' => (
-#     trigger     => sub {
-#         $_[0]->clear_lines;
-#     },
-# );
 
 
 # ****************************************************************
@@ -75,7 +64,7 @@ sub _build_lines {
     my $request  = GET($self->stream);
     my $response = $self->agent->request($request);
 
-    confess sprintf 'Could not download file from (%s)',
+    confess sprintf 'Could not download the file from (%s)',
                 $self->stream->as_string
         if $response->is_error;
 

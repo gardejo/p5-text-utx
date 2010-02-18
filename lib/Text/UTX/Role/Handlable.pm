@@ -6,7 +6,7 @@ package Text::UTX::Role::Handlable;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -56,7 +56,7 @@ with qw(
 # public method(s)
 # ****************************************************************
 
-# Note: ensure class name canonized
+# Note: This method ensures that class name is canonized.
 sub canonize {
     my ($self, $role_kind, $framework, $alias) = @_;
 

@@ -6,7 +6,7 @@ package Text::UTX::Implementation::Format::UTX::Simple;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -36,7 +36,7 @@ has 'count_header_lines' => (
     lazy_build      => 1,
 );
 
-# Note: I venture to define the type as 'Str' instead of 'Num' or 'Int'
+# Note: I venture to define the type as 'Str' instead of 'Num' or 'Int'.
 has 'abbreviation_for_specification' => (
     is              => 'ro',
     isa             => 'Str',
@@ -104,6 +104,12 @@ has 'alignment_delimiter_pattern' => (
     is              => 'ro',
     isa             => 'RegexpRef',
     init_arg        => undef,
+    lazy_build      => 1,
+);
+
+has 'locale_delimiter' => (
+    is              => 'ro',
+    isa             => 'Str',
     lazy_build      => 1,
 );
 
@@ -274,6 +280,10 @@ sub _build_alignment_delimiter_pattern {
 
     return $self->assemble_regexp_with_affixed_spaces
                 ( $self->alignment_delimiter );
+}
+
+sub _build_locale_delimiter {
+    return '-';
 }
 
 sub _build_format_delimiter {

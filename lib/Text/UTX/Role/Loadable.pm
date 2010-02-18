@@ -6,7 +6,7 @@ package Text::UTX::Role::Loadable;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -31,16 +31,7 @@ use namespace::clean;
 # ****************************************************************
 
 with qw(
-    Text::UTX::Role::HasLines
-);
-
-
-# ****************************************************************
-# inherited attribute(s)
-# ****************************************************************
-
-has '+lines' => (
-    lazy_build  => 1,
+    Text::UTX::Interface::Stream
 );
 
 
@@ -60,13 +51,8 @@ sub _build_lines {
 sub load {
     my ($self, $instream) = @_;
 
-    if (defined $instream) {
-        $self->stream($instream);
-    }
-
-    # build lines
-    $self->lines
-        unless $self->has_lines;
+    $self->stream($instream)
+        if defined $instream;
 
     return;
 }

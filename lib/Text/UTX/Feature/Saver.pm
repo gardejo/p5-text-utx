@@ -6,7 +6,7 @@ package Text::UTX::Feature::Saver;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -17,6 +17,13 @@ use warnings;
 # ****************************************************************
 
 use Moose::Role;
+
+
+# ****************************************************************
+# general dependency(-ies)
+# ****************************************************************
+
+use Try::Tiny;
 
 
 # ****************************************************************
@@ -63,6 +70,22 @@ has 'outstream' => (
     },
 );
 
+# Note: This attribute is reserved.
+has 'is_implicitly_save' => (
+    traits      => [qw(
+        Bool
+    )],
+    is          => 'rw',
+    isa         => 'Bool',
+    default     => 1,
+    handles     => {
+        is_explicitly_save => 'not',
+        explicitly_save    => 'unset',
+        implicitly_save    => 'set',
+        toggle_save_mode   => 'toggle',
+    },
+);
+
 
 # ****************************************************************
 # consuming role(s)
@@ -89,9 +112,18 @@ sub _build_saver_class {
 sub _build_saver {
     my $self = shift;
 
-    $self->ensure_class_loaded($self->saver_class);
+    my $saver_class = $self->saver_class;
 
-    return $self->saver_class->new(
+    try {
+        $self->ensure_class_loaded($saver_class);
+    }
+    catch {
+        confess sprintf 'Could not load the saver class (%s) because: %s',
+                    $saver_class,
+                    $_;
+    };
+
+    return $saver_class->new(
         stream => $self->outstream,
     );
 }
@@ -127,11 +159,13 @@ around save => sub {
         if ! $dumper_alias
         && $self->has_parser;
 
-    # confess 'Could not save the outstream because: '
-    #       . 'outstream not defined'
-    #     unless $self->has_outstream;
-    $self->outstream( $self->instream )             # overwite to instream
-        unless $self->has_outstream;
+    if (! $self->has_outstream) {
+        confess 'Could not save the outstream because '
+              . 'outstream not defined'
+            if $self->is_explicitly_save;
+
+        $self->outstream( $self->instream );    # overwite to instream
+    }
 
     $self->$next(
         $self->outstream,

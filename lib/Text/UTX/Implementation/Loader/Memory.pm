@@ -1,4 +1,4 @@
-package Text::UTX::Role::StreamLike;
+package Text::UTX::Implementation::Loader::Memory;
 
 
 # ****************************************************************
@@ -6,7 +6,7 @@ package Text::UTX::Role::StreamLike;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -16,38 +16,53 @@ use warnings;
 # MOP dependency(-ies)
 # ****************************************************************
 
-use Moose::Role;
+use Moose;
 
 
 # ****************************************************************
 # namespace cleaner
 # ****************************************************************
 
-use namespace::clean;
-
-
-# ****************************************************************
-# attribute(s)
-# ****************************************************************
-
-has 'stream' => (
-    is          => 'rw',
-    # required    => 1,
-    # trigger     => sub {
-    #     $_[0]->clear_lines;
-    # },
-);
+use namespace::clean -except => [qw(meta)];
 
 
 # ****************************************************************
 # consuming role(s)
 # ****************************************************************
 
+# Note: We should not consume roles at once.
 with qw(
-    Text::UTX::Role::QualifiableToClassName
-    Text::UTX::Interface::Stream
+    MooseX::Clone
 );
-#     Text::UTX::Role::HasLines
+
+with qw(
+    Text::UTX::Implementation::Stream::Memory
+    Text::UTX::Role::HasLines
+);
+
+with qw(
+    Text::UTX::Role::Loadable
+);
+
+with qw(
+    Text::UTX::Interface::Loader
+);
+
+
+# ****************************************************************
+# builder(s)
+# ****************************************************************
+
+sub _build_lines {
+    return [];
+}
+
+
+# ****************************************************************
+# compile-time process(es)
+# ****************************************************************
+
+__PACKAGE__->meta->make_immutable;
 
 
 # ****************************************************************
@@ -66,15 +81,11 @@ __END__
 
 =head1 NAME
 
-Text::UTX::Role::StreamLike - 
+Text::UTX::Implementation::Loader::Memory - 
 
 =head1 SYNOPSIS
 
-    package Text::UTX::Implementation::Stream::MyStream;
-
-    with qw(
-        Text::UTX::Role::StreamLike
-    );
+    # yada yada yada
 
 =head1 DESCRIPTION
 

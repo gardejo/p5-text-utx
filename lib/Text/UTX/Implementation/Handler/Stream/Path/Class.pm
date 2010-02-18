@@ -6,7 +6,7 @@ package Text::UTX::Implementation::Handler::Stream::Path::Class;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -40,6 +40,7 @@ use namespace::clean -except => [qw(meta)];
 with qw(
     Text::UTX::Implementation::Stream::Path::Class
     Text::UTX::Role::Handlable
+    Text::UTX::Role::HasLines
 );
 
 
@@ -62,8 +63,8 @@ sub _build_aliases {
 sub guess {
     my ($self, $role_kind, $framework, $stream) = @_;
 
-    # Note: always return class name (successfully handled)
-    #       because this class is fallback class
+    return
+        unless defined $stream;
 
     $self->_optimize;
 

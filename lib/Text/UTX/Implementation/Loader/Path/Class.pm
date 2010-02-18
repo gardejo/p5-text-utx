@@ -6,7 +6,7 @@ package Text::UTX::Implementation::Loader::Path::Class;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -30,31 +30,19 @@ use namespace::clean -except => [qw(meta)];
 # consuming role(s)
 # ****************************************************************
 
+# Note: We should not consume roles at once.
 with qw(
-    Text::UTX::Role::HasLines
     Text::UTX::Implementation::Stream::Path::Class
+    Text::UTX::Role::HasLines
 );
 
-# method(s)
 with qw(
     Text::UTX::Role::Loadable
 );
 
-# interface(s)
 with qw(
     Text::UTX::Interface::Loader
 );
-
-
-# ****************************************************************
-# inherited attribute(s)
-# ****************************************************************
-
-# has '+stream' => (
-#     trigger     => sub {
-#         $_[0]->clear_lines;
-#     },
-# );
 
 
 # ****************************************************************
@@ -64,14 +52,17 @@ with qw(
 sub _build_lines {
     my $self = shift;
 
+    # Note: We may simply implement this logic like
+    #       "return $self->stream->slurp(chomp => 1);".
+
     my $handle = $self->stream->openr;
 
-    confess sprintf 'Could not open file (%s) as read mode',
+    confess sprintf 'Could not open the file (%s) as the read mode',
                 $self->stream->stringify
         unless $handle;
 
     my @lines = $handle->getlines;
-    confess sprintf 'Could not read lines from file (%s)',
+    confess sprintf 'Could not read lines from the file (%s)',
                 $self->stream->stringify
         unless @lines;
 

@@ -6,7 +6,7 @@ package Text::UTX::Type::IxHash;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -16,11 +16,9 @@ use warnings;
 # MOP dependency(-ies)
 # ****************************************************************
 
-use MooseX::Types (
-    -declare => [qw(
-        IxHash
-    )],
-);
+use MooseX::Types -declare => [qw(
+    IxHash
+)];
 use MooseX::Types::Moose qw(
     ArrayRef
 );
@@ -114,7 +112,7 @@ which should be a L<Tie::IxHash|Tie::IxHash> object.
 
 =over 4
 
-=item * L<Tie::IxHash>
+=item * L<Tie::IxHash|Tie::IxHash>
 
 =back
 

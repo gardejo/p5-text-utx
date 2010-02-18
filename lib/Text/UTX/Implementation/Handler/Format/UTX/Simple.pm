@@ -6,7 +6,7 @@ package Text::UTX::Implementation::Handler::Format::UTX::Simple;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -31,12 +31,6 @@ use List::MoreUtils qw(apply);
 # ****************************************************************
 
 use namespace::clean -except => [qw(meta)];
-
-
-# ****************************************************************
-# attribute(s)
-# ****************************************************************
-
 
 
 # ****************************************************************
@@ -85,7 +79,7 @@ sub guess {
     my ($self, $role_kind, $framework, $stream) = @_;
 
     return
-        if $stream !~ $self->extension_pattern;
+        if defined $stream && $stream !~ $self->extension_pattern;
 
     if ($role_kind eq 'Parser') {
         return $self->_guess_for_parser($role_kind, $framework, $stream);
@@ -105,6 +99,7 @@ sub guess {
 sub _guess_for_parser {
     my ($self, $role_kind, $framework, $instream) = @_;
 
+    # my $first_line = $framework->get_line(0);
     my $first_line = $framework->loader->get_line(0);
 
     return

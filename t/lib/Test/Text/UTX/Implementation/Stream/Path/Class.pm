@@ -1,54 +1,44 @@
-package Text::UTX::Implementation::Loader::URI;
+package Test::Text::UTX::Implementation::Stream::Path::Class;
 
 
 # ****************************************************************
 # pragma(s)
 # ****************************************************************
 
-# Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
-# (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
-
-
-# ****************************************************************
-# MOP dependency(-ies)
-# ****************************************************************
-
-use Moose;
-use MooseX::Types::URI qw(Uri);
 
 
 # ****************************************************************
 # general dependency(-ies)
 # ****************************************************************
 
-# use URI;
+use Test::More;
 
 
 # ****************************************************************
-# namespace cleaner
+# general method(s)
 # ****************************************************************
 
-use namespace::clean -except => [qw(meta)];
-
-
-# ****************************************************************
-# attribute(s)
-# ****************************************************************
-
-has 'instream' => (
-    is          => 'rw',
-    isa         => Uri,
-);
+sub stream_handler_class {
+    return 'Text::UTX::Implementation::Handler::Stream::Path::Class';
+}
 
 
 # ****************************************************************
-# compile-time process(es)
+# test method(s)
 # ****************************************************************
 
-__PACKAGE__->meta->make_immutable;
+sub test_partly_qualified_class_name {
+    my $self = shift;
+
+    isa_ok(
+        $self->class->new->partly_qualified_class_name,
+        'Path::Class',
+    );
+
+    return;
+}
 
 
 # ****************************************************************
@@ -63,17 +53,13 @@ __END__
 # POD
 # ****************************************************************
 
-=pod
-
 =head1 NAME
 
-Text::UTX::Implementation::Loader::URI - Loader implementation for Text::UTX with URI
+Test::Text::UTX::Implementation::Stream::Path::Class -
 
 =head1 SYNOPSIS
 
-    use Text::UTX::Implementation::Loader::URI;
-
-    my $loader = Text::UTX::Implementation::Loader::URI->new;
+    # yada yada yada
 
 =head1 DESCRIPTION
 
@@ -95,9 +81,9 @@ L<http://ttt.ermitejo.com/>
 Copyright (c) 2009-2010 by MORIYA Masaki (a.k.a. Gardejo),
 L<http://ttt.ermitejo.com/>.
 
-This module is free software;
+This library is free software;
 you can redistribute it and/or modify it under the same terms as Perl itself.
-See L<perlgpl|perlgpl> and L<perlartistic|perlartistic>.
+See L<perlgpl|perlapi> and L<perlartistic|perlartistic>.
 
 The full text of the license can be found in the F<LICENSE> file
 included with this distribution.

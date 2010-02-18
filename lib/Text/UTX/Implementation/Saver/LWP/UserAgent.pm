@@ -6,7 +6,7 @@ package Text::UTX::Implementation::Saver::LWP::UserAgent;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -38,18 +38,12 @@ use namespace::clean -except => [qw(meta)];
 # consuming role(s)
 # ****************************************************************
 
+# Note: We should not consume roles at once.
 with qw(
-    Text::UTX::Role::HasLines
     Text::UTX::Implementation::Stream::LWP::UserAgent
 );
 
-# method(s)
-with qw(
-    Text::UTX::Role::Loadable
-);
-
-# interface(s)
-with qw(
+wit qw(
     Text::UTX::Interface::Saver
 );
 
@@ -61,20 +55,19 @@ with qw(
 sub save {
     my ($self, $outstream, $dumped_string) = @_;
 
-    if (defined $outstream) {
-        $self->stream($outstream);
-    }
+    $self->stream($outstream)
+        if defined $outstream;
 
     my $request  = POST(
         $self->stream->as_string,
-        # Header  => '...',
-        # Note: HTTP::Message content must be bytes
+        # Todo: Header  => '...',
         Content => encode_utf8 $dumped_string,
+            # Note: HTTP::Message content must be bytes.
     );
 
     my $response = $self->agent->request($request);
 
-    confess sprintf 'Could not upload file to (%s)',
+    confess sprintf 'Could not upload the file to (%s)',
                 $self->stream->as_string
         if $response->is_error;
 

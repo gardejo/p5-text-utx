@@ -6,7 +6,7 @@ package Text::UTX::Implementation::Stream::LWP::UserAgent;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -38,8 +38,14 @@ use namespace::clean;
 # attribute(s)
 # ****************************************************************
 
-has 'agent' => (
+has 'stream' => (
     is          => 'rw',
+    isa         => Uri,
+    coerce      => 1,
+);
+
+has 'agent' => (
+    is          => 'ro',
     isa         => 'LWP::UserAgent',
     lazy_build  => 1,
 );
@@ -50,19 +56,7 @@ has 'agent' => (
 # ****************************************************************
 
 with qw(
-    Text::UTX::Role::StreamLike
-    Text::UTX::Role::HasLines
-);
-
-
-# ****************************************************************
-# inherited attribute(s)
-# ****************************************************************
-
-has '+stream' => (
-    # required    => 1,
-    isa         => Uri,
-    coerce      => 1,
+    Text::UTX::Role::QualifiableToClassName
 );
 
 

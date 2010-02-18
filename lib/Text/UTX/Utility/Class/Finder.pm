@@ -6,7 +6,7 @@ package Text::UTX::Utility::Class::Finder;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -68,7 +68,7 @@ has 'handlers' => (
     isa         => 'ArrayRef[Object]',
     handles     => {
         all_handlers => 'elements',
-        add_handler  => 'unshift',      # Note: I venture to assign 'push'
+        add_handler  => 'unshift',      # Note: I venture to assign 'push'.
     },
     lazy_build  => 1,
 );

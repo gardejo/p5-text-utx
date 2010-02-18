@@ -6,7 +6,7 @@ package Text::UTX::Implementation::Parser::UTX::Simple;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -17,6 +17,13 @@ use warnings;
 # ****************************************************************
 
 use Moose::Role;
+
+
+# ****************************************************************
+# general dependency(-ies)
+# ****************************************************************
+
+use Data::Util qw(:check);
 
 
 # ****************************************************************
@@ -33,47 +40,31 @@ use namespace::clean;
 with qw(
     Text::UTX::Interface::Parser
     Text::UTX::Role::HasColumns
-    Text::UTX::Role::HasLines
     Text::UTX::Role::HasFormat
-    Text::UTX::Implementation::Format::UTX::Simple
 );
 
-
-# ****************************************************************
-# inherited attribute(s)
-# ****************************************************************
-
-# has '+version' => (
-#     trigger     => sub {
-#         confess 'Could not modify version attribute '
-#               . 'on feature concrete classes';
-#     },
-# );
-
-# has '+lines' => (
-#     trigger     => sub {
-#         $_[0]->clear_columns;
-#     },
-# );
+with qw(
+    Text::UTX::Implementation::Format::UTX::Simple
+);
 
 
 # ****************************************************************
 # hook(s) on construction
 # ****************************************************************
 
-sub BUILD {
-    my $self = shift;
+# Note: We cannot write "has '+version' => (required => 1);" on this role
+#       (from Moose 0.93_01).
+around BUILDARGS => sub {
+    my ($next, $class, @init_args) = @_;
 
-    my $format_class = $self->fully_qualified_class_name('Format');
-    if ($self->has_version) {
-        $format_class .= '::'
-                      .  $self->version_for_class_name( $self->version );
-    }
+    my $init_arg = $class->$next(@init_args);
 
-    $self->format_class($format_class);
+    confess 'Could not construct the parser instance because '
+          . 'version number must be specified'
+        unless defined $init_arg->{version};
 
-    return;
-}
+    return $init_arg;
+};
 
 
 # ****************************************************************
@@ -81,14 +72,22 @@ sub BUILD {
 # ****************************************************************
 
 sub parse {
-    my $self = shift;
+    my ($self, $lines) = @_;
 
-    my $meta_information = $self->parse_header;
+    confess 'Could not parse lines because '
+          . 'lines are not an array reference'
+        unless is_array_ref($lines);
+
+    # Note: Use slice instead of splice() to keep $self->loader->lines().
+    my @header_lines = @$lines[0 .. ($self->count_header_lines - 1)];
+    my @body_lines   = @$lines[$self->count_header_lines .. $#{$lines}];
+
+    my $meta_information = $self->parse_header(\@header_lines);
 
     return {
         %$meta_information,
         columns => [ $self->all_universal_columns ],
-        entries => $self->parse_body,
+        entries => $self->parse_body(\@body_lines),
     };
 }
 

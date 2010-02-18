@@ -6,7 +6,7 @@ package Text::UTX::Role::HasFormat;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -17,7 +17,6 @@ use warnings;
 # ****************************************************************
 
 use Moose::Role;
-# use Moose::Util qw(ensure_all_roles);
 
 
 # ****************************************************************
@@ -34,7 +33,7 @@ use namespace::clean;
 has 'format_class' => (
     is          => 'rw',
     isa         => 'Str',
-    predicate   => 'has_format_class',
+    lazy_build  => 1,
     trigger     => sub {
         $_[0]->clear_format;
     },
@@ -57,37 +56,40 @@ with qw(
 
 
 # ****************************************************************
+# interface(s)
+# ****************************************************************
+
+# Fixme:
+# requires qw(
+#     version
+# );
+
+
+# ****************************************************************
 # builder(s)
 # ****************************************************************
+
+sub _build_format_class {
+    my $self = shift;
+
+    my $format_class = $self->fully_qualified_class_name('Format');
+    $format_class .= '::' . $self->version_for_class_name($self->version)
+        if defined $self->version;
+
+    return $format_class;
+}
 
 sub _build_format {
     my $self = shift;
 
-    confess 'Could not instantiate format because: '
-          . 'format class not defined'
-        unless $self->has_format_class;
+    confess 'Could not instantiate the format because '
+          . 'the format class not defined'
+        unless defined $self->format_class;
 
     $self->ensure_class_loaded($self->format_class);
 
     return $self->format_class->new;
 }
-
-
-# ****************************************************************
-# public method(s)
-# ****************************************************************
-
-=for comment
-
-sub apply_version {
-    my ($self, $version) = @_;
-
-    # ensure_all_roles $self->format, $self->version_for_class_name($version);
-
-    return;
-}
-
-=cut
 
 
 # ****************************************************************
@@ -115,6 +117,14 @@ Text::UTX::Role::HasFormat -
 =head1 DESCRIPTION
 
 blah blah blah
+
+=head1 MEMORANDUM
+
+If we apply a role for a class
+by L<Moose::Util::ensure_all_roles()|Moose::Util> dynamically,
+the applied class change into an anonymous class.
+Therefore, I implemented B<version> classes and B<format> roles
+(instead of B<format> classes and B<version> roles).
 
 =head1 AUTHOR
 

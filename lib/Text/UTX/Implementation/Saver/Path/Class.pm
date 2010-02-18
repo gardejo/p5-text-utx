@@ -6,7 +6,7 @@ package Text::UTX::Implementation::Saver::Path::Class;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -30,17 +30,11 @@ use namespace::clean -except => [qw(meta)];
 # consuming role(s)
 # ****************************************************************
 
+# Note: We should not consume roles at once.
 with qw(
-    Text::UTX::Role::HasLines
     Text::UTX::Implementation::Stream::Path::Class
 );
 
-# method(s)
-with qw(
-    Text::UTX::Role::Loadable
-);
-
-# interface(s)
 with qw(
     Text::UTX::Interface::Saver
 );
@@ -53,18 +47,17 @@ with qw(
 sub save {
     my ($self, $outstream, $dumped_string) = @_;
 
-    if (defined $outstream) {
-        $self->stream($outstream);
-    }
+    $self->stream($outstream)
+        if defined $outstream;
 
     my $handle = $self->stream->openw;
 
-    confess sprintf 'Could not open file (%s) as write mode',
+    confess sprintf 'Could not open the file (%s) as the write mode',
                 $self->stream->stringify
         unless $handle;
 
     $handle->print( $dumped_string )
-        or confess sprintf 'Could not write lines to file (%s)',
+        or confess sprintf 'Could not write lines to the file (%s)',
                         $self->stream->stringify;
 
     $handle->close;

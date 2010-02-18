@@ -6,7 +6,7 @@ package Text::UTX::Type::Locale;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -16,18 +16,26 @@ use warnings;
 # MOP dependency(-ies)
 # ****************************************************************
 
-use MooseX::Types (
-    -declare => [qw(
-        Locale
-    )],
-);
+use MooseX::Types -declare => [qw(
+    Locale
+    LocaleString
+)];
 use MooseX::Types::Moose qw(
+    Maybe
     Object
     Str
     ArrayRef
     HashRef
     ScalarRef
 );
+
+
+# ****************************************************************
+# general dependency(-ies)
+# ****************************************************************
+
+use Locale::Country;
+use Locale::Language;
 
 
 # ****************************************************************
@@ -48,7 +56,9 @@ use namespace::clean;
 # class variable(s)
 # ****************************************************************
 
-my $Locale_Class = 'Text::UTX::Component::Locale';
+my $Locale_Class      = 'Text::UTX::Component::Locale';
+my $Delimiter         = '_';
+my $Delimiter_Pattern = qr{ [_\-] }xms;
 
 
 # ****************************************************************
@@ -58,16 +68,53 @@ my $Locale_Class = 'Text::UTX::Component::Locale';
 # ----------------------------------------------------------------
 # locale string (language + country)
 # ----------------------------------------------------------------
-subtype Locale,
-    as Object,
+subtype LocaleString,
+    as Maybe[Str],
         where {
-            $_->isa($Locale_Class);
+            return 1
+                unless defined $_;
+
+            my ($language, $country) = split $Delimiter_Pattern, $_;
+
+            defined $language         &&
+            $language eq lc $language &&
+            code2language($language)  &&
+            (
+                ! defined $country ||
+                (
+                    $country eq uc $country &&
+                    code2country($country)
+                )
+            );
+        };
+
+coerce LocaleString,
+    from Str,
+        via {
+            my ($language, $country) = split $Delimiter_Pattern, $_;
+
+            return join $Delimiter,
+                lc $language,
+                ( defined $country ? uc $country : () );
+        };
+
+
+# ----------------------------------------------------------------
+# locale object (language + country)
+# ----------------------------------------------------------------
+subtype Locale,
+    as Maybe[Object],
+        where {
+            ! defined $_ || $_->isa($Locale_Class);
         };
 
 coerce Locale,
     from ArrayRef,
         via {
-            return $Locale_Class->new($_);
+            return $Locale_Class->new(
+                language => $_->[0],
+                ( $_->[1] ? (country => $_->[1]) : () ),
+            );
         },
     from HashRef,
         via {
@@ -75,11 +122,11 @@ coerce Locale,
         },
     from ScalarRef,
         via {
-            return $Locale_Class->new($_);
+            return $Locale_Class->new(locale => $$_);
         },
     from Str,
         via {
-            return $Locale_Class->new($_);
+            return $Locale_Class->new(locale => $_);
         };
 
 
@@ -87,7 +134,7 @@ coerce Locale,
 # compile-time process(es)
 # ****************************************************************
 
-# Note: __PACKAGE__ can not run consumed methods (ex. ensure_class_loaded)
+# Note: __PACKAGE__ cannot run consumed methods (ex. ensure_class_loaded()).
 Text::UTX::Utility::Class->ensure_class_loaded($Locale_Class);
 
 
@@ -133,13 +180,13 @@ blah blah blah
 
 =over 4
 
-=item * L<Locale::Language>
+=item * L<Locale::Language|Locale::Language>
 
-=item * L<Locale::Country>
+=item * L<Locale::Country|Locale::Country>
 
-=item * L<MooseX:Types::Locale::Language>
+=item * L<MooseX:Types::Locale::Language|MooseX:Types::Locale::Language>
 
-=item * L<MooseX:Types::Locale::Country>
+=item * L<MooseX:Types::Locale::Country|MooseX:Types::Locale::Country>
 
 =back
 

@@ -1,0 +1,3418 @@
+#UTX-S 0.91; en-US/ja-JP; 2008-05-21; copyright: Francis Bond (2008); license: CC-by 3.0
+#src	tgt	src:pos
+1-to-1 mapping	1対1の写像	-
+AAP	照応的一致原理	-
+AAVE	アフリカ系アメリカ人日常英語	-
+ABF	平均分岐数	-
+ADV	副詞	noun
+AP complement	AP補語	-
+ARP	項具現化原理	-
+ATN	ATN	-
+ATN parser	ATNプログラム	-
+ATNG	拡張遷移ネットワーク文法	-
+AVM	属性値行列	-
+Across-the-Board exception	一律の例外	-
+Act disallowed	行為は却下可能	-
+Action Aider	行為補助部	-
+Adjacent Feature Principle	隣接素性原理	-
+Adjunct Principle	付加語原理	-
+African American English	アフリカ系アメリカ人英語	-
+African American Vernacular English	アフリカ系アメリカ人日常英語	-
+Agent Nominalization Lexical Rule	動作主名詞化語彙規則	-
+Anaphoric Agreement Principle	照応的一致原理	-
+Arc Pair Grammar	アークペア文法	-
+Argument Realization Principle	項具現化原理	-
+Arrow Logic	アロー論理	-
+Augmented Transition Network	拡張遷移網	-
+Automata Theory	オートマトン理論	-
+Automatic Language Processing  Advisory Committee	自動言語処理諮問委員会	-
+BIP	束縛継承原理	noun
+Black English	黒人英語	-
+Boolean algebra	ブール代数	-
+CBL	制約に基づく語彙主義	-
+CFG	文脈自由文法	-
+CLIR	クロスリンガル情報検索	-
+CP erasure	CP削除	-
+CSC	等位構造制約	-
+CSG	文脈依存文法	-
+CSLI	言語情報研究センター	-
+Case Constraint	格制約	-
+Categorial Grammar	範疇文法	-
+Center for the Study of Language and Information	言語情報研究センター	-
+ChaSen	茶筌	-
+Chomsky regular form	チョムスキー標準形	-
+CnG	構文文法	-
+Coke-Younger-Kasami Method	CYK法	-
+Communication with translation	翻訳通信	-
+Compactness Theorem	コンパクト性定理	-
+Complementary Similarity Measure	補完類似度	-
+Completeness Theorem	完全性定理	-
+Confidence	信頼度	-
+Constant Lexeme Lexical Rule	定常語彙素語彙規則	-
+Constituent Ordering Principle	構成素順序原理	-
+Constraint-Based Lexicalism	制約に基づく語彙主義	-
+Construction Grammar	構文文法	-
+Constructive Process Theory	言語過程説	-
+Contraction Lexical Rule	縮約語彙規則	-
+Cooperative Principle	共同原則	-
+Coordinate Structure Constraint	等位構造制約	-
+Coordination Rule	等位接続規則	-
+D-structure	D構造	-
+DAG	非循環有向グラフ	-
+DCG	確定節文法	-
+DRS	談話表示構造理論	noun
+DRT	DRT	-
+DSP	DSP	-
+Danish	デンマーク語	-
+Definite Clause Grammar	確定節文法	-
+Dependency Grammar	依存文法	-
+Dice coefficient	ダイス相関係数	-
+Directed Acyclic Graph	非循環有向グラフ	-
+Disjoint Reference Rule	分離指示規則	-
+Dutch	オランダ語	-
+EDR	日本電子化辞書研究所	-
+EST	拡大標準理論	-
+East Asian languages	東アジアの言語	-
+Ebonics	エボニクス	-
+Ellipsis Lexical Rule	省略語彙規則	-
+Exclamative	感嘆文	-
+Extended Standard Theory	拡大標準理論	-
+Extraposition Grammar	XG	-
+Extraposition Lexical Rule	後置語彙規則	-
+FAHQT	完全自動翻訳	-
+FCR	素性共起制限	-
+FFP	足素性原理	-
+FST	有限状態遷移	-
+FUG	機能単一化文法	noun
+Feature Co-occurrence Restrictions	素性共起制限	-
+Follow	後続語	-
+Foot Feature Principle	足素性原理	-
+Fregean Principle	フレーゲの原理	-
+French	フランス語	-
+GAP Principle	空所原理	-
+GCD	最大公約数	noun
+GETA	グレノブル大学自動翻訳研究所	-
+GPSG	GPSG	-
+GSP	一般構文処理プログラム	-
+General Syntactic Processor	一般構文処理プログラム	-
+Generalized Phrase Structure Grammar	一般句構造文法	-
+Generative Semantics	生成意味論	-
+Germanic languages	ゲルマン系言語	-
+Government and Binding theory	統率・束縛理論	-
+HFC	主辞素性規約	noun
+HFP	主辞素性原理	-
+HPSG	HPSG	-
+Hashimoto Grammar	橋本文法	-
+Head Feature Principle	主辞素性原理	-
+Head-Complement Rule	主辞・補語規則	-
+Head-Filler Rule	主辞・フィラー規則	-
+Head-Modifier Rule	主辞・修飾語規則	-
+Head-Specifier Rule	主辞・指定部規則	-
+Head-Specifier-Complement	主辞・指定部・補語	-
+Head-driven Phrase Structure Grammar	HPSG	-
+Heavy NP Shift	重い名詞句の移動	-
+Heyting algebra	Heyting代数	-
+Hidden Markov Model	隠れマルコフモデル	-
+Horn clause	ホーン節	-
+Hungarian	ハンガリー語	-
+Hybrid Translation	ハイブリッド型翻訳方式	-
+ID rule	直接支配規則	-
+IST	直接上位タイプ	-
+Icelandic	アイスランド語	-
+Immediate Dominance	直接支配規則	-
+Imperative Rule	命令文規則	-
+Inuit	イヌイット語	-
+Inversion Lexical Rule	倒置語彙規則	-
+Irish	アイルランド語	-
+JPSG	JPSG	-
+Jamaican Creole	ジャマイカ・クリオール語	-
+Japan Electronic Dictionary Research Institute	日本電子化辞書研究所	-
+Japanese language education	日本語教育	-
+Japanese phrase structure grammar	JPSG	-
+Japanese to English transfer dictionary	日英対照辞書	-
+LCM	最小公倍数	-
+LDD	長距離依存	noun
+LFG	LFG	-
+LHS	左辺	noun
+LMT	語彙写像理論	-
+LP rule	線形順序規則	-
+LaTeX	ラテフ	-
+Left-to-right and Right-most Parsing	LR法	-
+Lexical Functional Grammar	語彙機能文法	-
+Linear Precedence Constraint	線形順序制約	-
+Linguistic Oriented Programming Language	LINGOL	-
+Locality Principle	局所性原理	-
+MT Method using automatic rewriting of source language	原文自動書換型翻訳方式	-
+Memory Organization Packet	MOP	-
+Minimalist Program	極小主義プログラム	-
+Montague grammar	モンテギュー文法	-
+Morphemics	形態論	noun
+Morphological Analysis based Translation	形態素解析型翻訳	-
+Move alpha	α移動	-
+Multi-Level Translation Method	多段翻訳方式	-
+Multi-dimensional Thesaurus	多次元シソーラス	-
+Multi-lingual Translation	多言語翻訳	-
+NAIST	奈良先端科学技術大学院大学	-
+NHK	日本放送協会	-
+NICE property	NICE 特性	-
+NLP	自然言語処理	-
+NLU	自然言語理解	-
+NSA	名詞的 SPR 一致	-
+Negation Lexical Rule	否定語彙規則	-
+Nominal SPR Agreement	名詞的 SPR 一致	-
+Non-3rd-Singular Verb Lexical Rule	非三人称単数動詞語彙規則	-
+OOV rate	未知語率	noun
+Optimality Theory	最適性理論	-
+P-marker	句構造標識	-
+PGLR	確率一般化LR	-
+PLC	語彙的コントロールの原理	noun
+PP attachment ambiguities	PP付加の曖昧性	-
+PSG	句構造文法	noun
+Parallel Function Strategy	平行機能方略	-
+Passive Lexical Rule	受動化語彙規則	-
+Past Participle Lexical Rule	過去分詞語彙規則	-
+Past-Tense Verb Lexical Rule	過去時制動詞語彙規則	-
+Path	経路格	-
+Phonemics	音素論	-
+Phonetic Language	音声言語	noun
+Phonologic Component	音韻部門	noun
+Phonological Representation	音声表示	-
+Phonological Rule	音韻規則	-
+Plural Noun Lexical Rule	複数名詞語彙規則	-
+Porter algorithm	ポーター・アルゴリズム	-
+Prague school	プラーグ派 	-
+Preferential Disambiguation Model	選好的曖昧性解消モデル	-
+Preparatory Condition	準備条件	-
+Present Participle Lexical Rule	現在分詞語彙規則	-
+Present Tense Lexical Rule	現在時制語彙規則	-
+Principle of Clarity	明瞭性重視の原則	-
+Principle of Compositional Semantics	要素合成法の原理	-
+Principle of Compositionality	構成性原理	-
+Principle of Politeness	対人関係重視の原則	-
+Principle of compositionality	要素合成法の原理	-
+Principles and Parameters	原理とパラメータ	-
+Projection Principle	投影原理	-
+Projection Rule	投射規則	-
+Prosodics	韻律論	-
+Provisional Bunsetsu Boundary	仮文節境界	-
+R-expressions	指示表現	-
+REST	改訂拡大標準理論	-
+RHS	右辺	noun
+RTN	再帰的遷移網	-
+Realistic Transformational Grammar	現実的変形文法	-
+Relational Concept	関係概念	-
+Revised Extended Standard Theory	改訂拡大標準理論	-
+Right Node Raising	右節点繰り上げ	-
+Right Roof Constraint	右屋根制約	-
+Robustness	ロバスト性	-
+Rule of Equality	同等性の原則	-
+Rule of Formality	形式性の原則	-
+Rule of Optionality	選択性の原則	-
+Rules of Clarity	明瞭性重視の原則	-
+Rules of Pragmatic Competence	語用論的能力の原則	-
+Russian	ロシア語	-
+S-pronoun	文代名詞	-
+S-structure	S構造	-
+SAE	標準アメリカ英語	-
+SIF	意味解釈機能	-
+SOR	主語から目的語への繰り上げ	-
+SRL	SRL	-
+SUBCAT	下位範疇	-
+SVD	特異値分析	-
+Saussure	Saussure	-
+Saussurean	Saussureの	-
+Scrambling Principle	かき混ぜ原理	-
+Semantic Analysis based Translation	意味解析型翻訳	-
+Semantic Compositionality Principle	意味的構成性原理	-
+Semantic Inheritance Principle	意味的継承原理	-
+Semantic Representation Language	SRL	-
+Sentence Combination	文結合	-
+Sentence Lifting	S繰り上げ	-
+Sentence Reduction	文短縮	-
+Singular Noun Lexical Rule	単数名詞語彙規則	-
+Sino-Japanese reading	音読み	noun
+Situation Semantics	状況意味論	noun
+Slifting	S繰り上げ	-
+Source	始点格	-
+Specified Subject condition	指定主語条件	-
+Standard Theory	標準理論	-
+Stowell Construction	Stowell構文	-
+Subject Assignment Strategy	主語割当方略	-
+Subject Condition	主語条件	-
+Subject Extraction Lexical Rule	主語摘出語彙規則	-
+Subject-Aux Inversion	主語・助動詞の倒置	-
+Subject-to-Object Raising	主語から目的語への繰り上げ	-
+Subject-to-Subject Raising	主語から主語への繰り上げ	-
+Supermaxim	一般公理	-
+Swedish	スウェーデン語	-
+Syntactic Analysis based Transfer Method	構文解析型トランスファー方式	-
+Syntactic Analysis based Translation Method	構文解析型翻訳	-
+TAO	通信・放送機構	-
+TEI	フルテキストの標準化計画	-
+TITECH	東京工業大学	-
+TeX	テフ	noun
+Tongan	トンガ語	-
+Topic Assignment Strategy	主題割当方略	-
+Transfer of Syntactic Structure	構文の変換	-
+Tree Transducer	木対木変換	-
+Turing	チューリング	noun
+UDC	国際十進分類法	-
+UMIST	マンチェスタ大学科学技術研究所	-
+Universal Decimal Classification	国際十進分類法	-
+University of Pennsylvania	ペンシルバニア大学	-
+VP argument	VP項	-
+VP complement	VP補語	-
+VP ellipsis	VPの省略	-
+VP preposing	動詞的前置	-
+VSO	動詞・主語・目的語	-
+Valence Principle	結合価原理	-
+Verb-Subject-Object	動詞・主語・目的語	-
+Visser's Generalization	Visserの一般化	-
+Viterbi algorithm	ビタビ・アルゴリズム	-
+WFF	整式	noun
+Well-Formed Tree Structure	適格な木構造	-
+Word Grammar	語文法	-
+WordNet	ワードネット	
+X-bar Theory	X’理論	-
+X1-theory	X1理論	-
+Zero Copula Rule	ゼロ・コピュラ規則	-
+a-structure	a-構造	-
+abessive	欠格	noun
+ability	能力	noun
+ablative	奪格	-
+abnormality	非常	noun
+absolute honorific	絶対敬語	noun
+absolute respectful speech	絶対敬語	noun
+absolute value	絶対値	noun
+absolutive	独立格	-
+absolutive construction	独立構文	-
+abstract noun	抽象名詞	noun
+abstract verb	抽象動詞	-
+abuse	濫用	noun
+accept	受理する	verb
+accept state	受理状態	-
+acceptability	容認可能性	-
+acceptable	容認可能	-
+acceptance	受理	noun
+accepted view	定説	noun
+accidence	品詞構成論	-
+accomplish	完遂する	verb
+accomplishment	完遂	noun
+accusative case	対格	noun
+accusative noun phrase	対格名詞句	-
+accusative verb	対格動詞	-
+achieve	完遂	verb
+achievement	達成	noun
+act	行動	verb
+act of predicating	叙述行為	-
+act of referring	言及行為	-
+act professed but hollow	行為は言葉だけで実質なし	-
+act purported but void	行為は企図されたが無効	-
+action	行動	noun
+action part	実効部	-
+action sequencing	行動の序列化	-
+action verb	動作動詞	-
+activate	活性化する	verb
+activation	活性化	noun
+active	能動	noun
+active aspect	能相	-
+active edge	活性弧	-
+active verb	能動詞	-
+active voice	能動態	noun
+active-passive relation	能動・受動関係	-
+active-passive synonymy in raising constructions	繰り上げ構文における能動・受動の同義	-
+actor	主体	noun
+acyclic	非循環的な	adj
+ad hoc	アドホック	noun
+adaptive production system	適応型プロダクション・システム	-
+additive	追加詞	-
+addressee	聞き手	noun
+adessive	所格	noun
+adjacency	隣接性	-
+adjacency condition	隣接条件	-
+adjacency pair	隣接対	-
+adjectival clause	形容詞節	-
+adjectival equivalent	形容詞相当語句	noun
+adjective	形容詞	noun
+adjective pattern	形容詞型	-
+adjective phrase	形容詞句	noun
+adjunct	付加	noun
+adjunct word	付加語	noun
+adjunction	付加	noun
+admissible	認容できる	-
+adnominal	連体詞	noun
+adnominal base	連体形	noun
+adnominal case	連体格	-
+adnominal clause	連体節	-
+adnominal constituent	連体修飾成分	-
+adnominal form	連体修飾	noun
+adnominal marker	連体助詞	-
+adnominal particle	連体助詞	-
+adnominal phrase	連体句	-
+adopted word	外来語	noun
+adverb	副詞	noun
+adverbial	副詞句	noun
+adverbial adjunct	副詞的修飾語	-
+adverbial form	副詞形	-
+adverbial marker	副助詞	-
+adverbial modifier	副詞的な修飾句	-
+adverbial particle	副詞的小詞	-
+adverbial phrase	副詞的要素	-
+adverse effects	迷惑の意味	-
+advice	忠告	noun
+advise	忠告する	verb
+advocate	推奨する	verb
+advocating	推奨	noun
+affirm	肯定	verb
+affirmation	肯定	noun
+affix	接辞	noun
+affricative sound	破擦音	noun
+agenda	議事	noun
+agent	主体	noun
+agent frame	動作主格	-
+agentive case	行為者格	-
+agentivity	動作主性	-
+agglutinative language	膠着語	-
+agree	一致	verb
+agreement	一致	noun
+agreement phenomena	一致現象	-
+algebra	代数学	noun
+algorithm	アルゴリズム	noun
+aligned	対応付けた	-
+alignment	対応づけ	-
+all-inclusive time	包括時	-
+allative	向格	noun
+allegory	諷喩	noun
+allomorph	異形態	-
+allophone	異音	noun
+alpha movement	α移動	-
+alphanumeric	英数字	noun
+alternatives	代替案	-
+ambiguity	曖昧さ	noun
+ambiguity resolution	曖昧性の解消	-
+ambiguous	曖昧な	adj
+amplifier	誇張詞	-
+analyse	解析	verb
+analysis	解析	noun
+analysis of parallel structures	並列関係解析	-
+analysis tree	解析木	-
+anaphor	照応	noun
+anaphora	前方指示	-
+anaphoric island	照応不能領域	-
+anaphoric reference	照応指示	-
+anaphoric relation	照応関係	-
+ancillary word	付属語	noun
+animate	有生	-
+animate noun	有生名詞	-
+anomalous finite	変則定形動詞	-
+antecedent	先行詞	noun
+anti-exception	反例外	-
+antisymmetric	反対称的な	adj
+antonym	反対語	noun
+aphoristic imperative	格言的な命令文	-
+apologize	陳謝	verb
+apology	陳謝	noun
+appeal	訴え	noun
+appealing	訴え	noun
+appearance	態	-
+appendant	辞	-
+application language	応用言語	-
+appositive clause	同格節	-
+appropriateness	適切性	-
+approximate	近似計算する	verb
+approximator	近似詞	-
+arabic figure	算用数字	noun
+arabic numeral	算用数字	noun
+arbitrary	任意な	adj
+arc	枝	noun
+arc pair grammar	対弧文法	-
+argue	議論	verb
+argument	議論	noun
+argument cancellation	項の打ち消し	-
+argument category	引数範疇	-
+argument command	項統御	-
+argument position	項位置	noun
+argument structure	項構造	-
+arithmetic sequence	等差数列	noun
+arity	項数	-
+arrange	予定	verb
+arrangement	予定	noun
+array	配列	noun
+article	冠詞	noun
+articulation	分節化	-
+artificial intelligence	人工知能	noun
+aspect	相	noun
+aspectual classes	アスペクトのたぐい	-
+assert	言明	verb
+assertion	主張	noun
+assertive predicate	断定的述語	-
+assignment	割り当て	noun
+assignment statement	代入文	-
+associate	連想	verb
+association	連想	noun
+association with focus	焦点との連合	-
+astronomical figure	天文学的数字	-
+asymptote	漸近線	noun
+atomic	原子的な	-
+atomic formula	素式	-
+atomic sentence	原子文	-
+attach	付加	verb
+attached procedure	付加手続き	-
+attention focusing	注目点の集中	-
+attitudinal disjunct	態度的離接詞	-
+attribute	限定	noun
+attribute-value matrices	属性値行列	-
+attributive	連体詞	noun
+attributive adjective	限定形容詞	noun
+attributive base	連体形	noun
+attributive position	限定の位置	noun
+attributive use	限定用法	noun
+attune	同調する	-
+attunement	同調	noun
+auditory information	聴覚情報	-
+augmented transition net grammar	拡張遷移網文法	-
+authorship problem	執筆者の推定問題	-
+automatic interpreting telephony machine	自動通訳電話機	-
+automaton	オートマトン	noun
+auxiliary	助動詞	noun
+auxiliary connective	接続助詞	noun
+auxiliary verb	助動詞	noun
+average branching factor	平均分岐数	-
+avoidance of repetition	反復の回避	-
+axiom	公理	noun
+axiomatic situation theory	公理論的状況理論	-
+axiomatization	公理化	noun
+axiomatize	公理化する	verb
+axis	原点	noun
+back-of-envelope calculation	近似計算	noun
+backtrack	後戻り	verb
+backtracking	後戻り処理	-
+backward chaining	逆向き連鎖	-
+backward cohesion force	逆方向結束力	-
+backward pronominalization	逆行代名詞化	-
+backward reasoning	後向き推論	-
+bare template	ベア・テンプレート	-
+base	低	-
+base P-marker	基底句構造標識	-
+base component	基底部門	noun
+base form	原型	adj
+base rule	基底部規則	-
+base structure	基本構造	-
+baseline	基準値	-
+basic circumstance	基本事態	-
+basic feature structure	基本素性構造	-
+basic function	基本的機能	-
+basic lexicon	基本語彙	-
+be false	虚偽	verb
+be invariant	不変化の	-
+beam search	ビーム探索法	-
+beam width	ビーム幅	-
+beg	懇願	verb
+begging	懇願	noun
+beginning symbol	開始記号	-
+believe	信じる	verb
+belong	属する	verb
+benefit	プラス	noun
+bilingual corpus	対訳コーパス	-
+binary	二項	-
+binary branching	二項枝分かれ	-
+binary decision tree	2分決定木	-
+binary tree	二分岐木	-
+bind	束縛する	verb
+binding	束縛	noun
+binding feature principle	束縛素性の原理	-
+binding inheritance principle	束縛継承原理	noun
+binding theory	束縛理論	noun
+black box	黒箱	-
+blackboard	黒板	noun
+blocks world	積木の世界	-
+body	ボディ	noun
+booster	上昇詞	-
+bottleneck	ボトルネック	noun
+bottom	底	-
+bottom-up	ボトムアップ	noun
+bottom-up parsing	ボトムアップ型アルゴリズム	-
+bound	束縛される	-
+bound anaphor	束縛照応形	-
+bound variable	束縛変数	-
+bounded form	係り結び	noun
+bounded path	限られた経路	-
+boundedness	有界性	-
+bounding theory	境界理論	noun
+branch	枝	noun
+breadth-first	横型	-
+breadth-first search	横型探索	-
+break	区切り	noun
+breed	品種	noun
+bunsetsu	文節	noun
+by-phrase	by-句	-
+bypass	バイパス	noun
+c-command	c統御	-
+calculability	算定可能性	-
+calculate	演算	verb
+calculation	演算	noun
+cancel	取り消す	verb
+cancellability	却下可能性	-
+cancellable	却下可能	-
+canonical LR	正準LR	-
+canonical expression	正規化表現	-
+canonical speech	標準的な発話	-
+cardinal number	基数詞	-
+case	格	noun
+case arc	括弧	noun
+case assignment	格の割り当て	-
+case element	格要素	-
+case filter	格フィルタ	-
+case frame	格フレーム	-
+case grammar	格文法	-
+case marker	格助詞	noun
+case marking	格の割り当て	-
+case particle	格助詞	noun
+case particle equivalent	格助詞相当語	-
+case preposition	格前置詞	-
+case role	格役割	-
+case theory	格理論	noun
+case-marker	格標識	-
+case-marking particle	格助詞	noun
+cataphora	後方照応	-
+categorial feature	品詞素性	-
+categorical promise	無条件の約束	-
+category	カテゴリ	noun
+category selection	品詞選択	-
+category symbol	範疇記号	-
+causal agent	使役主	-
+causal case	原因格	-
+causal chain	因果関係の連鎖	-
+causal relation	起因関係	-
+causal relationship	因果関係	-
+causality	因果律	noun
+causative	使役	noun
+causative sentence	使役文	-
+causative use	使役用法	-
+causative verb	使役動詞	noun
+cause	原因	verb
+centering theory	センタリング理論	-
+central adjective	本形容詞	-
+chain return	連鎖の再開	-
+change of case	格変化	noun
+change of part of speech	品詞変換	-
+character type	字種	-
+chart	チャート	noun
+chart parser	チャート法	-
+chart parsing	チャート法	-
+child	子	-
+chinese character	漢字	noun
+chinese numerals	漢数字	noun
+circuit	回路	noun
+circulate	循環する	verb
+circumlocution	迂言	noun
+circumstances	事態	noun
+clarity	明瞭性	-
+class	類	noun
+classical form of i-adjective inflection	ク活用	-
+classification	分類	noun
+classification of expressions	表現分類	-
+classification system	分類体系	-
+classifier	類別詞	-
+classify	分類する	verb
+classify by type	種別	verb
+clausal anaphora	文類照応	-
+clause	節	noun
+clause interrogation	節疑問	-
+clause negation	節否定	-
+clause type	文型	noun
+cleft	分裂構文	-
+cleft sentence	分裂文	-
+closed formula	文	noun
+closed world assumption	閉世界仮説	-
+closure	クロージャ	-
+cluster	クラスタリングする	verb
+clustering	クラスタリング	noun
+co-occur	共起	verb
+co-occurrence	共起	noun
+co-occurrence dictionary	共起辞書	-
+co-occurrence restriction	共起制限	-
+co-operative conversation	協調的な会話	-
+co-reference	同一指示	-
+co-routine	コルーチン	-
+coefficient	係数	noun
+coerce	強制型変換	-
+coercion	強制	noun
+cognate object	同属目的語	-
+cognition	認知	noun
+cognitive	認識	adj
+cognitive science	認知科学	-
+cognitive structure	認知構造	-
+cognizance	認識	noun
+cognize	認知する	verb
+coherence	一慣性	-
+cohesion	結束性	-
+coin	造語する	verb
+coinage	造語	noun
+coindexed	同一指標が付けられる	-
+coindexing	同一指標付け	-
+collective	共同的	-
+collective noun	集合名詞	noun
+colligation	連辞的結合	noun
+collision event	衝突事象	-
+collocation	連語	noun
+collocation dictionary	共起辞書	-
+colloquial	口語	noun
+colloquial grammar	口語文法	-
+combinatorial explosion	組合せ的爆発	-
+combined word retrieval	単語結合型辞書引き	-
+comitative	共格	noun
+comma	読点	noun
+comma and period	句読点	noun
+command	命令	noun
+comment	評言	noun
+common multiple	公倍数	noun
+common noun	一般名詞	noun
+commutative	可換	-
+comparative construction	比較構文	-
+comparative expression	比較の表現	-
+comparative linguistics	比較言語学	noun
+comparative philology	対照言語学	-
+compare	比較する	verb
+comparison	比較	noun
+comparison theory	比較理論	-
+competence	言語能力	noun
+compiler	コンパイラ	noun
+complement	補語	noun
+complement sentence	補文	-
+complementary distribution	相補分布	-
+complementary principle	相補性の原理	-
+complementation	補語化	noun
+complementiser	補文標識	-
+complementizer phrase	CP補語	-
+complete	完全な	adj
+completeness	完全性	-
+complex  number	複素数	noun
+complex NP constraint	複合名詞句制約	-
+complex NP shift	複合名詞句の移動（規則）	-
+complex predicate	複合述部	-
+complex sentence	複文	noun
+compositionality	単調性	-
+compound auxiliary verb	複合助動詞	-
+compound circumstance	複合事態	-
+compound predicate	複合述語	-
+compound sentence	重文	noun
+compound verb	複合動詞	-
+compound word	複合語	noun
+comprehend	理解する	verb
+comprehension	理解	noun
+comprehensiveness	包括性	-
+compress	圧縮	verb
+compression	圧縮	noun
+compromiser	妥協詞	-
+computation	計算	noun
+computational application	計算機での応用	-
+computational complexity	計算の複雑さ	-
+computational linguistics	計算言語学	noun
+compute	計算	verb
+computer	計算機	noun
+computer vision	コンピュータ・ビジョン	-
+concede	譲歩	verb
+concept	概念	noun
+concept chain	概念連鎖	-
+concept dictionary	概念辞書	-
+concept of number	単位観	-
+conception	発想法	noun
+conceptual dependency	概念依存関係	-
+conceptual dependency theory	概念依存論理	-
+conceptual structure	概念構造	-
+conceptualization	概念化	noun
+conceptualize	概念化する	verb
+concession	譲歩	noun
+conclusive base	終止形	noun
+concord	一致	noun
+concrete noun	具象名詞	noun
+condition	条件	noun
+conditional base	仮定形	noun
+conditional conjunction	条件接続	-
+conditional expression	条件表現	-
+conditional feature structure	条件素性構造	-
+conditional part	条件部	-
+conditional phrase	条件句	-
+conditional statement	条件文	noun
+conditioned unification	条件付き単一化	-
+condole	弔慰	verb
+condolence	弔慰	noun
+configurate	構成する	verb
+configuration	構成	noun
+configurational	階層的な	-
+conflict resolution	競合解消	-
+conflict set	競合集合	-
+confort	慰藉する	verb
+congratulate	祝福	verb
+congratulating	祝福	noun
+conjoin	接続	verb
+conjugate	活用	verb
+conjugation	活用	noun
+conjugation charts	活用表	-
+conjugational form	活用形	noun
+conjugational stem	活用接尾辞	-
+conjugational word	活用語	noun
+conjugative suffix	活用語尾	-
+conjunct	等位構成素	-
+conjunction	接続	noun
+conjunctive	連結詞	-
+conjunctive adverb	接続副詞	-
+conjunctive attributes	接続属性	-
+conjunctive circumstance	連接事態	-
+conjunctive particle	接続助詞	noun
+connative	内包的	-
+connected speech signal	連続音声記号	-
+connection	係り結び	noun
+connection table	接続テーブル	-
+connective	接続語	noun
+connectivity	連結性	-
+connotation	共示	noun
+consequence	帰結	noun
+consistency	無矛盾性	-
+consolation	慰藉	noun
+console	慰藉	verb
+consonant	子音	noun
+constancy of semantic contribution	意味的貢献の一貫性	-
+constant	定数	noun
+constant of integration	積分定数	-
+constative utterance	事実確認的発語	-
+constituency	要素構成	-
+constituent	成分	noun
+constituent command	構成素統御	noun
+constituent order	構成素の順序	-
+constituent question	埋め込み疑問文	-
+constituent structure	構成素構造	noun
+constitutive rules	構成規則	-
+constrain	制約	verb
+constraining knowledge	拘束知識	-
+constraint	制約	noun
+constraint graph	制限グラフ	-
+constraint programming	制約プログラミング	-
+constraint structured planning	制限付き構造化計画	-
+constraint unification	制約単一化	-
+constraint-based	制約に基づく	-
+constraint-based architecture	制約に基づくアーキテクチャ	-
+construction	構文	noun
+construction with an adjective predicate	形容詞構文	-
+content	内容	noun
+context	文脈	noun
+context analysis	文脈処理	-
+context processing	文脈処理	-
+context tree	文脈木	-
+context-free grammar	文脈自由文法	-
+context-sensitive grammar	文脈依存文法	-
+contexts of use	言語使用の文脈	-
+contextual knowledge	文脈知識	-
+contextualize	文脈によって解釈可能にする	-
+contiguity	隣接性	-
+continuative base	連用形	noun
+continuative predicate	連用述語	-
+continuous clause	連用節	-
+continuous form	連用形	noun
+continuous function	連続関数	noun
+continuous modification	連用修飾	noun
+continuous style	継続態	-
+continuous tense	継承時制	-
+contract	縮約する	verb
+contracted form	修飾形	-
+contraction	縮約	noun
+contradictory conjunction	逆接	noun
+contrast	対照	noun
+contrast principle	対立の原理	-
+contrastive linguistics	対照言語学	-
+contrastive stress	対照強制	-
+control	コントロール	noun
+control complement	コントロール動詞の補語	-
+control of instability	不安定性の制御	-
+control theory	コントロール理論	noun
+controlled language	制限言語	-
+controller	コントロールするもの	-
+controlling predictive words	統括する陳述辞	-
+conventional	習慣的な	adj
+conventional implicature	慣例的含意	-
+converge	収束する	-
+conversation	会話	noun
+conversation history	会話の履歴	-
+conversational implicature	会話の含意	-
+conversational maxims	会話の公理	-
+conversational postulates	会話公準	-
+converse	会話する	verb
+coordinate	座標	noun
+coordinate structure	等位構造	noun
+coordination	等位接続	noun
+copula	コプラ	noun
+copula sentence with noun predicative complement	名詞述語文	-
+copular pattern transfer dictionary	ダ文パターン対辞書	-
+copulative predicate	名詞述語	-
+core category	核範疇	-
+coreferential	同一指示的	-
+corollary	系	noun
+corpora	コーパス	-
+corpus	コーパス	-
+correction	言い直し表現	-
+correctness	正確性	-
+correlative pronoun	相関代名詞	-
+corresponding application	準用	noun
+corrigibility	訂正可能性	-
+cost	マイナス	noun
+cost-benefit scale	損得のスケール	-
+countability	可算性	-
+countable	可算	noun
+countable noun	可算名詞	-
+countably infinite	可付番無限	-
+counter-agent	対行為者格	-
+counter-expectancy	反予想性	-
+counter-factual	非現実節	-
+counterfactuality	非現実性	-
+creativity	創造性	-
+crisis	非常	noun
+criteria for the linguistic quality of translation	機能試験項目	-
+critical thinking	批判的思考	-
+cross product	外積	-
+cross validation	交差確認	-
+cross-categorial generalization	範疇横断的な一般化	-
+cross-classification	交差分類	noun
+cross-classify	交差分類する	verb
+cross-classifying type	横断分類的なタイプ	-
+cross-language variation	言語間の相違	-
+cross-linguistically	言語に共通して	-
+crossed dependency	係り受け交差	-
+cue phrase	手がかり句	-
+culmination	達成相	-
+culmination point	達成点	-
+cumulative	集積的	-
+cursive kana character	ひらがな	-
+curve	曲線	noun
+cybernetics	サイバネティックス	noun
+cycle	循環	noun
+cyclic	循環的な	adj
+cyclic permutation	循環的並べ換え	-
+cyclically	循環的に	-
+cyclicity	循環性	noun
+da style	だ体	-
+da-na inflection	ダナ活用	-
+daemon	デーモン	noun
+data driven	データ駆動	-
+data retrieval	データ検索	-
+data search	データ探索	noun
+data sparseness	データ過疎性	-
+data structure	データ構造	-
+data type theory	データタイプ理論	noun
+dative	与格	-
+dative alternation	与格交替	-
+dative of interest	興味の与格	-
+dative of purpose	目的の与格	-
+dative shift	与格移動	-
+daughter	子構成素	-
+daughter category	子範疇	-
+deactivate	不活性化する	verb
+deactivation	不活性化	noun
+dead metaphor	死喩	-
+decision tree	決定木	-
+declarative	平叙文	noun
+declarative adverb	陳述副詞	noun
+declarative form	平叙形式	-
+declarative knowledge representation	宣言型の知識表現	-
+declarative question	平叙疑問文	-
+declarative representation	宣言的な表現	-
+declarative sentence	平叙文	noun
+declensional kana ending	送りがな	-
+declinable and indeclinable words	用言と体言	-
+declinable compound word	用言性の複合語	-
+declinable word	用言	noun
+decreasing function	減少関数	-
+deducible	導出可能	-
+deduct	演繹	verb
+deduction	演繹	noun
+deduction schema	演繹スキーマ	-
+deductive	演繹的	-
+deep	深層	noun
+deep anaphora	深層照応	-
+deep case	深層格	-
+deep reasoning	深い推論	-
+deep structure	深層構造	-
+deep subject	深層主語	-
+default	デフォルト	noun
+default logic	デフォルト論理	-
+default value	デフォルト値	noun
+defeasible	無効にできる	-
+defective noun phrase	欠如名詞句	-
+defective verb	欠如動詞	-
+define	定義する	verb
+definite article	定冠詞	noun
+definite integral	定積分	-
+definite noun phrase	定名詞句	-
+definite reference	確定指示	-
+definiteness	特定名詞句	-
+definition	定義	noun
+degree	次数	noun
+degree adverb	程度副詞	-
+degree of activation	活性度	-
+degree of empathy	共感度	-
+deictic	直示的	-
+delete	削除	verb
+deleted interpolation	削除補間	-
+deletion	削除	noun
+demand	要請する	verb
+demanding	要請	noun
+demon	デモン	-
+demonstrative	指示語	-
+demonstrative adjective	指示形容詞	-
+demonstrative adverb	指示副詞	-
+demonstrative marker	提示の助詞	-
+demonstrative pronoun	指示代名詞	noun
+demote	降格する	verb
+demotion	降格	noun
+denial	打ち消し;打消し;打消	noun
+denominator	分母	noun
+denotation	意味するもの	-
+denotational	表示的	-
+denotational semantics	外延的意味	-
+denote	表示する	verb
+denumerator	可算決定詞	-
+deontic meaning	義務的意味	-
+depend	依存	verb
+dependant	依存要素	-
+dependence	依存	noun
+dependency	依存	noun
+dependency analysis	係り受け解析	-
+dependency grammar	依存関係文法	-
+dependency information	依存に関する情報	-
+dependency marker	係助詞	noun
+dependency relation	依存関係	-
+dependency structure	依存構造	-
+dependent clause	従属節	noun
+dependent predicate	係り述節	-
+depict	描写	verb
+depiction	描写	noun
+depiction method	描写法	-
+deplore	悲嘆	-
+deploring	悲嘆	-
+depth-first	縦型	adj
+depth-first search	縦型探索	-
+derivable	導出可能	-
+derivation	導出	noun
+derivation tree	導出木	-
+derivational theory of complexity	複雑性の派生理論	-
+derivative	派生語	noun
+derive	導出する	verb
+described situation	記述状況	-
+description standard	正書法	noun
+descriptive adequacy	記述的妥当性	noun
+descriptive grammar	記述文法	noun
+desiderative clause	願望文	-
+designate	意味する	verb
+destructive	破壊的な	-
+determination	決定	noun
+determinative	限定詞	noun
+determine	決定	verb
+determiner	限定詞	noun
+determinism	決定性	-
+deterministic	決定的な	adj
+deterministic parsing model	決定論的解析モデル	-
+deterministic tree transducers	決定的な木変換プログラム	-
+detransitivization	脱他動詞化	-
+deverbal	脱動詞的	-
+deverbative	非動詞化	-
+diagnosticity	診断度	-
+dialect	方言	noun
+dialog	対話	noun
+dialogize	対話する	verb
+dialogue	対話	noun
+dictionary	辞書	noun
+dictionary form	終止形	noun
+difference	差	noun
+differential	微分	noun
+differential equation	微分方程式	noun
+differentiate	微分する	verb
+dimensions of classification	分類の次元	-
+diminisher	減少詞	-
+diminutive	指小辞	noun
+direct	指示	verb
+direct  translation	直接翻訳	-
+direct anaphora	直接的照応	-
+direct constituent	直接構成素	-
+direct object	直接目的語	noun
+direct representation	直接型表現形式	-
+direct speech	直接話法	noun
+directed graph	有向グラフ	-
+directed parsing	統制統語解析	-
+directedness	指示性	-
+direction	方向	noun
+directive	指示	noun
+directives	指示行為	-
+disambiguate	曖昧性解消	verb
+disambiguation	曖昧性解消	verb
+discharge	解放	noun
+disclaimers	ことわり表現	-
+discontinuousness	中止性	-
+discourse	談話	noun
+discourse block	会話ブロック	-
+discourse function	談話機能	-
+discourse grammar	談話文法	-
+discourse initial position	談話のはじめの位置	-
+discourse location	談話の場所	-
+discourse reference	談話指示	-
+discourse representation structure theory	談話表示構造理論	noun
+discourse representation theory	談話表示理論	-
+discourse segment	会話セグメント	-
+discourse segment purpose	DSP	-
+discourse structure	談話構造	-
+discriminate	弁別	verb
+discrimination net	識別ネット	-
+discuss	議論する	verb
+discussion	議論	noun
+disjoint reference	非同一指示	-
+disjunct	離接詞	-
+disjunction	論理和	noun
+disjunctive circumstance	離接事態	-
+disjunctive normal form	論理和標準形	-
+disjunctive question	分離疑問	-
+disjunctively	選言的に	-
+disprove	定説を覆す	-
+dispute	議論	verb
+disqualification	欠格	noun
+distal pronoun	遠称	noun
+distinguish	弁別	verb
+distributional quantifier	分配数量詞	-
+distributive	個別的	-
+distributive concept	個別概念	-
+diverge	発散する [はっさんする] (vs)	-
+divergence	発散	noun
+divide	割算する	verb
+division	割算	noun
+domain	定義域	noun
+domain adjunct	領域付接詞	-
+domain-specific knowledge	問題領域の知識	-
+dominate	支配	verb
+domination	支配	noun
+donkey sentence	ロバ文	-
+dot product	内積	-
+double consonant	促音	noun
+double-subject construction	二重主格構文	-
+downgrade	格下げ	verb
+downgrading	格下げ	noun
+downtoner	緩和詞	-
+dual	双対	-
+dummy	ダミー	noun
+dummy head	虚辞	noun
+dummy noun	形式名詞	-
+durative	持続的	-
+durative aspect	継続相	-
+dyadic	二項的	-
+dynamic	動的な	adj
+dynamic attribute	動的属性	-
+dynamic disambiguation	動的な曖昧性解消	-
+dynamic verb	動的動詞	-
+echo negation	繰り返し否定	-
+economy conditions	経済性条件	-
+edge	弧	noun
+eel sentence	ウナギ文	-
+effect	効力	noun
+effect of reducing the ambiguity in analysis	解析多義削減効果	-
+elative	出格	noun
+elegance	エレガントさ	-
+element	要素	noun
+elide	削除	verb
+ellipsis	削除	noun
+embed	埋め込み	verb
+embedded	埋め込み	noun
+embedded clause	埋め込み文	-
+embedded expression	埋め込み表現	-
+embedded proposition	埋め込まれた命題	-
+embedded question	埋め込み疑問文	-
+embedded sentence	埋め込み文	-
+embedded structure	入れ子構造	-
+embedded type	入れ子型	-
+emotion	感情	noun
+emotive adjectives	感情形容詞	-
+empathy	共感	noun
+emphasis	強調	noun
+emphasize	強調	verb
+emphasizer	強調詞	-
+emphatic affirmative	強調的肯定	-
+emphatic reflexive	強調の再帰代名詞	-
+emphatic stress	強調的強勢	-
+emptiness	空	adj
+empty	空	adj
+empty category	空範疇	-
+empty set	空集合	noun
+enablement	権能割賦	-
+encrypt	暗号化	verb
+encryption	暗号化	noun
+end event	終了事象	-
+end of a sentence	文末	noun
+end of a word	語尾	noun
+end position	後位	-
+ending	語尾	noun
+ending signal	終了符号	-
+endophora	文脈照応	-
+entail	含意	verb
+entailment	論理的含意	-
+epistemic meaning	認識的意味	-
+epresent in Chinese characters	漢字表記する	verb
+equation	等式	noun
+equative sentence	等価文	-
+equi	同一名詞句削除	-
+equi construction	equi構文	-
+equi verb	equi動詞	-
+ergative verb	能格動詞	-
+eru ichidan inflection	上一段活用	-
+essential condition	本質条件	-
+essive	様格	noun
+established theory	定説	noun
+euphemism	婉曲表現	-
+evaluation criteria	評価項目	-
+evaluative disjunct	評価的離接詞	-
+even function	偶関数	-
+even number	偶数	noun
+event	出来事	noun
+event driven	事象駆動	-
+exaggerate	誇張	verb
+example-based translation	用例ベース翻訳	-
+exclamation	感嘆	noun
+exclamation mark	感嘆符	noun
+exclamation point	感嘆符	noun
+exclamatory mood	感嘆	noun
+exclamatory sentence	感嘆文	-
+exclude	除外する	verb
+exclusion	除外	noun
+exclusive	排除詞	-
+execute	実行する	verb
+execution	実行	noun
+existential	存在の	-
+existential clause	存在の節	-
+existential entailment	存在帰結	-
+existential quantifier	存在記号	-
+exophora	外部指示	-
+exophoric ellipsis	外界省略	-
+expand	拡張	verb
+expansion	拡張	noun
+expantion	展開	noun
+expect	予期	verb
+expectation	予期	noun
+expectation driven	予期駆動	-
+expectation-driven processing	予期駆動型の処理	-
+expected search length	平均探索長	-
+experiencer	経験者格	-
+experiment	実験	noun
+experimental epistemology	実験認識行為	-
+explanatory adequacy	説明的妥当性	noun
+expletive	虚辞	noun
+expletive noun	形式名詞	-
+expletive pronoun	非人称代名詞	-
+explicit	明言的	-
+explicit antecedent	明示的先行詞	-
+explicit performatives	明示的な遂行表現	-
+explicitness	明示性	-
+exponent	指数	noun
+exponential	累乗	noun
+exponential function	指数関数	noun
+exponentiate	冪乗する	verb
+express	表現	verb
+expression	表現	noun
+expression element	表現素	-
+expressive	態度表明型	-
+extend	拡張する	verb
+extended inference mode	拡張推論モード	-
+extension	拡張	noun
+extensional	外延的	-
+external negation	外部否定	-
+external sandhi	外連声	-
+external significance of language	言語の外的意義	-
+external theta-role	外的θ役割	-
+extra-linguistic information	言語外の情報	-
+extra-linguistic knowledge	言語外の知識	-
+extract	抽出	noun
+extraction	取り出し	-
+extralinguistic	言語外	-
+extrapose	外置	verb
+extraposed	後置	noun
+extraposition	外置	noun
+extraposition from NP	名詞句からの外置	-
+extreme argument	極論	noun
+extremum	極地	noun
+eyetracking experiment	眼球運動の追跡実験	-
+fact	事実	noun
+factive adverbials	叙実副詞	-
+factive predicate	叙実的述語	-
+factor	因数分解	verb
+factorial	階乗	noun
+factorisation	因数分解	noun
+factorisation into prime numbers	素因数分解	noun
+factual knowledge	事実知識	-
+fail	失敗	verb
+failure	失敗	noun
+faithfulness	忠実性	-
+fallacy	虚偽	adj
+false	偽	noun
+feature	素性	-
+feature binding	束縛素性	-
+feature structure	素性構造	noun
+feature structure description	素性構造記述	-
+felicity conditions	適切性条件	-
+feminine	女性	noun
+feminine noun	女性名詞	noun
+fifth base	仮定形	noun
+figurative expression	比喩の表現	-
+figurative language	比喩	noun
+figure of speech	比喩	noun
+filler	フィラー	-
+filler-gap construction	フィラー・空所構文	-
+filler-gap dependency	空所とその埋語の依存関係	-
+final state	最後状態	-
+find	発見	verb
+finding	発見	noun
+finishing point	終了点	-
+finite	有限な	adj
+finite verb	定動詞	noun
+finite-state automata	有限状態オートマトン	-
+finite-state grammar	有限状態文法	noun
+finite-state transition	有限状態遷移	-
+finitude	有限性	-
+fire	発火	noun
+first auxiliary	第一助動詞	-
+first base	未然形	noun
+first order predicate logic	第一階述語論理	-
+first person	自称	noun
+first person pronoun	一人称代名詞	noun
+first verb	前項動詞	-
+first-order predicate logic	一階述語論理	-
+fixed phrase constructions	イデオム構造	-
+flap	弾音	noun
+flat adverb	単純形副詞	-
+flattery	お世辞	noun
+flaws	欠陥	noun
+flooring	底上げ	-
+fluctuation of description	表記上の揺らぎ	-
+focus	焦点	noun
+focus of attention	注意の集中	-
+focused	焦点の当たった	-
+focusing adjunct	焦点化付接詞	-
+for all	凡ゆる	adj
+form	形式	noun
+form-in-function	形式機能	-
+formal adjective	形式形容詞	-
+formal expression	敬語	noun
+formal gender	形式的な性	noun
+formal language	形式言語	-
+formal noun	形式名詞	-
+formal reasoning	形式推論	-
+formal semantics	形式意味論	noun
+formal verb	形式用言	-
+formalisation	定式化	noun
+formalise	定式化する	verb
+formality	形式性	-
+formalize	形式化する	verb
+formation of negative	否定形の作り方	-
+formative	形式素	noun
+formula	公式	-
+forward chaining	前向き連鎖	-
+forward cohesion force	順方向結束力	-
+forward inferencing	前向きの推論	-
+forward pronominalization	進行代名詞化	-
+forward reasoning	前向き推論	-
+fourth base	連体形	noun
+fractional number	分数	noun
+fragment	断片	noun
+frame	フレーム	noun
+frame problem	フレーム問題	-
+framework	枠組み	noun
+free algebra	自由代数	-
+free anaphor	自由照応形	-
+free translation	意訳	noun
+free variable	自由変数	-
+free word order	自由語順の	-
+frequency	頻度	noun
+frequency adjunct	頻度付接詞	-
+frequency of appearance	出現頻度	-
+front	前置する	verb
+front end	フロント・エンド	-
+front position	前位	-
+full duplex transmission	全二重通信	noun
+full form	完全形	-
+full stop	句点	noun
+fully automatic high quality translation	完全自動翻訳	-
+fully bracketed corpus	完全括弧つきコーパス	-
+fully countable	絶対可算	-
+fully resolved model	完全決定的モデル	-
+function	機能	noun
+function chains	機能の連鎖	-
+function symbols	関数記号	-
+function word	機能語	noun
+functional	関数型	-
+functional application	関数適用	-
+functional composition	関数合成	-
+functional grammar	機能構文論	-
+functional programming language	関数型プログラム言語	-
+functional role	機能的役割	-
+functional structure	機能構造	-
+functional uncertainty	機能的不確定性	-
+functional unification grammar	機能単一化文法	noun
+functional word	機能語	noun
+functionally dependent value	関数的に依存する値	noun
+functor category	関数範疇	-
+future	未来	noun
+future perfect	未来完了	noun
+future perfect progressive	未来完了進行	-
+future progressive	未来進行	-
+future tense	未来形	noun
+future time	未来時	-
+gap	空所	noun
+gapping	空所化	-
+garden path	袋小路	-
+garden path sentence	迷路文	-
+garden-path sentence	袋小路文	noun
+gender	性	noun
+general	常識的知識	-
+general compound word	一般複合名詞	-
+general individuality	一般的個別性	-
+general intelligence	一般的な知能	-
+general knowledge	常識知識	-
+general principle of well-formedness	適格性の一般原理	-
+generalization	一般化	noun
+generalization and abstraction	汎化と抽象化	-
+generalize	一般化する	verb
+generalized conversational implicature	一般化された会話の含意	-
+generalized phrase structure grammar	一般化句構造文法	-
+generate	生成	verb
+generation	合成	noun
+generation rule	生成規則	-
+generative grammar	生成文法	noun
+generative lexicon	生成的辞書	-
+generic	総称	noun
+generic sentence	総称文	-
+generic word	汎語	-
+genitive	属格	-
+genitive case	属格	-
+geometric	等比数列	noun
+geometry	幾何学	noun
+gerund	動詞の分詞形	-
+gerund rule	動名詞規則	-
+give and take	授受	noun
+giving and receiving sentence	受益文	-
+global rule	大域的規則	-
+goal	目標	noun
+goal case	目標格	-
+goal driven	目的駆動	-
+goal frame	目的格	noun
+godan inflection	五段活用	-
+gold standard	正解データ	-
+govern	統御する	verb
+governance	統御	noun
+government theory	統率理論	noun
+governor	統率子	-
+grain size	きめの細かさ	-
+grammar	文法	noun
+grammar editor	文法エディタ	-
+grammar rule	文法規則	noun
+grammatical	適格	noun
+grammatical acceptability	容認性	-
+grammatical alteration of function	文法的機能変化	-
+grammatical category	文法範疇	-
+grammatical feature	文法的特徴	-
+grammatical function	文法機能	-
+grammatical relation	文法関係	noun
+grammatical rule	統語規則	-
+grammatical sentence	適格文	-
+grammaticality	文法性	noun
+grammaticalization	文法化	noun
+grammaticalize	文法化する	verb
+granularity	粒度	noun
+graph	グラフ	noun
+graph theory	グラフ理論	-
+grasp	把握	noun
+greatest common divisor	最大公約数	noun
+greatest lower bound	最大下限	-
+greed	貪欲	-
+group	群	noun
+group of users of the same language	言語集団	-
+guiding principle	指導原理	noun
+habitual	習慣的な	adj
+habitual present	習慣的現在	-
+half-duplex conversation	半2重会話	-
+half-duplex dialogue	半2重対話	-
+half-duplex transmission	半2重通信	-
+haptic representation	触覚表象	-
+hashing	ハッシング	-
+head	ヘッド	noun
+head constituent of a phrase	句の主要な構成素	-
+head daughter	主辞の子	-
+head feature	主辞素性	-
+head feature convention	主辞素性規約	noun
+head final	主要部後続	-
+head initial	主要部先行	-
+head noun	主辞名詞	-
+head predicate	受け述節	-
+head wrapping	主辞包接	-
+head-complement phrase	主辞・補語句	-
+head-complement-structure	主辞−補語構造	-
+head-driven	主辞駆動	-
+head-driven phrase structure grammar	主辞駆動句構造文法	noun
+head-filler construction	主辞・フィラー構文	-
+head-filler-structure	主辞−埋語構造	-
+head-final language	主辞後続言語	-
+head-governed	主辞による統率	-
+head-initial language	主辞先行言語	-
+head-nonhead conflict	主要部・非主要部衝突	-
+head-specifier phrase	主辞・指定部句	-
+headed phrase	主辞をもつ句	-
+headed rule	主辞規則	-
+headed structure	有主辞構造	-
+headedness	主辞性	-
+hearer	聞き手	noun
+helping verb	補助動詞	noun
+here-there-over_there-where	こ・そ・あ・ど	-
+hesitation	言いよどみ表現	-
+heuristic	ヒューリスティクス	-
+heuristics	ヒューリスティクス	-
+hierarchical	階層的な	-
+hierarchicality	階層性	-
+hierarchy	階層	noun
+hierarchy of expressions	表現階層	-
+hint	諷喩	verb
+hiragana	ひらがな	-
+historical explanation	歴史的な説明	-
+historical present	歴史的現在	noun
+hitches	障害	noun
+hold	成立する	-
+homogeneity	一様性	-
+homomorphic	純同型の	-
+homomorphism	準同形	-
+homonymy	多義性	noun
+homophone	同音意義	-
+homophonous	同音意義語	-
+honorific	敬称	noun
+honorific and humble expressions	敬譲語	-
+honorific expression	尊敬語	noun
+hope	希望	noun
+horizontal	横方向の	-
+hue	色相	-
+human noun	人間性名詞	-
+human problem solving	人間の問題解決	-
+humble expression	謙譲語	noun
+hyperbola	双曲線	noun
+hyperbole	誇張	noun
+hyperbolize	誇張する	verb
+hypernym	上位概念語	-
+hyponym	下位概念語	-
+hypothetical promise	仮定的な約束	-
+i-type adjective	形容詞	noun
+idea	考え方	noun
+ideational function	観念構成機能	-
+identity	同一性	-
+identity conditions	同一性の条件	-
+identity of reference	指示の同定	-
+ideological self disunion	観念的自己分裂	-
+idioglossary	慣用語句辞書	-
+idiom	熟語	noun
+idiom chunk	イディオムチャンク	-
+idiom dictionary	慣用語句辞書	-
+idiomatic affix dictionary	連語辞書	-
+idiomatic expression	イディオム表現	-
+idiomatic expression transfer dictionary	慣用表現辞書	-
+idiomatic phrase	慣用句	noun
+idiosyncrasy	特性	noun
+ignite	発火	verb
+illative	入格	noun
+illocutionary act	発語内行為	-
+illocutionary force	発話の力	-
+illocutionary force indicating device	発語内的な力の指標	-
+illusion	幻想	noun
+image	画像	noun
+image schema	イメージスキーマ	-
+imaginary number	虚数	noun
+imagine	想像	verb
+immediate constituent	直接構成素	-
+immediate dominance	直接支配	noun
+immediate dominance schema	直接支配規則	-
+immediate linguistic environment	言語的環境	-
+immediate supertype	直接上位タイプ	-
+immediately dominate	直接支配する	verb
+impede	障害	verb
+imperative	命令文	noun
+imperative base	命令形	noun
+imperative mood	命令	noun
+imperative sentence	命令文	noun
+imperfect	未完了	-
+impersonal passive	非人称受動	-
+implement	道具格	-
+implementation	実装	noun
+implicate	包含	verb
+implication	包含	noun
+implicature	含意	noun
+implicit	暗黙的	-
+implicit antecedent	潜在的先行詞	-
+imply	包含	verb
+in constructing sentence	文構成上	-
+inactive edge	不活性弧	-
+inanimate	無生物	noun
+inanimate subject	無生物主語	-
+inchoative verb	起動動詞	-
+include	包含	verb
+inclusive future	包括未来	-
+inclusive past	包括過去	-
+inclusive present	包括現在	-
+inclusive relation	包含関係	-
+incompatible	非両立	-
+inconformity	不整合	noun
+inconsistency	不整合	noun
+incountably infinite	連続体の無限	-
+increasing function	増加関数	-
+incremental processing	漸増的処理	-
+indeclinable compound word	体言性の複合語	-
+indeclinable parts of speech in Japanese grammar	体言	noun
+indefinite	不定	noun
+indefinite article	不定冠詞	noun
+indefinite imperatives	不定命令文	-
+indefinite integral	非定積分	-
+indefinite noun	形式名詞	-
+indefinite pronoun	不定代名詞	-
+indefinite referring	不定指示	-
+indefinite vocative	不定の呼びかけ表現	-
+independence	独立性	noun
+independent word	詞	-
+indeterminacy	不確実性	-
+index	指標	noun
+indexed object	指標付き対象	-
+indicative	直説法	noun
+indirect anaphora	間接的照応	-
+indirect discourse	間接的な談話	-
+indirect linking	間接結合	-
+indirect narration	間接話法	noun
+indirect object	間接目的語	noun
+indirect question	間接疑問	-
+indirect speech	間接話法	noun
+indirect translation )	間接翻訳	-
+indirectR suggestion	諷喩	noun
+individual	個体	noun
+individuality	個別性	-
+individuate	個別化	noun
+individuated	個別的	-
+individuation	個別化	noun
+induce	帰納	verb
+induction	帰納	noun
+inequality	不等式	noun
+inessive	内格	noun
+inexact reasoning	蓋然推論	-
+infelicitous	不適切な	adj
+infelicity	不適切性	-
+infer	推論	verb
+inference	推論	noun
+inferencer	推論機構	-
+inferential knowledge	推論知識	-
+infinite	無限な	adj
+infinitival complement	不定詞補語	-
+infinitive	不定形	-
+infinitive construction	不定詞構文	-
+infinity	無限大	noun
+infix	挿入	noun
+inflect	屈折	verb
+inflection	活用	noun
+inflection rule	屈折規則	-
+inflectional form	活用形	noun
+inflectional language	屈折言語	-
+inflections	活用形	noun
+inflexion	活用語尾	-
+information	情報	noun
+information extraction	情報抽出	-
+information need	情報要求	-
+information retrieval	情報検索	noun
+information-based	情報に基礎をおいた	-
+information-bearing object	情報を担う媒体	-
+informative	報知的	-
+inherent presupposition	内在的前提	-
+inherent reflexive	内在的な再帰	-
+inherit	継承	verb
+inheritance	継承	noun
+inheritance hierarchy	継承階層	-
+initial state	初期状態	-
+initial symbol	開始記号	-
+initial tree	初期の木構造	-
+innateness	生得性	-
+insert	挿入する	verb
+insertion	挿入	noun
+insertion transformation	挿入変形	-
+insincere	不誠実な	adj
+insincerity	不誠実	noun
+insinuation	諷喩	noun
+instance	例	noun
+instance node	事例節点	-
+institutional states of affairs	制度化された状況	-
+instruct	教示	verb
+instruction	教示	noun
+instrument	道具	noun
+instrument adjunct	道具付接詞	-
+instrumental case	具格	-
+integer	整数	noun
+integrate	積分する	verb
+integrated circuit	集積回路	-
+integration	積分	noun
+intend	意図	verb
+intensifier	強意詞	-
+intension	内包	-
+intensional	内包的	-
+intensional verb	内包性動詞	-
+intensionality	内包性	-
+intensity	強意	noun
+intention	意図	noun
+inter-keyboard dialogue	端末間対話	-
+inter-sentence dependency	文間依存	-
+interaction theory	相互作用理論	-
+intercept	切片	noun
+interface	インターフェイス	-
+interjection	感嘆詞	noun
+interjective expression	間投表現	-
+interjective marker	間投助詞	-
+interleave	挟み込む	verb
+interleaved	絡み合っている	-
+interlingua	中間言語	-
+interlingua method	中間言語方式	-
+interlingual representations	インターフェース表現	-
+intermediate language	中立言語	-
+internal expression	内部表現	-
+internal gap	内的空所	-
+interpersonal function	対人的機能	-
+interpret	解釈	verb
+interpretation	解釈	noun
+interpreting telephone	通訳電話	-
+interpreting telephone system	通訳電話	-
+interpretive capacity	解釈的機能	-
+interpretive semantics	解釈意味論	-
+interrogative	疑問文	noun
+interrogative adjectives	疑問形容詞	-
+interrogative adverb	疑問副詞	-
+interrogative clause	疑問文	noun
+interrogative element	疑問を表わす要素	-
+interrogative mood	疑問	noun
+interrogative noun	疑問名詞	-
+interrogative pronoun	疑問代名詞	noun
+interrogative sentence	疑問文	noun
+interrogative-negative	否定疑問	-
+interrupted collocation	離散型共起表現	-
+intersection	共通部分	-
+intimidate	威嚇	verb
+intonation	イントネーション	noun
+intonation contour	音調曲線	-
+intransitive	自動詞	noun
+intransitive verb	自動詞	noun
+introduction	初めに	-
+introductory	予備の	-
+intuition of native speaker	母語話者の直観	-
+invalidate	無効化	noun
+invariant	不変式	-
+inverse function	逆関数	noun
+inverse mapping	逆写像	noun
+inversion	倒置	noun
+invert	倒置	verb
+inverted clause	倒置節	-
+inverted sentence	倒置文	-
+invitate	勧誘する	verb
+invitation	勧誘	noun
+invitational form	勧誘形	-
+invite	誘惑	verb
+invited inference	誘引的推論	-
+ironic	皮肉な	adj
+irony	皮肉	noun
+irrational number	無理数	noun
+irregular conjugation	変格	noun
+irregular conjugation  of verbs ending in "nu"	ナ行変格活用	noun
+irregularity	変格	noun
+irregularly	不規則的に	-
+iru ichidan inflection	下一段活用	-
+island	島	-
+island driving	島駆動	-
+isolated-word recognition system	孤立単語認識システム	-
+isolating language	孤立言語	-
+isomorphism	同型	noun
+it extraposition	it外置	-
+it-cleft	it分裂構文	-
+iterability	繰り返しの可能性	-
+iterate	繰り返す	verb
+iterative	繰り返し相	-
+jargon	専門用語	noun
+joshi	助詞	noun
+juncture rule	連接規則	-
+k-column irregular verb	カ変	-
+kanji	漢字	noun
+kanji compound word	熟語	noun
+katakana	カタカナ	-
+kernel sentence	核文	-
+kernel structure	核構造	-
+knowledge	知識	noun
+knowledge acquisition	知識獲得	-
+knowledge base	知識ベース	-
+knowledge compiler	知識コンパイラ	-
+knowledge engineering	知識工学	noun
+knowledge representation	知識表現	noun
+knowledge retrieval	知識検索	-
+knowledge-based system	知識に基づくシステム	-
+knowledge-based translation	知識ベース型の翻訳	-
+knowledgeable	知識的な	-
+kuru verb	カ変	-
+label	標示	noun
+labeled bracket	標示付き括弧	-
+labeled corpus	構造つきコーパス	-
+lambda abstract	ラムダ抽象化する	verb
+lambda abstraction	ラムダ抽象化	noun
+lambda operator	λ演算子	-
+lament	悲嘆	noun
+lamenting	悲嘆	noun
+language	言語	noun
+language acquisition	言語獲得	-
+language agent	言語主体	-
+language barrier	言語の障壁	-
+language family	言語族	-
+language generating competence	言語生成能力	-
+language processing	言語処理	noun
+language specific part	言語依存部分	-
+language-specific principles	言語固有の原理	-
+lattice	束	-
+law of causality	因果律	noun
+leaf node	葉節点	-
+learn	学習	verb
+learnability	習得可能性	-
+learning	学習	noun
+learning machine	学習機械	-
+least common multiple	最小公倍数	-
+left recursive rules	左再帰規則	-
+left-hand side	左辺	noun
+lemma	補題	noun
+level	階層	noun
+lexeme	語彙素	-
+lexical	語義的	-
+lexical category	語彙的範疇	-
+lexical chain	語彙的連鎖	-
+lexical cohesion	語彙的結束性	-
+lexical decomposition	語彙の分析	-
+lexical description	辞書記述	-
+lexical entry	語彙見出し	-
+lexical form	語彙形式	-
+lexical head	語彙的主辞	-
+lexical information	語彙情報	-
+lexical item	語彙項目	-
+lexical mapping theory	語彙写像理論	-
+lexical preference	語彙選好	-
+lexical redundancy	語彙的冗長性	-
+lexical rule	語彙規則	noun
+lexical satisfaction	語彙充足	-
+lexical sign	語彙的記号	-
+lexical theory	語彙的理論	-
+lexical transfer	語彙の変換	-
+lexical type	語彙タイプ	-
+lexical type hierarchy	語彙タイプ階層	-
+lexical-functional grammar	LFG	-
+lexicalism	語彙主義	-
+lexically governed	語彙的に統率されて	-
+lexically-based analysis	辞書情報に基づく分析	-
+lexico-semantic dictionary	意味辞書	-
+lexicography	語彙学	-
+lexicon	辞書	noun
+licensed	認可される	-
+licensing requirement	認可要求	-
+likelihood	見込み	noun
+limit	極限	noun
+limiter	制限詞	-
+linear equation	1次方程式	-
+linear function	一次関数	noun
+linear order	線形順序	noun
+linear precedence	線形順序規則	-
+linear precedence rule	線形順序制約	-
+linearity	線状性	-
+lingua franca	共通言語	noun
+linguist	言語学者	noun
+linguistic	言語的	-
+linguistic communication	言語伝達	-
+linguistic competence	言語能力	noun
+linguistic conceptualism	言語学的観念論	noun
+linguistic context	言語的文脈	-
+linguistic idiosyncrasy	言語的特異性	-
+linguistic knowledge	言語知識	noun
+linguistic objects	言語的対象物	-
+linguistic performance	言語運用	noun
+linguistic realism	言語学的実在論	noun
+linguistics	言語学	noun
+link	枝	noun
+linked form	係り結び	noun
+linking	リンク化	-
+liquid sound	流音	noun
+list	リスト	noun
+listener's circle	共感の輪	-
+literal	リテラル	noun
+literal meaning	文字通りの意味	-
+literal meaning hypothesis	表層発語内行為仮説	-
+literal statement of desire	文字通りの要求の陳述	-
+loan word	外来語	noun
+local	局所的	-
+local rule	局所的規則	-
+local subtree	局所的部分木	-
+locality	局所性	-
+locality restriction	局所性の制限	-
+localization	局地化	-
+location	位置	noun
+locative case	場所格	-
+locative inversion	位置格の倒置	-
+locative pronoun	位置格代名詞	-
+locutionary act	発語行為	-
+logarithm	対数	noun
+logic	論理	noun
+logic of circumstances	事態の論理	-
+logic operators	論理定数	-
+logic programming	論理プログラミング	-
+logical combinators	論理的結合子	-
+logical conjunction	論理積	noun
+logical consequence	論理的帰結	-
+logical form	論理形式	noun
+logical operator	論理演算子	-
+long or prolonged sound	調音	noun
+long unit	長単位	-
+long-distance dependency	長距離依存	noun
+long-term memory	長期記憶	-
+longest-first method	最長一致	-
+lookahead	先読み	-
+loop	ループ	noun
+loosely	ゆるく	-
+loss	暗転	verb
+lumping	ランプ化	noun
+m-command	m統御	noun
+m-th power	M乗	noun
+machine learning	機械学習	-
+machine translation	機械翻訳	noun
+macro schema	マクロスキーマ	-
+macro stream	マクロストリーム	-
+main assertion	主断定	-
+main clause	主節	noun
+main clause phenomena	主節現象	-
+main concept	主概念	-
+main proposition	主命題	-
+main sentence	主文	noun
+main stress	主要強勢	-
+main verb	本動詞	-
+major	主要な	-
+major category	主要な品詞	-
+major feature	主要な素性	-
+manner	様態化	-
+manner adjunct	様態付接詞	-
+manner noun	様態名詞	-
+manner-of-speaking verbs	伝達の様態動詞	-
+map	写像	verb
+mapping	写像	noun
+marked	有標	-
+markedness	有標度	-
+marker	マーカー	noun
+masculine	男性	noun
+match	照合	noun
+match patterns	パターン照合する	verb
+material noun	物質名詞	noun
+mathematical induction	数学帰納法	-
+mathematical logic	数理論理学	-
+mathematical reasoning	数学的推論	-
+matrix	行列	noun
+maxim of Agreement	同意の公理	-
+maxim of Approbation	是認の公理	-
+maxim of Generosity	寛容の公理	-
+maxim of Manner	様態の公理	-
+maxim of Modesty	謙譲の公理	-
+maxim of Quality	質の公理	-
+maxim of Quantity	量の公理	-
+maxim of Relevance	関係の公理	-
+maxim of Sympathy	同情の公理	-
+maxim of Tact	駆け引きの公理	-
+maximal value	最大値	noun
+maximally specific	最大限に指定された	-
+maximizer	極大詞	-
+maximum	最大	noun
+maximum likelihood estimation	最尤推定	-
+mean	意味する	verb
+meaning	意味	noun
+meaning analysis	意味解析	noun
+meaning and context	意味と文脈	-
+meaning of a word	語義	noun
+meaning of adversity	迷惑の意味	-
+meaning understanding	意味理解	-
+means adjunct	手段付接詞	-
+means-ends analysis	手段目標解析	-
+mechanism	機構	noun
+mediate-term memory	中期記憶	-
+memory	メモリ	noun
+mental organ	心的器官	-
+mental representation	心的表象	-
+mentalism	唯心論	noun
+meta-knowledge	メタ知識	-
+meta-level reasoning	メタレベル推論	-
+meta-system	メタシステム	-
+metacognition	メタ認知	noun
+metaphor	比喩	noun
+metaphorical	隠喩的な	-
+metarule	メタ規則	-
+metonymy	換喩	noun
+mid position	中位	noun
+middle-out strategy	ミドルアウト法	-
+mimesis	擬態語	noun
+mimetic word	擬態語	noun
+mini-max principle	ミニマックス原理	-
+minimal contrast	最小の対比	-
+minimal pair	最小対	-
+minimal pairs	比較最小対	-
+minimizer	極小詞	-
+minimum value	最小値	noun
+minor	非主要な	-
+misapplication	誤適用	noun
+misapply	誤適用する	verb
+misexecute	誤執行する	verb
+misexecution	誤執行	noun
+misfire	不発	noun
+misinvocation	誤発動	noun
+missing antecedent	不在先行詞	-
+missing complement	消失している補語	-
+mitigate	緩和	verb
+mitigation	緩和	noun
+mixed kana-kanji	混ぜ書き表記	-
+modal	助動詞	noun
+modal auxiliary	法助動詞	-
+modal disjunct	法的離接詞	-
+modal equivalent	助動詞相当連語	-
+modal information	モーダル情報	-
+modal operator	様相演算子	-
+modal structure	法構造	-
+modal verb	法動詞	-
+modality	法	noun
+model	モデル	noun
+modifiability	修正可能性	-
+modification	係り	noun
+modified	被修飾語	noun
+modified noun	被修飾名詞	noun
+modifier	修飾語	noun
+modify	修飾する	verb
+modular	モジュール型	-
+modularity	モジュール性	-
+modularization	モジュール化	noun
+modularize	モジュール化する	verb
+module	モジュール	-
+modus	モドゥス	-
+modus ponens	三段論法	noun
+molecule	微分子	-
+monadic	単項	adj
+monotone increasing function	単調増加関数	-
+monotonic	単調な	adj
+monotonicity	単調性	-
+mood	法	noun
+mood and tense	法と時	noun
+mood system	法体系	-
+mora phoneme	促音	noun
+more informative	情報量が多い	noun
+morph	形態	noun
+morpheme	形態素	noun
+morpho-syntactic dictionary	解析用辞書	-
+morphological analysis	形態素解析	noun
+morphological differences	形態的相違点	-
+morphology	形態論	noun
+morphophonemic rule	形態素音素規則	-
+mother	母	-
+mother  - PSG structure tree	親範疇	-
+move	移動	verb
+movement	移動	noun
+moving average	移動平均	-
+mshift	移動する	verb
+multi-word expression	連語	noun
+multiple	倍数	noun
+multiple gaps	複数の空所	-
+multiple inheritance	多重継承	-
+multiple inheritance hierarchy	多重継承階層	-
+multiplication	掛け算	noun
+multiply	掛け算する	verb
+mutual intelligibility	相互了解可能性	-
+na-adjective	形容動詞	noun
+name of a organization	組織名	noun
+name of a place	地名	noun
+named plan	名前付きプラン	-
+narration	話法	noun
+nasal	鼻音	noun
+nasal consonant	鼻濁音	noun
+nasal sound change	撥音便	noun
+nasal vowel	鼻母音	noun
+native Japanese reading	訓読み	noun
+natural class	自然な種類	-
+natural deduction	自然演繹	-
+natural gender	自然な性	noun
+natural language	自然言語	noun
+natural language interface	自然言語インタフェース	-
+natural language processing	自然言語処理	-
+natural language understanding	自然言語理解	-
+natural number	自然数	noun
+natural scope	自然のスコープ	-
+natural state	常体	noun
+necessary	必要な	adj
+necessary and sufficient condition	必要十分条件	noun
+necessity	必要	noun
+negate	否定	verb
+negation	否定	noun
+negative	打ち消し;打消し;打消	noun
+negative adverb preposing	否定副詞前置	-
+negative base	未然形	noun
+negative expression	否定の表現	-
+negative form	否定形	-
+negative polarity expression	否定対極表現	-
+negative politeness	消極的な丁寧さ	-
+negative predicates	否定述語	-
+negative question	否定疑問	-
+negative raising	否定辞繰り上げ	-
+negative sentence	否定文	noun
+neologism	造語	noun
+nest	入れ子	noun
+network fragment	部分ネット	-
+network partitioning	ネットワーク分割	-
+neural network	神経回路網	noun
+neuter	中性	noun
+neutral expression	中立語	-
+new coinage	新造語	-
+new information	新情報	-
+new word	造語	noun
+node	ノード	noun
+nominal adjectival	形容動詞	noun
+nominal adjective	形動	noun
+nominal anaphora	名詞類照応	-
+nominal element	名詞的要素	-
+nominal sentence	名詞文	-
+nominal verb	サ変動詞	-
+nominalization	名詞化	noun
+nominalize	名詞化する	verb
+nominative case	主格	noun
+nominative constituent	主格成分	-
+nominative noun phrase	主格名詞句	-
+non terminal symbol	非終端記号	-
+non-assertive predicate	非断定的述語	-
+non-conclusive verb	非完結動詞	-
+non-coreference Rule	非同一指示規則	-
+non-detachability	分離不可能性	-
+non-detachable	分離不可能	-
+non-factive	非叙実	-
+non-factive predicate	非叙実的述語	-
+non-finite verb	非定形動詞	-
+non-gradable	程度表示不可能な	-
+non-monotonic logic	非単調論理	-
+non-polite style	非丁寧体	-
+non-progressive	非進行	-
+non-restrictive relative clause	非制限関係節	-
+non-terminal [node]	非終端記号	-
+non-third-singular rule	非三人称単数規則	-
+noncircularity	非巡環性	-
+nondeterministic	非決定的	-
+nonfinite verb phrase	不定動詞句	-
+nonhead daughter	主辞でない子	-
+nonheaded phrase	主辞をもたない句	-
+nonlinguistic information	非言語的情報	-
+nonlinguistic knowledge	非言語的知識	-
+nonlocal	非局所的な	-
+nonmonotonicity	非単調性	-
+nonreferential NP	非指示的NP	-
+nonreferentiality	非指示性	-
+normal state	普通体	-
+normal style	普通体	-
+notation	記法	noun
+noun	名詞	noun
+noun clause	名詞節	noun
+noun pattern	名詞型	-
+noun phrase	名詞句	noun
+novelty	新奇性	-
+nth derivative	第n次導関数	-
+nuclear tone	中核的音調	-
+nucleus	核	-
+null anaphora	空の照応詞	-
+null operator	空の演算子	-
+null-headed	主辞なしの	-
+number	数	noun
+number agreement	数の一致	-
+numeral	数字	noun
+numeral classifier	助数詞	noun
+numeration	数え上げ	-
+numerative	助数詞	noun
+numerator	分子	noun
+o-command	o制御	-
+object	対象	noun
+object complement	目的補語	-
+object control	目的語コントロール	-
+object deletion	目的語削除	-
+object equi verb	目的語equi動詞	-
+object raising	目的語繰り上げ	-
+object-based	オブジェクト指向	adj
+object-control verb	目的語コントロール動詞	-
+objectification	客体化	noun
+objectify	擬物化する	verb
+objective concept	対象概念	-
+objective expression	客体的表現	-
+objective recognition	客体的認識	-
+objective world	対象世界	-
+objectivity	客観性	noun
+obligation	義務	noun
+obligatory	強制的な	adj
+obligatory case	必須格	noun
+obligatory complement	必須の補語	-
+obligatory transformation	必須変形	-
+oblique agent function	斜格動作主機能	-
+oblique case	斜格	-
+oblique function	斜格機能	-
+oblique object	斜格目的語	-
+obliqueness	斜格性	-
+obliqueness command	斜格性統御	-
+obliqueness hierarchy	斜格性の階層	-
+obliqueness of grammatical relation	文法関係の斜格性	-
+observation	観察	noun
+observational adequacy	観察的妥当性	-
+observe	観察	verb
+obstacle	障害	noun
+occur in succession	継起する	verb
+occurring in succession	継起	noun
+odd function	奇関数	-
+odd number	奇数	noun
+offer	提供	noun
+old information	旧情報	-
+olfactory information	嗅覚情報	-
+one clause - one case principle	一分一格の原理	-
+one-to-one	1対1	-
+onomatopoeic word	擬音語	noun
+onto-mapping	上への写像	-
+ontologically necessary	存在論的に必要な	-
+ontology	オントロジー	-
+open condition	開放条件	-
+open syllable	開音節	noun
+open-ended symbol system	記号体系	-
+operational	操作的	-
+operator	演算子	noun
+optional transformation	随意変形	-
+optionality	選択性	-
+optionality scale	随意性のスケール	-
+order	オーダ	noun
+order independence of linguistic constraints	言語制約の順序非依存性	-
+order sorted	順序で分類された	-
+order-dependence of content	意味内容の語順依存性	-
+ordinal number	序数	noun
+organization of the lexicon	辞書の構成	-
+original form	原形	noun
+out-of-vocabulary rate	未知語率	noun
+override	覆す	verb
+overriding of constraint	制約の無効化	-
+overt anaphor	照応表現	-
+ownership link	所有関係の枝	-
+pack	圧縮する	verb
+packed shared forest	圧縮共有森	-
+packed shared parse forest	圧縮共有構文森	-
+packing	圧縮	noun
+palindrome	回文	noun
+parabola	放物線	noun
+paradigm	パラダイム	noun
+paragraph	落段	-
+parallel	並列	noun
+parallel corpus	パラレルコーパス	-
+parallel marker	並立助詞	-
+parallel noun phrase	並列名詞句	-
+parallel processing	並列処理	noun
+parallel relation	並立関係	-
+parallel sentence	並立文	-
+parallelism	並列性	-
+parameter	パラメータ	noun
+parametric	パラメータの	-
+parametrized state of affairs	パラメータ化された事態	-
+paraphrase	言い換え	noun
+paraphrasing	言い換え	noun
+paraplate	パラプレート	-
+parasitic gap	寄生的な空所	-
+parent	親	noun
+parenthetic sentence	挿入文	noun
+parenthetical adverbs	挿入的副詞	-
+parenthetical expression	挿入句	noun
+parenthetical verbs	挿入動詞	-
+parse	解析	verb
+parse net	パースネット	-
+parse tree	統語解析木	-
+parser	パーサ	noun
+parsimony	倹約	-
+parsing	解析	noun
+parsing dictionary	解析用辞書	-
+parsing technique	解析技術	-
+part of speech	品詞	noun
+part of speech class	品詞分類	noun
+part of speech system	品詞体系	-
+part of speech types	品詞タイプ	-
+partial	部分	noun
+partial function	部分関数	-
+partial information structure	部分情報構造	noun
+partial linguistic analysis	部分的な言語分析	-
+partial order	半順序	-
+partial ordering	半順序	-
+partial sum	部分和	-
+partially bracketed corpus	部分括弧つきコーパス	-
+participial adjective	分詞形容詞	-
+participial construction	分詞構文	-
+participle	分詞	noun
+particle	助詞	noun
+particle movement	不変化詞移動	-
+particularized conversational implicature	特殊化された会話の含意	-
+particularizer	特殊化詞	-
+partition	分割する	verb
+partitive	分格	noun
+passive	受動	noun
+passive form	受身形	noun
+passive rule	受動化規則	-
+passive voice	受け身	noun
+passivizability	受動化の可能性	-
+passivization	受動変形	-
+past form	過去形	noun
+past participle	過去分詞	noun
+past perfect progressive	過去完了進行	-
+past perfect tense	過去完了	noun
+past progressive	過去進行	-
+past tense	過去形	noun
+past time	過去時	-
+past-participle rule	過去分詞規則	-
+past-tense semantics	過去時制の意味	-
+path	素性経路	-
+path adjunct	経路付接詞	-
+path of attribute	属性の経路	-
+patiency	受け手性	-
+pattern matching	パターン照合	noun
+pattern recognition	パターン認識	noun
+pattern transfer dictionary	パターン対辞書	-
+pattern translation	パターン翻訳	-
+pause	休止	noun
+perceptual primitive	知覚要素	-
+perfect	完了相	-
+perfect tense	完了形	-
+perfective	完了	noun
+performance	行為	noun
+performative analysis	遂行文	-
+performative utterance	遂行的発話	-
+performative verb	遂行動詞	-
+period	句点	noun
+period adjunct	期間付接詞	-
+periphrasis	迂言	noun
+periphrastic expression	迂言的表現	-
+periphrastic performatives	迂言的遂行表現	-
+perlocutionary act	発語媒介行為	-
+perlocutionary force	発語媒介的な力	-
+permission	許可	noun
+permit	許可	verb
+person	人称	noun
+person's name	人名	noun
+personal communication	私信	noun
+personal phrase	人称詞	-
+personal pronoun	人称代名詞	noun
+personification	擬人化	noun
+personify	擬人化する	verb
+perspective	パースペクティヴ	-
+phatic act	用語行為	-
+phenomenon	事象	noun
+philology	言語学	noun
+phone	音	noun
+phoneme	音素	noun
+phonemics	音韻学	noun
+phonetic act	音声行為	-
+phonetic form	音韻	-
+phonetically null	音声学的に空の	-
+phonetics	音声学	noun
+phonological	音韻的な	-
+phonological component	音韻部門	noun
+phonological form	音韻形式	-
+phonological representation	音韻表示	-
+phonology	音韻論	noun
+phrasal	句レベルの	-
+phrasal construction	句の構成	-
+phrasal satisfaction	句充足	-
+phrasal sign	句記号	-
+phrasal verb	句動詞	-
+phrase	句	noun
+phrase dictionary	フレーズ辞書	-
+phrase initial	句の先頭に来る	-
+phrase structure	句構造	-
+phrase structure grammar	句構造文法	noun
+phrase structure rule	句構造規則	noun
+phrase template	文型パターン	-
+phrase-marker	句構造標識	-
+picture noun	絵画名詞	-
+pitch	高低	noun
+pitch accent	ピッチ・アクセント	-
+pivot	中間言語	-
+place adjunct	場所付接詞	-
+place name	地名	noun
+placeholder	代替物	noun
+plain style	だ体	-
+plan	計画	noun
+plan box	プラン・ボックス	-
+planning	計画立案	-
+plausible reasoning	妥当な推論	-
+plead	嘆願	verb
+pleading	嘆願	noun
+pledge	誓い	noun
+plosive sound	破裂音	noun
+plural	複数	adj
+pluralia tantum	絶対複数	-
+plus	プラス	noun
+poetic inversion	詩的語順倒置	-
+point of inflexion	変曲点	noun
+polar interrogative	極性疑問文	-
+polarity	極性	noun
+polite expression	敬語	noun
+polite style	丁寧体	-
+politeness	丁寧さ	-
+polynomial	多項式	noun
+polynomial of degree n	n次式	-
+polyseme	多義語	-
+polysemous word	多義語	-
+polysemy	多義性	noun
+polyvalency	多価性	-
+positive	肯定的な	adj
+positive number	正の数	noun
+positive politeness	積極的な丁寧さ	-
+positive question	肯定疑問	-
+possess	所有	verb
+possession	所有	noun
+possessive adjective	所有形容詞	-
+possessive case	所有格	noun
+possessive pronoun	所有代名詞	-
+possibility	可能性	noun
+possible world	可能世界	-
+possible world semantics	可能世界意味論	-
+possible-world model	可能世界モデル	noun
+post central adjective	後形容詞	-
+post-correction	後修正	-
+post-editing	後編集	-
+post-editor	ポストエディタ	-
+post-positional particle	助詞	noun
+postdeterminer	後決定詞	-
+postposition	後置詞	noun
+potential clause	可能文	-
+potential facts	可能性のある事実	-
+potential verb	可能動詞	noun
+pragmatic	語用論的	-
+pragmatic context	非言語的文脈	-
+pragmatic entailment	含意	noun
+pragmatic scale	語用論上のスケール	-
+pragmatics	言語運用論	-
+pre-central adjective	前形容詞	-
+pre-editing	前修正	-
+pre-editing of source text	原文前編集	-
+pre-editor	プリエディタ	-
+pre-processing	前処理	-
+precision	適合率	-
+precision factor	適合率	-
+precompiled	あらかじめ編集	-
+predeterminer	前決定詞	-
+predicate	述語	noun
+predicate anaphora	述部類照応	-
+predicate calculus	述語論理	noun
+predicate clause	述語句	-
+predicate logic	述語論理	noun
+predicate of continuous clause	連用節述語	-
+predicate-argument structure	述語・項構造	-
+predication	叙述	noun
+predicative	叙述	adj
+predicative adjective	叙述形容詞	-
+predicative adjunct clause	叙述付加節	-
+predicative position	叙述の位置	-
+predicative use	叙述用法	-
+predict	予測	verb
+prediction	予測	noun
+predictive words	陳述辞	-
+prefer	選択	verb
+preference	選択	noun
+preference rule	選好ルール	-
+preference semantics	優先意味論	-
+prefix	接頭語	noun
+prehead adjective	主前形容詞	-
+preparatory	予備の	-
+preposition	前置詞	noun
+prepositional form	前置詞形	-
+prepositional phrase	前置詞句	-
+prescriptive grammar	規範文法	-
+present	現在時制	-
+present continuous tense	現在進行形	noun
+present form	現在形	-
+present participle	現在分詞	-
+present perfect progressive	現在完了進行	-
+present perfect tense	現在完了	noun
+present progressive	現在進行	-
+present progressive form	現在進行形	noun
+present tense	現在形	-
+present-participle rule	現在分詞規則	-
+preservation	保護	noun
+preserve	保護	verb
+presupposition	前提	noun
+presuppositional phrase	前提句	-
+preterminal	前終端記号	-
+prevail	優先する	verb
+primary performatives	原初的遂行表現	-
+primitive	素	noun
+primitive act	基本動作	-
+primitive attribute	要素属性	-
+primitive performatives	原発的発話	-
+primitive plot unit	基本単位	noun
+primitive state	基本状態	-
+primitiveness	原始性	-
+principal clause	主節	noun
+principle	原理	noun
+principle of lexical control	語彙的コントロールの原理	noun
+principle of substance base	実体中心主義	-
+principle parts	主要な部分	-
+priority	優先	noun
+pro-verb	代動詞	-
+probability	確率	noun
+problem domain dependant	問題領域に依存した	-
+problem reduction	問題分割	-
+problem space	問題空間	-
+procedural	手続き型	-
+procedural attachment	付加	noun
+procedural knowledge representation	手続き型の知識表現	-
+procedural reasoning	手続き的推論	-
+procedural representation	手続き的表現	-
+procedural representation of knowledge	知識の手続き的表現	-
+procedural semantics	手続き的意味	-
+procedure	手続き	noun
+process	処理する	verb
+process adjunct	過程付接詞	-
+process independence	処理からの独立性	-
+process structure	過程的構造	-
+process-neutral architecture	処理から独立したアーキテクチャ	-
+processing	処理	noun
+procrastinate	先延ばし	-
+produce	産出	verb
+product	積	noun
+production	プロダクション	noun
+production rule	書換え規則	-
+production system	プロダクション・システム	-
+productive	生産的	-
+programing language	プログラム言語	noun
+programming language	プログラム言語	noun
+progression	級数	noun
+progressive	進行相	noun
+progressive aspect	進行相	noun
+progressive tense	進行形	noun
+progressive voice	進行態	-
+prohibit	禁止	verb
+prohibition	禁止	noun
+project	投射	verb
+projection	投射	noun
+projection path	投射経路	-
+projection principle	投射原理	noun
+promise	約束	noun
+promote	昇格する	verb
+promotion	昇格	noun
+pronomials	代名詞類	-
+pronominal	代名詞	noun
+pronoun	代名詞	noun
+proof by refutation	背理法	-
+propagate	伝達する	verb
+propagated	伝播されて	-
+propagation	伝達	noun
+propagation effect	波及効果	noun
+proper noun	固有名詞	noun
+properly governed	真に統率される*	-
+property	性質	noun
+property inheritance	特性の継承	-
+property inheritance hierarchy	特性継承階層	-
+property inheritance link	特性継承枝	-
+proportion	比例	noun
+proportional	比例する	-
+proposition	命題	noun
+propositional act	命題行為	-
+propositional calculus	命題論理	-
+propositional content	命題内容	-
+propositional content condition	命題内容条件	-
+propositional island condition	命題文条件	-
+propositional logic	命題論理	-
+proprioception	固有受容	-
+prose	散文	noun
+prosodic	韻律	noun
+prosody	韻律	noun
+prototype	ひな型	-
+prototypical	典型的な	adj
+proximity	近接性	-
+pruning	枝刈り	-
+pruning heuristic	枝刈りヒューリスティック	-
+pseudo passivization	疑似受動化	-
+pseudo source language	疑似的原言語	-
+pseudo-direct object	疑似直接目的語	noun
+pseudo-gapping	疑似空所化	-
+pseudo-language	擬似言語	-
+pseudo-particle	格助詞相当語	-
+pseudocleft	疑似分裂構文	-
+pseudopassive	擬似受動文	-
+psoa	パラメータ化された事態	-
+psycholinguistics	心理言語学	-
+psychological complexity	心理的な複雑さ	-
+psychological predicate	心理的述語	-
+psychological reality	心理的実在性	-
+psychologism	心理主義	noun
+psychology	心理学	-
+psychomimes	擬態語	noun
+punctual	点的	-
+punctuation mark	句読点	noun
+purefactive predicates	純叙実の述語	-
+purpose	目的	noun
+quadrant	象限	noun
+quadratic equation	二次方程式	noun
+qualifier	限定詞	noun
+qualifying	限定的な	adj
+qualities	資質	noun
+quality evaluation	品質評価	-
+quantification	量化	noun
+quantificational circumstances	量化事態	-
+quantified	量化を受けている	-
+quantified circumstance	量化事態	-
+quantifier	冠詞	noun
+quantifier float	数量詞の遊離	-
+quantifier scope	量化詞のスコープ	-
+quantify	量化	noun
+quasi-present	疑似現在	-
+query language	質問言語	-
+question	質問	noun
+question mark	疑問符	noun
+question-answering	質問応答	-
+quirky case	奇妙な格	-
+quotation	引用	noun
+quotation equivalent	引用相当述節	-
+quotation mark	引用記号	-
+quotational clause	引用節	-
+quotational phrase	引用句	noun
+quotational postposition	引用の助詞	-
+quote	引用	verb
+quoted sentence	引用文	noun
+quotient	商	noun
+r-expression	r表現	-
+raise to the m-th power	M乗	verb
+raising	繰り上げ	noun
+raising construction	繰り上げ構文	-
+random text generation	ランダム文章生成	-
+range	値域	-
+rare word	珍しい単語	-
+ratio	比	noun
+rational number	有理数	noun
+reachability	到達可能性	-
+read in Sino-Japanese	音読みする	noun
+reading time	黙読時間	-
+real number	実数	noun
+real world	現実世界	-
+realis form	已然形	noun
+realistic grammar	現実的文法	-
+realistic proposition	実在論的命題	-
+reason	理由	noun
+reasoning	推論	noun
+reasoning by analogy	類推による推論	-
+recalculation	再計算	-
+recall	再現率	-
+recall factor	再現率	-
+recall rate	再現率	-
+reception	待遇	noun
+receptive perception verb	受容感覚動詞	-
+receptive verb	受容動詞	-
+recipient-donor	受益者−寄与者	-
+reciprocal pronoun	相互代名詞	-
+recognition structure	認識構造	-
+recognize	認識	verb
+recommend	勧告	verb
+recommendation	勧告	noun
+recordability	記録性	-
+recur	再帰する [さいきする] (vs)	-
+recurrent activity	反復される行為	-
+recursion	再帰	noun
+recursive	再起的	-
+recursive definition	帰納的定義	-
+recursive pattern matching	再帰的パターンマッチング	-
+recursive rule	再帰規則	-
+recursive transition network	再帰的遷移網	-
+recursively applicable rules	再帰的に適用可能な規則	-
+reduce a fraction	約分する	verb
+reduced relative	縮約関係節	-
+reductio ad absurdum	背理法	-
+reduction of a fraction	約分	noun
+redundancy	冗長性	-
+redundancy rule	冗長性規則	-
+redundant	余剰的	-
+redundant expression	冗長表現	-
+reduplicated form	畳語形	-
+reduplication	畳語	noun
+refer	指示	verb
+reference	指示	noun
+reference marker	参照マーカ	-
+reference type	参照タイプ	-
+reference vector	参照ベクトル	-
+referent	指示対象	-
+referent transfer	ウナギ文	-
+referential	指示的名詞	-
+referential index	指示的指標	-
+referential property	指示性	-
+referential type	指示タイプ	-
+referentiality	指示性	-
+reflex verb	再帰動詞	-
+reflexive	再帰代名詞	noun
+reflexive pronoun	再帰代名詞	noun
+reflexive verb	再帰動詞	-
+refusal	拒否	noun
+refuse	拒否	verb
+register	レジスタ	noun
+regular expression	正規表現	-
+regular grammar	正規文法	-
+regulative rules	統制規則	-
+reinforceability	強化可能性	-
+rejected condition	却下条件	-
+rejection	欠格	noun
+relate	関係する	verb
+relation	関係	noun
+relational	関係的	-
+relational changing	文法関係を変える	-
+relational expression for elements	文要素関係表現	-
+relational grammar	関係文法	-
+relational theory of meaning	意味の関係理論	noun
+relative	関係詞	noun
+relative adverb	関係副詞	noun
+relative clause	関係節	-
+relative dependency	関係節の依存関係	-
+relative honorific	相対敬語	noun
+relative maximum	極大	noun
+relative minimum	極小	noun
+relative order	相対的な順序	-
+relative phrase	関係詞節	-
+relative pronoun	関係代名詞	noun
+relative pseudocomplement	相対的疑似補完	-
+relative respectful speech	相対敬語	noun
+relative-word	関係詞	noun
+relatively prime	互いに素	-
+relevance	関連性	noun
+relevance factor	適合率	-
+relevance rate	適合率	-
+remainder	探あまり	noun
+repeated activities	繰り返される行為	-
+repetition	復唱表現	-
+rephrasing	言い換え表現	noun
+report	報告	verb
+reporting	報告	noun
+represent	表現する	verb
+representation	表現	noun
+representationalism	表現主義	noun
+representatives	述表示型	-
+reproach	非難	noun
+request	依頼	verb
+request for information	情報提示の依頼	-
+requesting	依頼	noun
+resolution	解決	noun
+resolution method	導出原理	-
+resolution principle	導出原理	-
+resoluve	解消する	verb
+resolve	解決	verb
+respond	応答	verb
+response	応答	noun
+response frame	応答フレーム	-
+response signal	応答記号	-
+restricted	限定されている	-
+restricted parameter	制限付きパラメター	-
+restricted quantification	限定量化	-
+restricted quantifier	制限付き量化子	-
+restrictive modification	連体修飾	noun
+result	結果	noun
+result state	結果状態	-
+resultative case	結果格	-
+resultative verb	結果動詞	-
+reversibility	可逆性	noun
+reversible	可逆な	-
+revise	書き換える	-
+rewrite	書換	-
+rewrite rule	書換え規則	-
+rewriting conjunctive expressions	接続表現明示型書き替え	-
+rewriting degenerated conjunctive expressions	縮退型接続表現の表現	-
+rewriting functional phrases	機能的連語書き替え	-
+rewriting idiomatic phrases	成句的表現書き替え	-
+rewriting modal and tense expressions	様相時制表現書き替え	-
+rewriting of source text	原文自動書き替え	-
+rewriting of supplemented predicates	述語補完型書き替え	-
+rewriting verb phrases	述部構造の書き替え	-
+rewriting within a source language	原言語内書き替え	-
+rheme	題述	-
+rhetic act	意味行為	-
+rhetorical	修辞的	-
+rhetorical question	修辞疑問文	-
+right association	右連合	-
+right-hand side	右辺	noun
+right-side up	上下関係の正しい	-
+robustness	頑健性	-
+role	役割	noun
+role assignment	役割の割り当て	-
+root	根	noun
+root of a word	語幹	noun
+root sentence	主節文	-
+rough calculation	近似計算	noun
+route	通過点	-
+rule	規則	noun
+rule out	除外	verb
+rule schema	文法規則スキーマ	-
+rules for constructing expressions	表現の構成規則	-
+rules of inference	推論規則	-
+run	実行	noun
+s-column	サ行	noun
+s-column irregular inflection	サ行変格活用	-
+sacrifice	犠牲	noun
+salience imbalance model	顕著性不均衡モデル	-
+same linguistic family	同族言語	-
+sandan inflection	三段活用	-
+sandhi	連声	noun
+sarcasm	当てこすり	noun
+satisfaction	充足	noun
+satisfy	充足する	verb
+saturate	飽和する	verb
+saturated phrase	飽和された句	-
+saturation	飽和	noun
+scalar	スカラー	noun
+scenario	シナリオ	noun
+scene-setting	場面を設定する	-
+schema	スキーマ	noun
+scheme	規則	noun
+scheme of individuation	個別化の型式	-
+school grammar	学校文法	-
+scope	作用域	-
+scope of an expression	表現範囲	-
+scrambling	かき混ぜ	-
+script	スクリプト	noun
+script header	スクリプト・ヘッダー	-
+search	探索	verb
+search through data	データ探索する	verb
+search tree	探索木	-
+second base	連用形	noun
+second object	第二目的語	-
+second person	二人称	noun
+second person pronoun	二人称代名詞	noun
+second verb	後項動詞	-
+secondary characteristic features	2次的特性	-
+secondary substantive	準体言	-
+segmentation	区切り	noun
+segmentation and classification	分節化と分類	-
+selectional property	補語選択の特性	-
+selectional restriction	選択制約	-
+selector function	選択関数	-
+self	本体	noun
+semantic	意味的な	-
+semantic ambiguity	意味的曖昧性	-
+semantic analysis	意味解析	noun
+semantic attribute	意味的属性	-
+semantic attribute system	単語意味属性体系	-
+semantic compatibility	意味的妥当性	-
+semantic component	意味部門	noun
+semantic comprehension	意味理解	-
+semantic comprehension based translation	意味理解型翻訳	-
+semantic concept	意味概念	-
+semantic content	意味内容	noun
+semantic density	意味的密度	-
+semantic dictionary	意味辞書	-
+semantic feature	意味素姓	-
+semantic formula	意味公式	-
+semantic grammar	意味文法	-
+semantic interpretation	意味解釈	noun
+semantic interpretation function	意味解釈機能	-
+semantic interpretation rule	意味解釈規則	-
+semantic marker	意味マーカ	-
+semantic net	意味ネット	-
+semantic network	意味ネットワーク	-
+semantic primitive	意味素	noun
+semantic representation	意味表示	-
+semantic role	意味的な役割	-
+semantic rule	意味的約束	-
+semantic selection restriction	意味的選択制限	-
+semantic structure	意味構造	-
+semantic structure dictionary	構文意味辞書	-
+semantic template	意味母型	-
+semantic usage	意味的用法	-
+semantic word dictionary	単語意味辞書	-
+semantically restricted	意味的に制限された	-
+semantics	意味	noun
+semantics principle	意味原理	noun
+sememe	意味素	noun
+semi-countable	半可算	-
+semi-factive predicate	半叙実的述語	-
+semi-factive predicates	半叙実述語	-
+semi-group	半群	-
+semi-idiomatic	半イディオム的な	adj
+sense identity	意義の同一様	-
+sensitive word	敏感語	-
+sensitivity	感度	noun
+sentation in Chinese characters	漢字表記	noun
+sentence	文	noun
+sentence adverb	文副詞	-
+sentence beginning	文頭	noun
+sentence conjunction	文接続	-
+sentence element expression	文要素表現	-
+sentence final position	文末	noun
+sentence fragment	文断片	-
+sentence function	文の機能	-
+sentence grammar	文文法	-
+sentence head	主部	noun
+sentence initial position	文頭	noun
+sentence pattern	文型	noun
+sentence pattern dictionary	文型辞書	-
+sentence with two subjects	二重主格構文	-
+sentence-final particle	終助詞	-
+sentence-pronoun	文代名詞	-
+sentential complement	補文	-
+sentential connectives	文連結詞	-
+sentential constant	文定数	-
+sentential subject constraint	文主語制約	-
+sequence	例	noun
+sequence union	順序連接	-
+sequential conjunction	順序接続	-
+serial processing	逐次処理	noun
+series	級数	noun
+set	集合	noun
+set complement	補集合	noun
+set description	集合記述	noun
+set intersection	積集合	-
+set theory	集合論	noun
+set union	和集合	-
+shallow reasoning	浅い推論	-
+share	共有	verb
+share structure	構造を共有する	-
+sharing	共有	noun
+shift	移動	noun
+short unit	短単位	-
+short-term memory	短期記憶	-
+short-term memory buffer	短期記憶バッファ	-
+shortcircuited implicature	短絡的含意	-
+shortfall density	不足密度	-
+sibling	兄弟	noun
+side condition	副次的条件	-
+sigma-structure	σ構造	-
+sign	記号	noun
+sign token	記号トークン	noun
+sign-based architecture	記号に基づくアーキテクチャ	-
+sign-based grammar	記号に基づく文法	-
+signal	記号	verb
+signature	符号数	-
+silent lexical entry	無音の語彙項目	-
+silent verb analysis	無音動詞分析	-
+similarity	類似性	-
+simile	比喩	noun
+simple past	単純過去	-
+simple present	単純現在	-
+simple sentence	単文	noun
+sincerity condition	誠実条件	-
+single-concept principle	概念の原則	-
+singular	単数	noun
+singular value decomposition	特異値分析	-
+sister	同位項	-
+sister constituents	姉妹構成素	-
+situation	状況	noun
+situation oriented	状況志向の	-
+situation oriented conception	状況中心の発想	-
+situational index	状況指標	-
+situational knowledge	状況知識	-
+situational logic	状況論理性	-
+sixth base	命令形	noun
+skolemisation	スコーレム化	noun
+skolemise	スコーレム化する	verb
+slash	空所	noun
+slope	傾き	noun
+sloppy anaphora	不完全先行詞	-
+sloppy identification	略式の同一性	-
+sloppy identity	不完全先行詞	-
+slot	スロット	noun
+slot filling	スロット埋込み	-
+small clause	小節	noun
+social convention	社会的な規則	-
+social norm	社会的規範	-
+sort	類	noun
+sort-changing	分類変化的な	-
+sort-preserving	分類保存的な	-
+sortal	類別的	-
+sound	健全な	adj
+sound change	音便	noun
+sound change to double consonant	促音便	-
+soundness	健全性	-
+source	起点	noun
+source frame	源泉格	-
+source language	原言語	-
+source language text	起点言語文	-
+source of knowledge	知識源	-
+source sentence	起点言語の文	-
+space adjunct	空間付接詞	-
+sparse data	希薄なデータ	-
+spatial movement of viewpoint	空間的視点の移動	-
+spatial representation	空間表象	noun
+speaker	話者	noun
+speaker-based	話し手の立場にもとづく	-
+speaker-oriented	話者指向	-
+specialist knowledge	専門的知識	noun
+specialized pattern transfer dictionary	専門パターン対辞書	-
+specific	特定の	-
+specific individuality	特殊的個別性	-
+specification list	詳述リスト	-
+specifications	仕様	noun
+specificity	特定性	-
+specifier	指定詞	noun
+speech	話し言葉	noun
+speech act	言語行為	-
+speech act idioms	発話行為の慣用句	-
+speech understanding	音声理解	-
+speech understanding system	音声理解システム	-
+spell-out	書き出し	noun
+split antecedent	分離先行詞	-
+spoken language	話し言葉	noun
+spontaneous speech	自然な発話	-
+spread activation	展開活性化法	-
+square brackets	角括弧	-
+square form of kana	カタカナ	-
+stability	安定性	noun
+stand-alone utterance	自立した発話	-
+standard American English	標準アメリカ英語	-
+start symbol	開始記号	-
+state	言明する	verb
+state just after completion	完了直後の状態	-
+state of affairs	事態	noun
+statement	陳述	noun
+statement of obligation	義務の陳述	-
+static	静的な	adj
+static attribute	静的属性	-
+stative verb	状態的動詞	-
+status	分析方法	-
+stem	語幹	noun
+stereotyped	典型的な	adj
+stimulus frame	刺激フレーム	-
+stipulation	条項	noun
+stop word	不要語	-
+story grammar	物語文法	-
+stress	ストレス	noun
+strict lexicalism	厳密な語彙主義	-
+strong assertive predicate	強断定的述語	-
+strong connectivity	強い関連性	-
+strong lexicalism	強度の語彙主義	-
+strongly countable	強可算	-
+structural ambiguity	構造的曖昧性	-
+structural description	構造記述	-
+structural element	構造素	-
+structural linguistics	構造言語学	noun
+structural parallelism	構造的類似性	-
+structural similarity	構造的類似性	-
+structuralism	構造主義	noun
+structure of Japanese expression elements	日本語表現要素体系	-
+structure preserving	構造保持	noun
+structure sharing	構造共有	noun
+style	文体	noun
+style disjunct	スタイル離接詞	-
+stylistic inversion	文体的倒置	-
+stylistic rule	文体規則	-
+sub-language	部分言語	-
+subcat feature principle	下位範疇化素性の原理	-
+subcategorisation	下位範疇化	noun
+subcategorisation feature	下位範疇化素性	noun
+subcategorization	下位範疇化	noun
+subcategorization feature	下位範疇化素性	noun
+subcategorization restriction	下位範疇化制限	-
+subcategorization theory	下位範疇化理論	-
+subcategorize for	下位範疇化する	verb
+subgoal	下位目標	-
+subject	主語	noun
+subject complement	主補語	-
+subject control	主語コントロール	-
+subject extraction	主語摘出	-
+subject gap	主語の空所	-
+subject of action	動作主	-
+subject raising	主語繰り上げ変形	-
+subject sharing	主語の共有	-
+subject-auxiliary inversion	主語・助動詞倒置	-
+subject-oriented adjunct	主語指向付接詞	-
+subject-verb inversion	主語・動詞倒置	-
+subjective	主体的な	adj
+subjective expression	主体的表現	-
+subjective recognition	主体的認識	-
+subjectivity	主観	noun
+subjunctive base	仮定形	noun
+subjunctive mood	仮定法	noun
+submaxim of Time	時間の下位公理	-
+subordinate	下位	adj
+subordinate assertion	従断定	-
+subordinate clause	副文	-
+subordinate form	付属形式	-
+subordinate phrase	従属句	-
+subordinate proposition	従命題	-
+subordinate sentence	従属文	-
+subordinate word	付属的な語	-
+subordinating predicate	副用言	-
+subordinating verb	副用語	-
+subset	部分集合	noun
+subsidiary verb	補助動詞	noun
+subsort	下位類	-
+substance	実体	noun
+substance oriented conception	実体中心の発想	-
+substantial logic	実体論理性	-
+substantive	体	noun
+substantive noun	実名詞	noun
+substantives	体言	noun
+substitute	代入する	verb
+substitution	代入	noun
+subsume	包摂する	verb
+subsumption	包摂	noun
+subtheory	下位理論	-
+subtract	引き算する	verb
+subtraction	引き算	noun
+subtype	下位タイプ	-
+suffix	接尾語	noun
+suggest	提案	verb
+suggestion	提案	noun
+suite case type	スーツケース型	-
+sum	和	noun
+super type	上位タイプ	-
+superior	上階の	-
+superlative	最大	noun
+superordinate	上位	noun
+superordinate compatibility	上位互換性	noun
+superordinate type	上位タイプ	-
+superset	上位集合	-
+supertype	上位タイプ	-
+support	支持する	verb
+suppose	仮定	verb
+supposition	仮定	noun
+surface	表層	noun
+surface anaphora	表層照応	-
+surface case	表層格	-
+surface order	表層の語順	noun
+surface structure	表層構造	noun
+surface subject	表層主語	-
+surface-oriented	表層指向	-
+suru verb	サ行変格活用	-
+suspend	棚上げする	verb
+suspendable	棚上げ可能	-
+suspending	棚上げ	noun
+swearing	誓い	noun
+switching language	切換え言語	-
+syllable	音節	noun
+symmetric	対称的な	adj
+symmetry	対称	noun
+synchronic	共時的な	adj
+synecdoche	提喩	-
+synonym	類語	noun
+syntactic	統語的	-
+syntactic amalgam	統語的融合体	-
+syntactic analysis	構文解析	noun
+syntactic analysis tree	統合解析木	-
+syntactic and semantic analysis	構文意味解析	-
+syntactic and semantic knowledge	構文的および意味的知識	-
+syntactic attribute	文法的属性	-
+syntactic category	構文的カテゴリー	-
+syntactic change	統語変化	-
+syntactic component	統語部門	-
+syntactic conjunctive relation	文法的接続関係	-
+syntactic dependency	係り受け	-
+syntactic dependency tree	依存関係木構造	-
+syntactic dependent	統語上の依存要素	-
+syntactic feature	統語素性	-
+syntactic index	統語指標	noun
+syntactic representation	統語範疇	noun
+syntactic rule	統語規則	-
+syntactic structure	統語構造	-
+syntactic transformation	構文変形	-
+syntactical	構文論的	-
+syntax	文法	noun
+syntax rule	文法的約束	-
+syntax-semantics interface	統語・意味インターフェイス	-
+system	体系	noun
+system dictionary	システム辞書	-
+system of  demonstratives	コソアドの体系	-
+systemic grammar	体系文法	noun
+tag	名札	noun
+tag question	付加疑問文	-
+tag-question	付加疑問	-
+tagging	情報付与	noun
+tar	ター	-
+target language	目標言語	-
+tari inflection	タリ活用	-
+task-specificity	機能特化	-
+tautology	トートロジー	noun
+taxonomic class term	類別名辞	-
+taxonomy	分類法	noun
+te form	テ形	-
+technical term	専門用語	noun
+technical writings	技術文	-
+telephone dialogue	電話対話	-
+telic	完成相	-
+telicity	テリシティ	-
+template	テンプレート	noun
+template matching	型板マッチング	-
+temporal expression	時称	-
+tenor	被喩辞	-
+tense	時制	noun
+tense and aspect	時相	noun
+tension theory	緊張理論	-
+tentative base	推量形	-
+tentative expression	推量の表現	-
+term	用語	noun
+terminal [node]	終端記号	-
+terminal node	終端接点	-
+terminal symbol	終端記号	-
+terminative aspect	終結相	-
+terminative voice	終結態	-
+terminology dictionary	専門辞書	-
+ternary	三項	-
+test suite	テストスゥィート	-
+text	文章	noun
+text categorization	テキストの分類	-
+text function	テクスト機能	-
+text generation	文章生成	noun
+text structure knowledge	テキスト構造知識	-
+textual function	テクスト的機能	-
+thank	感謝	verb
+thanks	感謝	noun
+thematic relation	主題関係	-
+theme	テーマ	noun
+themehood	動作対象性	-
+theorem	定理	noun
+theorem prover	定理証明機	-
+thesaurus	シソーラス	noun
+theta theory	θ理論	-
+theta-criterion	θ標準	-
+theta-position	θ位置	-
+theta-role	θ役割	-
+thing oriented conception	もの的発想	-
+third base	終止形	noun
+third person	三人称	noun
+third person pronoun	三人称代名詞	noun
+threat	威嚇	noun
+threaten	威嚇	verb
+threatening	脅し	noun
+time	時間格	-
+time (xmt	時間	noun
+time adjunct	時間付接詞	-
+time frame	時間フレーム	-
+time relation	時間関係	-
+title	敬称	noun
+token	トークン	noun
+token identity	トークン的同値	-
+tone unit	音調単位	-
+top	頂	-
+top down	トップダウン	noun
+top-down	下降型	-
+top-down method	トップダウン法	-
+top-down parsing	トップダウン型アルゴリズム	-
+topic	話題	noun
+topic of discussion	議論の主題	-
+topicalization	主題化	-
+topicalize	主題化する	verb
+topicalized	主題化	-
+topicalized sentence	主題化文	-
+topology	位相幾何学	noun
+total	全体	noun
+total content of an utterance	発話の伝達内容	-
+tough movement	tough移動	-
+tough-movement	目的語繰り上げ	-
+trace	痕跡	noun
+transcribe	転写する	verb
+transcription	転写	noun
+transderivational constraint	派生間制約	-
+transfer	変換	noun
+transfer of profit	利益の授受	-
+transform	変形	verb
+transformation	変形	noun
+transformational derivation	変形による派生	-
+transformational generative syntax	変形生成統語論	noun
+transformational grammar	変形文法	-
+transformational rule	変形規則	noun
+transit	遷移する	verb
+transition	遷移	noun
+transition operator	遷移作用素	-
+transition tree	遷移木	-
+transitive	他動詞	noun
+transitive verb	他動詞	noun
+transitive-intransitive correspondence	自動詞と他動詞の対応	-
+transitivity system	他動性体系	-
+translate	翻訳	verb
+translate freely	意訳	verb
+translation	翻訳	noun
+translation for communication	翻訳通信	-
+translation memory	翻訳メモリ	noun
+translation method	翻訳方式	-
+translation quality	訳文品質	-
+translation with supplementation	補完型翻訳	-
+translative	変格	noun
+translator	トランスレータ	noun
+transliterate	転写する	verb
+transliteration	転写	noun
+treat	待遇する	verb
+treatment	待遇	noun
+tree	木	noun
+tree diagram	樹形図	-
+tree structure	木構造	-
+tree-to-tree transduce	木対木変換	-
+trellis	トレリス	-
+trial and error	試行錯誤	verb
+trigger	起動	noun
+trigonometric function	三角関数	noun
+trill	顫動音	noun
+trope	比喩	noun
+true	真な	adj
+true factive predicate	真の叙実的述語	-
+true proposition	真の命題	-
+truth	真	noun
+truth condition	真理条件	-
+truth table	真理値表	-
+truth value	真理値	noun
+tuple	組	-
+type	タイプ	noun
+type hierarchy	タイプ階層	-
+type subsumption	タイプ包摂	-
+type subsumption graph	タイプ包摂グラフ	-
+type-n grammar	n型文法	-
+types	種別	noun
+unaccusative verb	非対格動詞	-
+unagi sentence	ウナギ文	-
+unary	単項	adj
+unbounded dependency	非有界依存	-
+unbounded distance	距離の上限なく	-
+unbracketed corpus	括弧なしコーパス	-
+uncountable	不可算	noun
+uncountable noun	不可算名詞	noun
+underlying structure	基底構造	-
+underspecification	不完全指定	-
+understand	理解	verb
+understandability	理解容易性	-
+understandable	理解しやすいか	-
+understanding	理解	noun
+understood element	了解された要素	-
+understood subject	暗黙の主語	noun
+undirected chart parsing	非統制チャート法	-
+unergative verb	非能格動詞	-
+unexpressed subject	表現されない主語	-
+ungrammatical	非文法的な	adj
+ungrammatical sentence	非文	-
+unheaded construction	主辞をもたない構文	-
+unification	単一化	noun
+unification grammar	単一化文法	-
+unification-based formalisms	単一化に基づく形式化	noun
+uniform scoring policy	一様評点法	-
+uniformity	均一性	-
+unify	単一化	verb
+uninflected adjective	連体詞	noun
+uninterrupted collocation	連鎖型共起表現	-
+union	合併集合	-
+unique argument	単項	noun
+unit	単位性	-
+unit sentence	単文	noun
+unit which expresses meaning	構造的な意味の単位	-
+universal	普遍的な	-
+universal deep case	一般深層格	-
+universal grammar	普遍文法	noun
+universal language	普遍言語	-
+universal meaning	共通の意味	-
+universal principle	普遍原理	noun
+universal quantifier	全称記号	-
+unmarked	無標	-
+unordered constraint	順序のない制約	-
+unpassivisable verb	所動詞	-
+unsaturated	不飽和	noun
+unspecified	指定されていない	-
+upper level	上階の	-
+usage	語法	noun
+user dictionary	利用者辞書	-
+utterance	発話	noun
+utterance act	発語行為	-
+utterance delimiter	発話の区切り符号	-
+utterance equivalence	発話の同等性	-
+vagueness	漠然性	-
+valence	結合価	-
+valence frame	結合価枠	-
+valence grammar	結合価文法	-
+valence relation	結合価関係	-
+valence theory	結合理論	-
+valency	結合価	-
+valency pattern	結合価パターン	-
+valid	妥当な	adj
+value	値	noun
+variable	変数	noun
+variable arity	可変な項数	-
+variable domain array	可変領域配列	-
+variation	変異	noun
+vary	変異する	verb
+vector cross product	ベクトル外積	-
+vector dot product	ベクトル内積	-
+vehicle	喩辞	-
+verb	動詞	noun
+verb agreement	動詞の一致	-
+verb of perception	知覚動詞	-
+verb pattern	動詞型	-
+verb phrase	動詞句	-
+verb sense	動詞のセンス	-
+verb valency	動詞の結合価	-
+verbal adverbial phrase	動詞性の副詞句	-
+verbal noun	動名詞	noun
+verbal semantic attribute	用言意味属性	-
+verbose	冗長な	adj
+verification	検証	noun
+verify	検証する	verb
+verify patterns	パターン照合する	verb
+vertex	頂点	noun
+vertical	縦方向の	-
+view	視点	noun
+view point	視点	noun
+virtual machine	抽象機械	-
+visibility condition	可視化条件	-
+vision	画像理解	-
+visual representation	視覚表象	-
+visual scene	情景	noun
+vitiated	実効が失われる	-
+vocabulary	語彙	noun
+vocative	呼格	-
+voice	ヴォイス	-
+voiced	有声音	noun
+volitional form you	意志形	-
+volume	体積	noun
+voluntary expression	自発の表現	-
+vowel	母音	noun
+vowel harmony	母音調和	noun
+warn	警告	verb
+warning	警告	noun
+way of thinking	考え方	noun
+weak assertive predicate	弱断定的述語	-
+weakly countable	弱可算	-
+well-formed	適正に定義されている	-
+well-formed formula	整式	noun
+well-formed phrase structure	適格な句構造	-
+well-formedness	統語的な整合性	noun
+wh construction	wh構文	-
+wh phrase	wh句	-
+wh question	wh疑問文	-
+wh word	wh語	-
+what is implicated	含意される内容	-
+what is non-conventionally implicated	非慣例的な含意	-
+willingness	意欲	noun
+window	ウインドウ	noun
+wish	祈願	noun
+word	用語	noun
+word collocation dictionary	単語共起辞書	-
+word discrimination network	類語弁別ネットワーク	-
+word end	語尾	noun
+word form	語形	noun
+word inflexion	語形変化	noun
+word order	語順	noun
+word segmentation	分かち書き	noun
+word syntactic attribute	単語の文法属性	-
+word transformation	語形変形	-
+word-sense	語意	noun
+word-sense ambiguity	語の意味の曖昧さ	-
+words of Chinese origin	漢語系の語	-
+words of Japanese origin	和語系の語	-
+words which represent attributes	属性を表す語	-
+words which represent substance	実体を表す語	-
+world knowledge	常識的知識	-
+wrapping cloth type	風呂敷型	-
+write in hiragana	ひらがな表記する	verb
+write with segmentation markers between lexemes	分かち書き	noun
+write without spaces	べた書きする	verb
+writing without spaces	べた書き	noun
+written in hiragana	ひらがな表記	noun
+written language	書き言葉	noun
+x-axis	x軸	-
+x-coordinate	x座標	-
+xcomp	補語	noun
+y-axis	y軸	-
+y-coordinate	y座標	-
+yes-no question	極性疑問文	-
+zero anaphora	ゼロ照応	-
+zero pronoun	ゼロ代名詞	-
+zero-copula sentence	ゼロ・コピュラ文	-
+θ-criterion	θ標準	-
+θ-positionR	θ位置	-
+θ-role	θ役割	-
+σ-structure	σ構造	-

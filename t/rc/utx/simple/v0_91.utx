@@ -1,0 +1,6 @@
+#UTX-S 0.91; en-US/ja-JP; 2008-03-15T10:00:00+09:00; copyright: Francis Bond (2008); license: CC-by 3.0
+#src	tgt	src:pos	src:plural	src:3sp	src:past	src:pastp	src:presp	src:comparative	src:superlative
+new	新規の	adj						newer	newest
+fast	高速な	adj						faster	fastest
+prosody	韻律	noun	prosodies						
+save	保存する	verb	saves	saved	saved	saving			

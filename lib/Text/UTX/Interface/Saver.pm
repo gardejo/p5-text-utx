@@ -6,7 +6,7 @@ package Text::UTX::Interface::Saver;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -27,10 +27,18 @@ use namespace::clean;
 
 
 # ****************************************************************
+# consuming role(s)
+# ****************************************************************
+
+with qw(
+    Text::UTX::Interface::Stream
+);
+
+
+# ****************************************************************
 # interface(s)
 # ****************************************************************
 
-# Todo: strictify it!
 requires qw(
     save
 );

@@ -6,7 +6,7 @@ package Text::UTX::Feature::Loader;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -17,6 +17,13 @@ use warnings;
 # ****************************************************************
 
 use Moose::Role;
+
+
+# ****************************************************************
+# general dependency(-ies)
+# ****************************************************************
+
+use Try::Tiny;
 
 
 # ****************************************************************
@@ -37,10 +44,12 @@ has 'loader_class' => (
     init_arg    => undef,
     trigger     => sub {
         $_[0]->clear_loader;
+        $_[0]->clear_parser_class;
+        $_[0]->clear_parser_version;
+        $_[0]->clear_parser;
     },
 );
 
-# Fixme: no good
 has 'loader' => (
     is          => 'rw',
     does        => 'Text::UTX::Interface::Loader',
@@ -48,13 +57,18 @@ has 'loader' => (
     handles     => [qw(
         load
     )],
+    trigger     => sub {
+        $_[0]->clear_parser_class;
+        $_[0]->clear_parser_version;
+        $_[0]->clear_parser;
+    },
 );
 
 has 'instream' => (
     is          => 'rw',
-    isa         => 'Str',
+    isa         => 'Maybe[Str]',
     init_arg    => undef,
-    predicate   => 'has_instream',
+    lazy_build  => 1,
     trigger     => sub {
         $_[0]->clear_loader_class;
         $_[0]->clear_loader;
@@ -90,11 +104,24 @@ sub _build_loader_class {
 sub _build_loader {
     my $self = shift;
 
-    $self->ensure_class_loaded($self->loader_class);
+    my $loader_class = $self->loader_class;
 
-    return $self->loader_class->new(
+    try {
+        $self->ensure_class_loaded($loader_class);
+    }
+    catch {
+        confess sprintf 'Could not load the loader class (%s) because: %s',
+                    $loader_class,
+                    $_;
+    };
+
+    return $loader_class->new(
         stream => $self->instream,
     );
+}
+
+sub _build_instream {
+    return;
 }
 
 
@@ -122,14 +149,14 @@ around load => sub {
     $self->instream($instream)
         if defined $instream;
 
-    confess 'Could not load the instream because: '
+    confess 'Could not load the instream because '
           . 'instream not defined'
         unless $self->has_instream;
 
     $self->$next;
     $self->parse($parser_alias);
 
-    return;
+    return $self;
 };
 
 

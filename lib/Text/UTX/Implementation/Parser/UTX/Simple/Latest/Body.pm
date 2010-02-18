@@ -6,7 +6,7 @@ package Text::UTX::Implementation::Parser::UTX::Simple::Latest::Body;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -31,21 +31,16 @@ use namespace::clean;
 # ****************************************************************
 
 sub parse_body {
-    my $self = shift;
-
-    # Note: treat a copy array instead of an array reference
-    #       to avoid side-effects on 'lines' attribute
-    my @all_lines  = $self->all_lines;
-    my @body_lines = splice @all_lines, $self->count_header_lines;
+    my ($self, $body_lines) = @_;
 
     my @entries;
 
-    foreach my $body_line (@body_lines) {
+    foreach my $body_line (@$body_lines) {
         my $is_comment = ( $body_line =~ s{ \A \#+ \s* }{}xmsg );
-        my @items = split $self->format->entry_delimiter_pattern, $body_line;
+        my @columns = split $self->format->entry_delimiter_pattern, $body_line;
         push @entries, {
             is_comment => $is_comment,
-            items      => \@items,
+            columns    => \@columns,
         };
     }
 

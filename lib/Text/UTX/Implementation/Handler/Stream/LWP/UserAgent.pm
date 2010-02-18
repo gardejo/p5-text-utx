@@ -6,7 +6,7 @@ package Text::UTX::Implementation::Handler::Stream::LWP::UserAgent;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -39,6 +39,7 @@ use namespace::clean -except => [qw(meta)];
 with qw(
     Text::UTX::Implementation::Stream::LWP::UserAgent
     Text::UTX::Role::Handlable
+    Text::UTX::Role::HasLines
 );
 
 
@@ -62,18 +63,12 @@ sub _build_aliases {
 sub guess {
     my ($self, $role_kind, $framework, $stream) = @_;
 
-    # Note: arrows 'file:///path/to/lexicon/example.utx'
+    # Note: This pattern allows 'file:///path/to/lexicon/example.utx' format.
     return
         if $stream !~ m{ :// }xms;
 
     return $self->fully_qualified_class_name($role_kind);
 }
-
-
-# ****************************************************************
-# protected/private method(s)
-# ****************************************************************
-
 
 
 # ****************************************************************

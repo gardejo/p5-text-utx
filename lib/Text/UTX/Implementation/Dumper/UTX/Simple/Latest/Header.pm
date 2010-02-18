@@ -6,7 +6,7 @@ package Text::UTX::Implementation::Dumper::UTX::Simple::Latest::Header;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -90,18 +90,24 @@ sub _dump_last_modified {
         ? 'Z'
         : $self->last_modified->strftime('%z');
 
-    # Note: +09:00 is invalid (+0900 is valid)
+    # Note: +09:00 is invalid (+0900 is valid).
     return $self->last_modified->iso8601 . $offset;
 }
 
 sub _dump_alignment {
     my $self = shift;
 
+    my $locale_delimiter = $self->format->locale_delimiter;
+
     return join $self->format->alignment_delimiter, (
-        $self->source->locale,
-        (
-            $self->has_target ? $self->target->locale : ()
-        ),
+        apply {
+            $_ =~ s{_}{$locale_delimiter};  # specialize
+        } (
+            $self->source->locale,
+            (
+                $self->has_target ? $self->target->locale : ()
+            ),
+        )
     );
 }
 

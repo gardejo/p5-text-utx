@@ -6,7 +6,7 @@ package Text::UTX::Type::Locale::Country;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -16,15 +16,23 @@ use warnings;
 # MOP dependency(-ies)
 # ****************************************************************
 
-use MooseX::Types (
-    -declare => [qw(
-        Country
-    )],
-);
+use MooseX::Types -declare => [qw(
+    Country
+)];
 use MooseX::Types::Moose qw(
+    Maybe
     Object
     Str
+    HashRef
+    ScalarRef
 );
+
+
+# ****************************************************************
+# general dependency(-ies)
+# ****************************************************************
+
+use Carp qw(confess);
 
 
 # ****************************************************************
@@ -56,12 +64,27 @@ my $Country_Class = 'Text::UTX::Component::Locale::Country';
 # country (code, name)
 # ----------------------------------------------------------------
 subtype Country,
-    as Object,
+    as Maybe[Object],
         where {
-            $_->isa($Country_Class);
+            ! defined $_ || $_->isa($Country_Class);
         };
 
 coerce Country,
+    from HashRef,
+        via {
+            confess sprintf '%s allows a hash reference with a single key '
+                          . 'for constructor',
+                        $Country_Class
+                if keys %$_ > 1;
+            return $Country_Class->new($_);
+        },
+    from ScalarRef,
+        via {
+            return $Country_Class->new(
+                  length $$_ == 2 ? ( code => $$_ )
+                :                   ( name => $$_ )
+            );
+        },
     from Str,
         via {
             return $Country_Class->new(
@@ -75,7 +98,7 @@ coerce Country,
 # compile-time process(es)
 # ****************************************************************
 
-# Note: __PACKAGE__ can not run consumed methods (ex. ensure_class_loaded)
+# Note: __PACKAGE__ cannot run consumed methods (ex. ensure_class_loaded()).
 Text::UTX::Utility::Class->ensure_class_loaded($Country_Class);
 
 
@@ -121,9 +144,9 @@ blah blah blah
 
 =over 4
 
-=item * L<Locale::Country>
+=item * L<Locale::Country|Locale::Country>
 
-=item * L<MooseX:Types::Locale::Country>
+=item * L<MooseX:Types::Locale::Country|MooseX:Types::Locale::Country>
 
 =back
 

@@ -6,7 +6,7 @@ package Text::UTX::Role::HasLines;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -17,6 +17,13 @@ use warnings;
 # ****************************************************************
 
 use Moose::Role;
+
+
+# ****************************************************************
+# internal dependency(-ies)
+# ****************************************************************
+
+use Text::UTX::Type::StrToArrayRef qw(StrToArrayRef);
 
 
 # ****************************************************************
@@ -34,11 +41,9 @@ has 'lines' => (
     traits      => [qw(
         Array
     )],
-    is          => 'ro',
-    # writer      => '_set_lines',
-    isa         => 'ArrayRef[Str]',
-    # init_arg    => undef,
-    # required    => 1,
+    is          => 'rw',
+    isa         => StrToArrayRef,
+    coerce      => 1,
     lazy_build  => 1,
     handles     => {
         all_lines    => 'elements',

@@ -6,7 +6,7 @@ package Text::UTX::Utility::Regexp;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -41,26 +41,26 @@ use namespace::clean;
 sub assemble_regexp_with_affixed_spaces {
     my ($self, $string) = @_;
 
-    my $ra = Regexp::Assemble->new;
-    # Caveat: use [ ](0x20) instead of \s, because \s contains \t(0x09)
-    $ra->add(         $string         );
-    $ra->add('[ ]*' . $string         );
-    $ra->add(         $string . '[ ]*');
-    $ra->add('[ ]*' . $string . '[ ]*');
+    my $assembler = Regexp::Assemble->new;
+    # Caveat: Use "[ ]"(0x20) instead of "\s", because "\s" contains "\t"(0x09).
+    $assembler->add(         $string         );
+    $assembler->add('[ ]*' . $string         );
+    $assembler->add(         $string . '[ ]*');
+    $assembler->add('[ ]*' . $string . '[ ]*');
 
-    return $ra->re;
+    return $assembler->re;
 }
 
 # Todo: memoize it!
 sub assemble_regexp_from {
     my ($self, @strings) = @_;
 
-    my $ra = Regexp::Assemble->new;
+    my $assembler = Regexp::Assemble->new;
     foreach my $string (@strings) {
-        $ra->add($string);
+        $assembler->add($string);
     }
 
-    return $ra->re;
+    return $assembler->re;
 }
 
 # Todo: memoize it!

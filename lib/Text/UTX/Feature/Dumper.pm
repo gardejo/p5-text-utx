@@ -6,7 +6,7 @@ package Text::UTX::Feature::Dumper;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -17,6 +17,13 @@ use warnings;
 # ****************************************************************
 
 use Moose::Role;
+
+
+# ****************************************************************
+# general dependency(-ies)
+# ****************************************************************
+
+use Try::Tiny;
 
 
 # ****************************************************************
@@ -100,7 +107,7 @@ sub _build_dumper_class {
 sub _build_dumper_version {
     my $self = shift;
 
-    confess 'Could not dump the lexicon as a proper format because: '
+    confess 'Could not dump the lexicon as a proper format because '
           . 'format handler is not defined'
         unless $self->has_format_handler;
 
@@ -110,9 +117,18 @@ sub _build_dumper_version {
 sub _build_dumper {
     my $self = shift;
 
-    $self->ensure_class_loaded($self->dumper_class);
+    my $dumper_class = $self->dumper_class;
 
-    return $self->dumper_class->new(
+    try {
+        $self->ensure_class_loaded($self->dumper_class);
+    }
+    catch {
+        confess sprintf 'Could not load the dumper class (%s) because: %s',
+                    $dumper_class,
+                    $_;
+    };
+
+    return $dumper_class->new(
         version       => $self->dumper_version,
         alignment     => dclone $self->alignment,
         # last_modified => dclone $self->last_modified,
@@ -155,9 +171,8 @@ around dump => sub {
 sub convert_to {
     my ($self, $format, $version) = @_;
 
-    if (defined $version) {
-        $self->dumper_version($version);
-    }
+    $self->dumper_version($version)
+        if defined $version;
 
     $self->dumper_class($format);
 

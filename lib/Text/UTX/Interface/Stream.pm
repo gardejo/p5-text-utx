@@ -6,7 +6,7 @@ package Text::UTX::Interface::Stream;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -30,9 +30,9 @@ use namespace::clean;
 # interface(s)
 # ****************************************************************
 
-# Todo: strictify it!
-# requires qw(
-# );
+requires qw(
+    stream
+);
 
 
 # ****************************************************************

@@ -6,7 +6,7 @@ package Text::UTX;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -24,6 +24,7 @@ use 5.008_001;
 # ****************************************************************
 
 use Moose;
+use MooseX::StrictConstructor;
 
 
 # ****************************************************************
@@ -52,13 +53,12 @@ with qw(
     Text::UTX::Role::LexiconLike
 );
 
-# feature(s)
-# Note: all consuming roles have a strategy (of the Strategy pattern)
+# Note: All consuming roles have a strategy (of the Strategy pattern).
 with qw(
-    Text::UTX::Feature::Dumper
     Text::UTX::Feature::Handler
     Text::UTX::Feature::Loader
     Text::UTX::Feature::Parser
+    Text::UTX::Feature::Dumper
     Text::UTX::Feature::Saver
 );
 
@@ -87,61 +87,106 @@ __END__
 
 Text::UTX - Abstract layer (parser/writer) for UTX Simple and other lexicon formats
 
+=head1 VERSION
+
+This document describes C<Text::UTX> version B<0.00>.
+
 =head1 SYNOPSIS
 
     use Text::UTX;
 
-    # load local UTX dictionary
-    my $utx_en_eo = Text::UTX->new;
-    $utx_en_eo->load('/home/johndoe/dictionary/utx/en_eo.utx');     # read
+    my $utx = Text::UTX->new;
 
-    # load network UTX dictionary
-    my $utx_eo_en = Text::UTX->new;
-    $utx_eo_en->load('http://dictionary.example/utx/eo_en.utx');    # download
-
-    # explicitly define loader class
-    my $strictry_utx = Text::UTX->new;
-    $utx->load('/home/johndoe/dictionary/unknown.txt' => 'UTX-S');
+    # load and parse an UTX dictionary
+    $utx->load('/home/alice/utx/en_eo.utx');        # read local file
+    $utx->load('http://dict.example/eo_en.utx');    # download via Internet
+    $utx->load('/home/bob/foo.txt' => 'UTX-S');     # explicit loader class
 
     # same as above
-    $strictry_utx = Text::UTX->new;
-    $strictry_utx->instream('/home/johndoe/dictionary/unknown.txt');
-    $strictry_utx->parser_class('UTX-S');
-    $strictry_utx->load;
+    $utx = Text::UTX->new;
+    $utx->instream('/home/dave/bar.txt');
+    $utx->parser_class('UTX-S');
+    $utx->load;
+    # or, implement Text::UTX::Implementation::Handler::Stream::TxtAsUtx
+
+    # load and parse an Eijiro (http://www.eijiro.jp/) dictionary
+    # (caveat: required Text::UTX::Implementation::Format::Eijiro series)
+    $utx->load('/home/ellen/eijiro/EIJIRO76.TXT');
+
+    # parse a string (Text::UTX can also an array reference)
+    $utx->parse(
+        "#UTX-S 1.00; en/eo; 2010-01-01T00:00:00Z\n"
+      . "#src\ttgt\tsrc:pos\n"
+      . "hellow\tsaluton\t\n"
+      . "world\tmondo\t\n"
+    );
+
+    # dump as strings...
+    my $str_utx_simple_1_00 = $utx->dump;           # as UTX Simple 1.00
+    my $str_eijiro          = $utx->dump('Eijiro'); # as Eijiro
+
+    # dump and save...
+    $utx->save;                                     # to the same file
+    $utx->save('/home/frank/utx/en_eo.utx');        # to an other file
+
+    # convert from UTX format into Eijiro
+    my $eijiro = $utx->convert_to('Eijiro');                # clone
+    $eijiro->save('/home/isaac/eijiro/en_eo.txt');          # write
+    $eijiro->save('http://dict.example/eijiro/eo_en.utx');  # upload
 
     # same as above
-    # implement your Text::UTX::Implementation::Handler::Stream::TxtAsUtx
-
-    # load local Eijiro dictionary
-    # (caveat: required Text::UTX::Implementation::Eijiro)
-    $eijiro_en_ja = Text::UTX->new;
-    $eijiro_en_ja->load('/home/johndoe/dictionary/eijiro/EIJIRO76.TXT');
-
-    # save to the same file
-    $utx_en_eo->save;
-
-    # save to an other file
-    $utx_en_eo->save('/home/alice/dictionary/utx/en_eo.utx');
-
-    # convert from UTX into Eijiro
-    my $eijiro_en_eo = $utx_en_eo->convert_to('Eijiro');            # clone
-    $eijiro->save('/home/johndoe/dictionary/eijiro/en_eo.txt');     # write
-    $eijiro->save('http://dictionary.example/eijiro/eo_en.utx');    # upload
-
-    # same as above
-    $utx_en_eo->convert_to('Eijiro');                               # no clone
-    $utx_en_eo->save('/home/johndoe/dictionary/eijiro/en_eo.txt');  # write
-    $utx_en_eo->save('http://dictionary.example/eijiro/eo_en.utx'); # upload
-
-=head1 VERSION
-
-0.00
+    $utx->convert_to('Eijiro');                             # no clone
+    $utx->save('/home/justin/eijiro/en_eo.txt');            # write
+    $utx->save('http://dict.example/eijiro/eo_en.utx');     # upload
 
 =head1 DESCRIPTION
 
-This framework provides you with an abstract layer for an user's dictionary(lexicon) of a machine translation software.
+This framework provides you with an abstract layer for an user's dictionary
+of a machine translation software.
 
 blah blah blah
+
+
+=head2 Figure 2. The Architecture of Text::UTX
+
+    * Container
+      Text::UTX
+
+    * Features
+        - Text::UTX::Loader
+        - Text::UTX::Parser
+        - Text::UTX::Dumper
+        - Text::UTX::Saver
+
+    * Implementations/Formats
+        - Text::UTX::Implementation::Format::UTX::Simple::*
+            - Text::UTX::Implementation::Handler::Format::UTX::Simple
+            - Text::UTX::Implementation::Parser::UTX::Simple::V0_90
+            - Text::UTX::Implementation::Parser::UTX::Simple::V0_91
+            - Text::UTX::Implementation::Parser::UTX::Simple::V0_92
+            - Text::UTX::Implementation::Parser::UTX::Simple::V1_00
+            - Text::UTX::Implementation::Dumper::UTX::Simple::V0_90
+            - Text::UTX::Implementation::Dumper::UTX::Simple::V0_91
+            - Text::UTX::Implementation::Dumper::UTX::Simple::V0_92
+            - Text::UTX::Implementation::Dumper::UTX::Simple::V1_00
+        - Text::UTX::Implementation::Format::UTX::XML
+            - Text::UTX::Implementation::Handler::Format::UTX::XML
+            - Text::UTX::Implementation::Parser::UTX::XML
+            - Text::UTX::Implementation::Dumper::UTX::XML
+
+    * Implementations/Streams
+        - Text::UTX::Implementation::Stream::Memory
+            - Text::UTX::Implementation::Handler::Stream::Memory
+            - Text::UTX::Implementation::Loader::Memory
+            - Text::UTX::Implementation::Saver::Memory
+        - Text::UTX::Implementation::Stream::LWP::UserAgent
+            - Text::UTX::Implementation::Handler::Stream::LWP::UserAgent
+            - Text::UTX::Implementation::Loader::LWP::UserAgent
+            - Text::UTX::Implementation::Saver::LWP::UserAgent
+        - Text::UTX::Implementation::Stream::Path::Class
+            - Text::UTX::Implementation::Handler::Stream::Path::Class
+            - Text::UTX::Implementation::Loader::Path::Class
+            - Text::UTX::Implementation::Saver::Path::Class
 
 =head1 ACKNOWLEDGEMENTS
 
@@ -181,5 +226,8 @@ L<http://ttt.ermitejo.com/>.
 This library is free software;
 you can redistribute it and/or modify it under the same terms as Perl itself.
 See L<perlgpl|perlapi> and L<perlartistic|perlartistic>.
+
+The full text of the license can be found in the F<LICENSE> file
+included with this distribution.
 
 =cut

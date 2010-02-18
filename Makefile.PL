@@ -8,7 +8,7 @@ use inc::Module::Install;
 # ================================================================
 # gathering meta information
 # ================================================================
-    # abstract, author, license, name, perl_version, version
+    # abstract, author, license, name, perl_version(5.008_001), version
     all_from        'lib/Text/UTX.pm';
 
     # supplement
@@ -37,21 +37,35 @@ use inc::Module::Install;
 # ================================================================
 # general dependency(-ies)
 # ================================================================
-    requires        'Class::Inspector'                  => '0';
+    requires        'Data::Util'                        => '0';
     requires        'DateTime'                          => '0';
     requires        'DateTime::Locale'                  => '0';
     requires        'DateTime::TimeZone'                => '0';
+#   requires        'Encode'                            => '0';
+        # was included by perl 5.007_003
+#   requires        'List::MoreUtils'                   => '0';
+        # was included by Moose
+#   requires        'Locale::Country'                   => '0';
+        # was included by perl 5.007_003
+#   requires        'Locale::Language'                  => '0';
+        # was included by perl 5.007_003
 #   requires        'Memoize'                           => '0';
-        # perl 5.007_003
+        # was included by perl 5.007_003
     requires        'Module::Pluggable::Object'         => '0';
     requires        'Moose'                             => '0.89_01';
         # for Moose::Meta::Attribute::Native
     requires        'MooseX::Clone'                     => '0';
+    requires        'MooseX::StrictConstructor'         => '0';
+    requires        'MooseX::Types'                     => '0';
     requires        'MooseX::Types::DateTimeX'          => '0';
-    requires        'MooseX::Types::Locale::Country'    => '0';
-    requires        'MooseX::Types::Locale::Language'   => '0';
+    requires        'MooseX::Types::Locale::Country'    => '0.01';
+    requires        'MooseX::Types::Locale::Language'   => '0.01';
     requires        'Regexp::Assemble'                  => '0';
+#   requires        'Storable'                          => '0';
+        # was included by perl 5.007_003
     requires        'Sub::Name'                         => '0';
+    requires        'Tie::IxHash'                       => '0';
+    requires        'Try::Tiny'                         => '0';
     requires        'namespace::clean'                  => '0.08';
         # cf. MooseX-Types-DateTime
 
@@ -69,6 +83,11 @@ use inc::Module::Install;
         'Optmize File::Spec processes' => [
             -default => 0,
             recommends( 'File::Spec::Memoized'              => '0' ),
+        ],
+        'Loader/Saver implementation: Network' => [
+            -default => 0,
+            recommends( 'HTTP::Request::Common'             => '0' ),
+            recommends( 'LWP::UserAgent'                    => '0' ),
         ],
     );
 

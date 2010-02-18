@@ -6,7 +6,7 @@ package Text::UTX::Feature::Handler;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -95,7 +95,7 @@ sub _build_stream_finder {
         namespace => $self->fully_qualified_class_name
                                 ('Handler', 'Stream'),
         fallback  => $self->fully_qualified_class_name
-                                ('Handler', 'Stream::Path::Class'),
+                                ('Handler', 'Stream::Memory'),
     );
 }
 
@@ -150,7 +150,7 @@ sub guess_format_class {
 # protected/private method(s)
 # ****************************************************************
 
-# Note: the Chain of Responsibility pattern
+# Note: This is the Chain of Responsibility pattern.
 sub _query_concrete_class {
     my ($self, $query_method, $responsibility, $role_kind, $seed_kind, $seed)
         = @_;
@@ -169,11 +169,11 @@ sub _query_concrete_class {
         }
     }
 
-    confess sprintf 'Could not %s %s class name for %s (%s)',
+    confess sprintf 'Could not %s the %s class name for %s (%s)',
                 $query_method,
                 lc $role_kind,
                 $seed_kind,
-                $seed
+                $seed || ''
         unless $concrete_class;
 
     return $concrete_class;

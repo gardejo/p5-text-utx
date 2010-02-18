@@ -6,7 +6,7 @@ package Text::UTX::Component::Locale::Country;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -17,6 +17,7 @@ use warnings;
 # ****************************************************************
 
 use Moose;
+use MooseX::StrictConstructor;
 use MooseX::Types::Locale::Country qw(CountryCode CountryName);
 
 
@@ -31,7 +32,16 @@ use Locale::Country qw(code2country country2code);
 # namespace cleaner
 # ****************************************************************
 
-use namespace::clean;
+use namespace::clean -except => [qw(meta)];
+
+
+# ****************************************************************
+# consuming role(s)
+# ****************************************************************
+
+with qw(
+    MooseX::Clone
+);
 
 
 # ****************************************************************
@@ -60,38 +70,15 @@ has 'name' => (
 
 
 # ****************************************************************
-# hook(s) on construction
-# ****************************************************************
-
-around BUILDARGS => sub {
-    my ($next, $class, @init_args) = @_;
-
-    if (scalar @init_args == 1) {
-        return $class->$next(
-              length $init_args[0] == 2 ? ( code => $init_args[0] )
-            :                             ( name => $init_args[0] )
-        );
-    }
-    else {
-        return $class->$next(@init_args);
-    }
-};
-
-
-# ****************************************************************
 # builder(s)
 # ****************************************************************
 
 sub _build_code {
-    my $self = shift;
-
-    return country2code $self->name;
+    return country2code $_[0]->name;
 }
 
 sub _build_name {
-    my $self = shift;
-
-    return code2country $self->code;
+    return code2country $_[0]->code;
 }
 
 

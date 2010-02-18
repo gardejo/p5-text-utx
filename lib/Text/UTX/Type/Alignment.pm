@@ -6,7 +6,7 @@ package Text::UTX::Type::Alignment;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -16,11 +16,9 @@ use warnings;
 # MOP dependency(-ies)
 # ****************************************************************
 
-use MooseX::Types (
-    -declare => [qw(
-        Alignment
-    )],
-);
+use MooseX::Types -declare => [qw(
+    Alignment
+)];
 use MooseX::Types::Moose qw(
     Object
     Str
@@ -61,13 +59,16 @@ my $Alignment_Class = 'Text::UTX::Component::Alignment';
 subtype Alignment,
     as Object,
         where {
-            $_->isa($Alignment_Class);
+            $_->isa($Alignment_Class) && defined $_->source;
         };
 
 coerce Alignment,
     from ArrayRef,
         via {
-            return $Alignment_Class->new($_);
+            return $Alignment_Class->new(
+                source => $_->[0],
+                ( defined $_->[1] ? (target => $_->[1]) : () ),
+            );
         },
     from HashRef,
         via {
@@ -75,11 +76,11 @@ coerce Alignment,
         },
     from ScalarRef,
         via {
-            return $Alignment_Class->new($_);
+            return $Alignment_Class->new(alignment => $$_);
         },
     from Str,
         via {
-            return $Alignment_Class->new($_);
+            return $Alignment_Class->new(alignment => $_);
         };
 
 
@@ -87,7 +88,7 @@ coerce Alignment,
 # compile-time process(es)
 # ****************************************************************
 
-# Note: __PACKAGE__ can not run consumed methods (ex. ensure_class_loaded)
+# Note: __PACKAGE__ cannot run consumed methods (ex. ensure_class_loaded()).
 Text::UTX::Utility::Class->ensure_class_loaded($Alignment_Class);
 
 
@@ -133,13 +134,13 @@ blah blah blah
 
 =over 4
 
-=item * L<Locale::Language>
+=item * L<Locale::Language|Locale::Language>
 
-=item * L<Locale::Country>
+=item * L<Locale::Country|Locale::Country>
 
-=item * L<MooseX:Types::Locale::Language>
+=item * L<MooseX:Types::Locale::Language|MooseX:Types::Locale::Language>
 
-=item * L<MooseX:Types::Locale::Country>
+=item * L<MooseX:Types::Locale::Country|MooseX:Types::Locale::Country>
 
 =back
 

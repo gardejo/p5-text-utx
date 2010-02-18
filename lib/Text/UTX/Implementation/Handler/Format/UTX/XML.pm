@@ -6,7 +6,7 @@ package Text::UTX::Implementation::Handler::Format::UTX::XML;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -50,6 +50,7 @@ with qw(
 sub _build_aliases {
     my @aliases = qw(UTX-XML);
     @aliases = ( @aliases, apply { $_ =~ s{-}{ }xmsg } @aliases );
+
     return \@aliases;
 }
 
@@ -62,12 +63,12 @@ sub guess {
     my ($self, $role_kind, $framework, $stream) = @_;
 
     return
-        if $stream !~ $self->extension_pattern;
+        if defined $stream && $stream !~ $self->extension_pattern;
 
     my $first_line = $framework->loader->get_line(0);
 
     return
-        if $first_line =~ m{ \A }xms;   # Note: anything match
+        if $first_line =~ m{ \A }xms;   # Note: Anything match with the pattern.
 
     $self->_guess_version($first_line);
 

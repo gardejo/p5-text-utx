@@ -6,7 +6,7 @@ package Text::UTX::Implementation::Stream::Path::Class;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -28,23 +28,22 @@ use namespace::clean;
 
 
 # ****************************************************************
-# consuming role(s)
+# attribute(s)
 # ****************************************************************
 
-with qw(
-    Text::UTX::Role::StreamLike
-    Text::UTX::Role::HasLines
+has 'stream' => (
+    is          => 'rw',
+    isa         => File,
+    coerce      => 1,
 );
 
 
 # ****************************************************************
-# inherited attribute(s)
+# consuming role(s)
 # ****************************************************************
 
-has '+stream' => (
-    # required    => 1,
-    isa         => File,
-    coerce      => 1,
+with qw(
+    Text::UTX::Role::QualifiableToClassName
 );
 
 

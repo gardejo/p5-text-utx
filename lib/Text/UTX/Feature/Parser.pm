@@ -6,7 +6,7 @@ package Text::UTX::Feature::Parser;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -17,6 +17,20 @@ use warnings;
 # ****************************************************************
 
 use Moose::Role;
+
+
+# ****************************************************************
+# general dependency(-ies)
+# ****************************************************************
+
+use Text::UTX::Type::StrToArrayRef qw(StrToArrayRef);
+
+
+# ****************************************************************
+# internal dependency(-ies)
+# ****************************************************************
+
+use Try::Tiny;
 
 
 # ****************************************************************
@@ -56,8 +70,8 @@ has 'parser' => (
     )],
 );
 
-# Note: this is a reserved attribute
-has 'is_scrictly_parse' => (
+# Note: This attribute is reserved.
+has 'is_strictly_parse' => (
     traits      => [qw(
         Bool
     )],
@@ -101,7 +115,7 @@ sub _build_parser_class {
 sub _build_parser_version {
     my $self = shift;
 
-    confess 'Could not parse the lexicon as a proper format because: '
+    confess 'Could not parse the lexicon as a proper format because '
           . 'format handler is not defined'
         unless $self->has_format_handler;
 
@@ -111,11 +125,23 @@ sub _build_parser_version {
 sub _build_parser {
     my $self = shift;
 
-    $self->ensure_class_loaded($self->parser_class);
+    my $parser_class = $self->parser_class;
 
-    return $self->parser_class->new(
+    try {
+        $self->ensure_class_loaded($parser_class);
+    }
+    catch {
+        confess sprintf 'Could not load the parser class (%s) because: %s',
+                    $parser_class,
+                    $_;
+    };
+
+    return $parser_class->new(
         lines   => $self->loader->lines,
-        version => $self->parser_version,
+        (
+              $self->has_parser_version ? (version => $self->parser_version)
+            :                             ()
+        ),
     );
 }
 
@@ -140,14 +166,17 @@ around parser_class => sub {
 };
 
 around parse => sub {
-    my ($next, $self, $parser_alias) = @_;
+    my ($next, $self, $lines) = @_;
 
-    $self->parser_class($parser_alias)
-        if defined $parser_alias;
+    if (defined $lines) {
+        $self->clear_instream;
+        $self->loader_class('Text::UTX::Implementation::Loader::Memory');
+        $self->loader->lines($lines);   # StrToArrayRef type coersion
+    }
 
-    my $universal_data = $self->$next;
+    my $parsed_data = $self->$next($self->loader->lines);
 
-    while (my ($attribute, $value) = each %$universal_data) {
+    while (my ($attribute, $value) = each %$parsed_data) {
         if ($self->meta->has_attribute($attribute)) {
             $self->$attribute($value);
         }
@@ -157,7 +186,7 @@ around parse => sub {
         }
     }
 
-    return;
+    return $self;
 };
 
 

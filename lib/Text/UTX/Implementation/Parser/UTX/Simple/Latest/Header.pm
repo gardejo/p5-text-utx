@@ -6,7 +6,7 @@ package Text::UTX::Implementation::Parser::UTX::Simple::Latest::Header;
 # ****************************************************************
 
 # Moose turns strict/warnings pragmas on,
-# however, kwalitee scorer can not detect such mechanism.
+# however, kwalitee scorer cannot detect such mechanism.
 # (Perl::Critic can it, with equivalent_modules parameter)
 use strict;
 use warnings;
@@ -47,11 +47,11 @@ with qw(
 # ****************************************************************
 
 sub parse_header {
-    my $self = shift;
+    my ($self, $header_lines) = @_;
 
-    # Todo: associate with count_header_lines
-    my $meta_information = $self->_parse_meta_information($self->get_line(0));
-    $self->_parse_columns($self->get_line(1));
+    # Todo: To associate with $self->count_header_lines().
+    my $meta_information = $self->_parse_meta_information($header_lines->[0]);
+    $self->_parse_columns($header_lines->[1]);
 
     return $meta_information;
 }
@@ -90,13 +90,17 @@ sub _parse_format {
     $specification = q{} unless defined $specification;
     $version       = q{} unless defined $version;
 
-    confess sprintf 'Could not parse format because: '
+    # Note: This exception will happen only by a parser object
+    #       (Text::UTX::Implementation::Parser::UTX::Simple::*).
+    #       The container object (Text::UTX) throws the different exception
+    #       ('Could not guess a parser class name for instream').
+    confess sprintf 'Could not parse a format because '
                   . 'parsed specification name (%s) is not (%s)',
                 $specification,
                 $self->specification
         unless $self->is_allowed_specification($specification);
 
-    confess sprintf 'Could not parse format because: '
+    confess sprintf 'Could not parse a format because '
                   . 'parsed version number (%s) is not (%s)',
                 $version,
                 $self->version
@@ -108,13 +112,27 @@ sub _parse_format {
 sub _parse_alignment {
     my ($self, $alignment) = @_;
 
-    my ($source, $target)
-        = split $self->format->alignment_delimiter_pattern, $alignment;
+    # my $locale_delimiter = $self->format->locale_delimiter;
+    # my ($source, $target) = apply {
+    #     $_ =~ s{$locale_delimiter}{_};  # canonize
+    # } split $self->format->alignment_delimiter_pattern, $alignment, 2;
 
-    return {
+    my ($source, $target)
+        = split $self->format->alignment_delimiter_pattern, $alignment, 2;
+
+    my %alignment = (
         source => $source,
-        target => $target,
-    };
+        ( defined $target ? (target => $target) : () ),
+    );
+
+    map {
+        confess sprintf 'Could not parse an alignment because '
+                      . 'the %s language is the blank character',
+                    $_
+            if defined $alignment{$_} && $alignment{$_} eq q{};
+    } qw(source target);
+
+    return \%alignment;
 }
 
 sub _parse_miscellanies {
@@ -143,8 +161,8 @@ sub _parse_columns {
         $_ =~ s{            :        }{_}xmsg;
     } @native_columns;
 
-    # Note: use @alignments instead of %alignment
-    #       to associate it with indexed hash (Tie::IxHash)
+    # Note: Use @alignments instead of %alignment
+    #       to associate it with indexed hash (Tie::IxHash).
     my @alignments = mesh @universal_columns, @native_columns;
 
     $self->set_columns(@alignments);
@@ -160,8 +178,14 @@ sub _parse_columns {
 sub _canonize_line {
     my ($self, $string_ref) = @_;
 
-    # chomp $$string_ref;
-    $$string_ref =~ s{ \A \# }{}xms;
+    if ( $$string_ref !~ s{ \A \# }{}xms ) {
+        # Note: This exception will happen only by a parser object
+        #       (Text::UTX::Implementation::Parser::UTX::Simple::*).
+        #       The container object (Text::UTX) throws the different exception
+        #       ('Could not guess a parser class name for instream').
+        confess 'Could not parse the header because '
+              . 'comment sign does not exist';
+    }
 
     return;
 }
