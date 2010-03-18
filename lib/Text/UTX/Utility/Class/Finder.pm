@@ -40,37 +40,41 @@ use namespace::clean -except => [qw(meta)];
 # ****************************************************************
 
 has 'namespace' => (
-    is          => 'rw',
-    isa         => 'Str',
-    required    => 1,
+    is              => 'rw',
+    isa             => 'Str',
+    required        => 1,
+    documentation   => '',
 );
 
 has 'interface' => (
-    is          => 'ro',
-    isa         => 'Str',
-    lazy_build  => 1,
+    is              => 'ro',
+    isa             => 'Str',
+    lazy_build      => 1,
+    documentation   => '',
 );
 
 has 'fallback' => (
-    is          => 'ro',
-    isa         => 'Str',
-    predicate   => 'has_fallback',
-    trigger     => sub {
+    is              => 'ro',
+    isa             => 'Str',
+    predicate       => 'has_fallback',
+    trigger         => sub {
         $_[0]->clear_handlers;
     },
+    documentation   => '',
 );
 
 has 'handlers' => (
-    traits      => [qw(
+    traits          => [qw(
         Array
     )],
-    is          => 'ro',
-    isa         => 'ArrayRef[Object]',
-    handles     => {
+    is              => 'ro',
+    isa             => 'ArrayRef[Object]',
+    lazy_build      => 1,
+    handles         => {
         all_handlers => 'elements',
         add_handler  => 'unshift',      # Note: I venture to assign 'push'.
     },
-    lazy_build  => 1,
+    documentation   => '',
 );
 
 
@@ -155,17 +159,16 @@ blah blah blah
 
 =over 4
 
-=item MORIYA Masaki (a.k.a. Gardejo)
+=item MORIYA Masaki, alias Gardejo
 
 C<< <moriya at cpan dot org> >>,
-L<http://ttt.ermitejo.com/>
+L<http://gardejo.org/>
 
 =back
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2009-2010 by MORIYA Masaki (a.k.a. Gardejo),
-L<http://ttt.ermitejo.com/>.
+Copyright (c) 2009-2010 by MORIYA Masaki, alias Gardejo
 
 This module is free software;
 you can redistribute it and/or modify it under the same terms as Perl itself.

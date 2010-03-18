@@ -38,52 +38,56 @@ use namespace::clean;
 # ****************************************************************
 
 has 'saver_class' => (
-    is          => 'rw',
-    isa         => 'Str',
-    lazy_build  => 1,
-    init_arg    => undef,
-    trigger     => sub {
+    is              => 'rw',
+    isa             => 'Str',
+    lazy_build      => 1,
+    init_arg        => undef,
+    trigger         => sub {
         $_[0]->clear_saver;
     },
+    documentation   => '',
 );
 
 has 'saver' => (
-    is          => 'rw',
-    does        => 'Text::UTX::Interface::Saver',
-    lazy_build  => 1,
-    handles     => [qw(
+    is              => 'rw',
+    does            => 'Text::UTX::Interface::Saver',
+    lazy_build      => 1,
+    handles         => [qw(
         save
     )],
+    documentation   => '',
 );
 
 has 'outstream' => (
-    is          => 'rw',
-    isa         => 'Str',
-    init_arg    => undef,
-    predicate   => 'has_outstream',
-    trigger     => sub {
+    is              => 'rw',
+    isa             => 'Str',
+    init_arg        => undef,
+    predicate       => 'has_outstream',
+    trigger         => sub {
         $_[0]->clear_saver_class;
         $_[0]->clear_saver;
         $_[0]->clear_dumper_class;
         $_[0]->clear_dumper_version;
         $_[0]->clear_dumper;
     },
+    documentation   => '',
 );
 
 # Note: This attribute is reserved.
 has 'is_implicitly_save' => (
-    traits      => [qw(
+    traits          => [qw(
         Bool
     )],
-    is          => 'rw',
-    isa         => 'Bool',
-    default     => 1,
-    handles     => {
+    is              => 'rw',
+    isa             => 'Bool',
+    default         => 1,
+    handles         => {
         is_explicitly_save => 'not',
         explicitly_save    => 'unset',
         implicitly_save    => 'set',
         toggle_save_mode   => 'toggle',
     },
+    documentation   => '',
 );
 
 
@@ -206,17 +210,16 @@ blah blah blah
 
 =over 4
 
-=item MORIYA Masaki (a.k.a. Gardejo)
+=item MORIYA Masaki, alias Gardejo
 
 C<< <moriya at cpan dot org> >>,
-L<http://ttt.ermitejo.com/>
+L<http://gardejo.org/>
 
 =back
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2009-2010 by MORIYA Masaki (a.k.a. Gardejo),
-L<http://ttt.ermitejo.com/>.
+Copyright (c) 2009-2010 by MORIYA Masaki, alias Gardejo
 
 This module is free software;
 you can redistribute it and/or modify it under the same terms as Perl itself.

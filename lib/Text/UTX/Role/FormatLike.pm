@@ -49,6 +49,7 @@ has 'latest_version' => (
     is              => 'ro',
     isa             => 'Str',
     lazy_build      => 1,
+    documentation   => '',
 );
 
 has 'extension' => (
@@ -66,6 +67,7 @@ has 'extension_pattern' => (
     isa             => 'RegexpRef',
     init_arg        => undef,
     lazy_build      => 1,
+    documentation   => '',
 );
 
 # Caveat: this attribute IS NOT a location of an user's lexicon
@@ -136,17 +138,16 @@ blah blah blah
 
 =over 4
 
-=item MORIYA Masaki (a.k.a. Gardejo)
+=item MORIYA Masaki, alias Gardejo
 
 C<< <moriya at cpan dot org> >>,
-L<http://ttt.ermitejo.com/>
+L<http://gardejo.org/>
 
 =back
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2009-2010 by MORIYA Masaki (a.k.a. Gardejo),
-L<http://ttt.ermitejo.com/>.
+Copyright (c) 2009-2010 by MORIYA Masaki, alias Gardejo
 
 This module is free software;
 you can redistribute it and/or modify it under the same terms as Perl itself.

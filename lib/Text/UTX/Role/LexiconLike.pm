@@ -48,10 +48,10 @@ use namespace::clean;
 # ****************************************************************
 
 has 'alignment' => (
-    is          => 'rw',
-    isa         => Alignment,
-    coerce      => 1,
-    handles     => [qw(
+    is              => 'rw',
+    isa             => Alignment,
+    coerce          => 1,
+    handles         => [qw(
         clear_source
         clear_target
         has_source
@@ -59,20 +59,23 @@ has 'alignment' => (
         source
         target
     )],
+    documentation   => '',
 );
 
 has 'last_modified' => (
-    is          => 'rw',
-    isa         => DateTime,
-    coerce      => 1,
-    lazy_build  => 1,
+    is              => 'rw',
+    isa             => DateTime,
+    coerce          => 1,
+    lazy_build      => 1,
+    documentation   => '',
 );
 
 has 'miscellanies' => (
-    is          => 'rw',
-    isa         => IxHash,
-    coerce      => 1,
-    handles     => {
+    is              => 'rw',
+    isa             => IxHash,
+    coerce          => 1,
+    lazy_build      => 1,
+    handles         => {
         add_miscellanies  => 'Push',
         add_miscellany    => 'Push',
         all_miscellanies  => 'Keys',
@@ -80,31 +83,35 @@ has 'miscellanies' => (
         get_miscellany    => 'FETCH',
         has_miscellany    => 'EXISTS',
     },
-    lazy_build  => 1,
+    documentation   => '',
 );
 
 has 'columns' => (
-    traits      => [qw(
+    traits          => [qw(
         Array
     )],
-    is          => 'rw',
-    isa         => 'ArrayRef[Str]',
-    handles     => {
+    is              => 'rw',
+    isa             => 'ArrayRef[Str]',
+    handles         => {
         add_column    => 'push',
         add_columns   => 'push',
         all_columns   => 'elements',
         count_columns => 'count',
         get_column    => 'get',
     },
+    documentation   => '',
 );
 
 has 'entries' => (
-    traits      => [qw(
+    traits          => [qw(
         Array
     )],
-    is          => 'rw',
-    isa         => 'ArrayRef[HashRef]',
-    handles     => {
+    is              => 'rw',
+    isa             => 'ArrayRef[HashRef]',
+    trigger         => sub {
+        $_[0]->clear_index;
+    },
+    handles         => {
         add_entries    => 'push',
         add_entry      => 'push',
         all_entries    => 'elements',
@@ -118,16 +125,15 @@ has 'entries' => (
         insert_entry   => 'insert',
         map_entries    => 'map',
     },
-    trigger     => sub {
-        $_[0]->clear_index;
-    },
+    documentation   => '',
 );
 
 has 'index' => (
-    is          => 'ro',
-    isa         => 'HashRef[Int]',
-    init_arg    => undef,
-    lazy_build  => 1,
+    is              => 'ro',
+    isa             => 'HashRef[Int]',
+    init_arg        => undef,
+    lazy_build      => 1,
+    documentation   => '',
 );
 
 
@@ -198,17 +204,16 @@ blah blah blah
 
 =over 4
 
-=item MORIYA Masaki (a.k.a. Gardejo)
+=item MORIYA Masaki, alias Gardejo
 
 C<< <moriya at cpan dot org> >>,
-L<http://ttt.ermitejo.com/>
+L<http://gardejo.org/>
 
 =back
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2009-2010 by MORIYA Masaki (a.k.a. Gardejo),
-L<http://ttt.ermitejo.com/>.
+Copyright (c) 2009-2010 by MORIYA Masaki, alias Gardejo
 
 This module is free software;
 you can redistribute it and/or modify it under the same terms as Perl itself.

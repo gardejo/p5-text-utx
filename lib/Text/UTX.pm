@@ -211,17 +211,16 @@ Additionally, he adjusted affairs at AAMT to release this module.
 
 =over 4
 
-=item MORIYA Masaki (a.k.a. Gardejo)
+=item MORIYA Masaki, alias Gardejo
 
 C<< <moriya at cpan dot org> >>,
-L<http://ttt.ermitejo.com/>
+L<http://gardejo.org/>
 
 =back
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2009-2010 by MORIYA Masaki (a.k.a. Gardejo),
-L<http://ttt.ermitejo.com/>.
+Copyright (c) 2009-2010 by MORIYA Masaki, alias Gardejo
 
 This library is free software;
 you can redistribute it and/or modify it under the same terms as Perl itself.

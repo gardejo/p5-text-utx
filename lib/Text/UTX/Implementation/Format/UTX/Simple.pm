@@ -34,6 +34,7 @@ has 'count_header_lines' => (
     is              => 'ro',
     isa             => 'Int',
     lazy_build      => 1,
+    documentation   => '',
 );
 
 # Note: I venture to define the type as 'Str' instead of 'Num' or 'Int'.
@@ -41,6 +42,7 @@ has 'abbreviation_for_specification' => (
     is              => 'ro',
     isa             => 'Str',
     lazy_build      => 1,
+    documentation   => '',
 );
 
 has 'comment_sign' => (
@@ -51,6 +53,7 @@ has 'comment_sign' => (
         $_[0]->clear_comment_sign_pattern;
         $_[0]->comment_sign_for_dumper;
     },
+    documentation   => '',
 );
 
 has 'comment_sign_pattern' => (
@@ -58,6 +61,7 @@ has 'comment_sign_pattern' => (
     isa             => 'RegexpRef',
     init_arg        => undef,
     lazy_build      => 1,
+    documentation   => '',
 );
 
 has 'comment_sign_for_dumper' => (
@@ -65,6 +69,7 @@ has 'comment_sign_for_dumper' => (
     isa             => 'Str',
     init_arg        => undef,
     lazy_build      => 1,
+    documentation   => '',
 );
 
 has 'meta_information_delimiter' => (
@@ -75,6 +80,7 @@ has 'meta_information_delimiter' => (
         $_[0]->clear_meta_information_delimiter_pattern;
         $_[0]->clear_meta_information_delimiter_for_dumper;
     },
+    documentation   => '',
 );
 
 has 'meta_information_delimiter_pattern' => (
@@ -82,6 +88,7 @@ has 'meta_information_delimiter_pattern' => (
     isa             => 'RegexpRef',
     init_arg        => undef,
     lazy_build      => 1,
+    documentation   => '',
 );
 
 has 'meta_information_delimiter_for_dumper' => (
@@ -89,6 +96,7 @@ has 'meta_information_delimiter_for_dumper' => (
     isa             => 'Str',
     init_arg        => undef,
     lazy_build      => 1,
+    documentation   => '',
 );
 
 has 'alignment_delimiter' => (
@@ -98,6 +106,7 @@ has 'alignment_delimiter' => (
     trigger         => sub {
         $_[0]->clear_alignment_delimiter_pattern;
     },
+    documentation   => '',
 );
 
 has 'alignment_delimiter_pattern' => (
@@ -105,12 +114,14 @@ has 'alignment_delimiter_pattern' => (
     isa             => 'RegexpRef',
     init_arg        => undef,
     lazy_build      => 1,
+    documentation   => '',
 );
 
 has 'locale_delimiter' => (
     is              => 'ro',
     isa             => 'Str',
     lazy_build      => 1,
+    documentation   => '',
 );
 
 has 'format_delimiter' => (
@@ -120,6 +131,7 @@ has 'format_delimiter' => (
     trigger         => sub {
         $_[0]->clear_format_delimiter_pattern;
     },
+    documentation   => '',
 );
 
 has 'format_delimiter_pattern' => (
@@ -127,6 +139,7 @@ has 'format_delimiter_pattern' => (
     isa             => 'RegexpRef',
     init_arg        => undef,
     lazy_build      => 1,
+    documentation   => '',
 );
 
 has 'miscellaniy_delimiter' => (
@@ -137,6 +150,7 @@ has 'miscellaniy_delimiter' => (
         $_[0]->clear_miscellaniy_delimiter_pattern;
         $_[0]->clear_miscellaniy_delimiter_for_dumper;
     },
+    documentation   => '',
 );
 
 has 'miscellaniy_delimiter_pattern' => (
@@ -144,6 +158,7 @@ has 'miscellaniy_delimiter_pattern' => (
     isa             => 'RegexpRef',
     init_arg        => undef,
     lazy_build      => 1,
+    documentation   => '',
 );
 
 has 'miscellaniy_delimiter_for_dumper' => (
@@ -151,6 +166,7 @@ has 'miscellaniy_delimiter_for_dumper' => (
     isa             => 'Str',
     init_arg        => undef,
     lazy_build      => 1,
+    documentation   => '',
 );
 
 has 'column_delimiter' => (
@@ -160,6 +176,7 @@ has 'column_delimiter' => (
     trigger         => sub {
         $_[0]->clear_column_delimiter_pattern;
     },
+    documentation   => '',
 );
 
 has 'column_delimiter_pattern' => (
@@ -167,6 +184,7 @@ has 'column_delimiter_pattern' => (
     isa             => 'RegexpRef',
     init_arg        => undef,
     lazy_build      => 1,
+    documentation   => '',
 );
 
 has 'entry_delimiter' => (
@@ -176,6 +194,7 @@ has 'entry_delimiter' => (
     trigger         => sub {
         $_[0]->clear_entry_delimiter_pattern;
     },
+    documentation   => '',
 );
 
 has 'entry_delimiter_pattern' => (
@@ -183,12 +202,14 @@ has 'entry_delimiter_pattern' => (
     isa             => 'RegexpRef',
     init_arg        => undef,
     lazy_build      => 1,
+    documentation   => '',
 );
 
 has 'blank_entry' => (
     is              => 'ro',
     isa             => 'Str',
     lazy_build      => 1,
+    documentation   => '',
 );
 
 
@@ -386,17 +407,16 @@ blah blah blah
 
 =over 4
 
-=item MORIYA Masaki (a.k.a. Gardejo)
+=item MORIYA Masaki, alias Gardejo
 
 C<< <moriya at cpan dot org> >>,
-L<http://ttt.ermitejo.com/>
+L<http://gardejo.org/>
 
 =back
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2009-2010 by MORIYA Masaki (a.k.a. Gardejo),
-L<http://ttt.ermitejo.com/>.
+Copyright (c) 2009-2010 by MORIYA Masaki, alias Gardejo
 
 This module is free software;
 you can redistribute it and/or modify it under the same terms as Perl itself.

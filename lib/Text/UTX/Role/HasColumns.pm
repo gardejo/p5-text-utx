@@ -38,11 +38,14 @@ use namespace::clean;
 # ****************************************************************
 
 has 'columns' => (
-    is          => 'ro',
-    isa         => IxHash,
-    coerce      => 1,
-    init_arg    => undef,
-    handles     => {
+    is              => 'ro',
+    isa             => IxHash,
+    coerce          => 1,
+    init_arg        => undef,
+    default         => sub {
+        [];
+    },
+    handles         => {
         all_universal_columns => 'Keys',
         clear_columns         => [ 'Splice' => (0)  ],
         get_universal_column  => [ 'Keys'   => (@_) ],
@@ -52,9 +55,7 @@ has 'columns' => (
         set_column            => [ 'Push'   => (@_) ],
         set_columns           => [ 'Push'   => (@_) ],
     },
-    default     => sub {
-        [];
-    },
+    documentation   => '',
 );
 
 
@@ -88,17 +89,16 @@ blah blah blah
 
 =over 4
 
-=item MORIYA Masaki (a.k.a. Gardejo)
+=item MORIYA Masaki, alias Gardejo
 
 C<< <moriya at cpan dot org> >>,
-L<http://ttt.ermitejo.com/>
+L<http://gardejo.org/>
 
 =back
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2009-2010 by MORIYA Masaki (a.k.a. Gardejo),
-L<http://ttt.ermitejo.com/>.
+Copyright (c) 2009-2010 by MORIYA Masaki, alias Gardejo
 
 This module is free software;
 you can redistribute it and/or modify it under the same terms as Perl itself.

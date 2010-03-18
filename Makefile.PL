@@ -1,9 +1,6 @@
-#!/usr/bin/perl
-
-use strict;
-use warnings;
-
-use inc::Module::Install;
+use inc::Module::Install 0.95;
+use Module::Install::AuthorRequires;
+use Module::Install::AuthorTests;
 
 # ================================================================
 # gathering meta information
@@ -12,13 +9,14 @@ use inc::Module::Install;
     all_from        'lib/Text/UTX.pm';
 
     # supplement
-    author          'MORIYA Masaki (a.k.a. Gardejo) <moriya at cpan dot org>';
+    author          'MORIYA Masaki, alias Gardejo <moriya at cpan dot org>';
     resources (
         repository
             => 'git://github.com/gardejo/p5-text-utx.git',
-        bugtracker
-            => 'http://rt.cpan.org/Public/Dist/Display.html?Name='
-             . 'Text-UTX',
+        # (implicit assignment)
+        # bugtracker
+        #     => 'http://rt.cpan.org/Public/Dist/Display.html?Name='
+        #      . 'Text-UTX',
         homepage
             => 'http://github.com/gardejo/p5-text-utx',
     );
@@ -29,9 +27,9 @@ use inc::Module::Install;
 # ================================================================
 # build dependency(-ies)
 # ================================================================
-    build_requires  'Module::Install'                   => '0.80';
+#   build_requires  'Module::Install'                   => '0.80';
         # to avoid YAML::Tiny problem
-    build_requires  'Module::Load'                      => '0';
+#   build_requires  'Module::Load'                      => '0';
         # is in perl 5.009_004
 
 # ================================================================
@@ -94,90 +92,49 @@ use inc::Module::Install;
 # ================================================================
 # test dependency(-ies)
 # ================================================================
-#   test_requires   'Perl::Critic'                      => '0.094';
-        # for author tests
-#   test_requires   'Test::CPAN::Meta'                  => '0.12';
-        # for author tests
-    test_requires   'Test::Class'                       => '0';
+    test_requires   'Test::Class'                       => '0.34';
     test_requires   'Test::Exception'                   => '0.27';
         # cf. MooseX-Types-DateTime
-#   test_requires   'Test::Kwalitee'                    => '0';
-        # for author tests
 #   test_requires   'Test::Moose'                       => '0';
         # was included by Moose
     test_requires   'Test::More'                        => '0';
 #   test_requires   'Test::mysqld'                      => '0';
-#   test_requires   'Test::NoTabs'                      => '0';
-        # for author tests
-#   test_requires   'Test::Perl::Critic'                => '0';
-        # for author tests
-#   test_requires   'Test::Pod'                         => '1.40';
-        # for author tests
-#   test_requires   'Test::Pod::Coverage'               => '1.08';
-        # for author tests
     test_requires   'Test::Requires'                    => '0';
-#   test_requires   'Test::Synopsis'                    => '0.06';
-        # for author tests
-#   test_requires   'Test::UseAllModules'               => '0';
-        # for author tests
     test_requires   'Test::Warn'                        => '0';
+
+# ================================================================
+# author dependency(-ies)
+# ================================================================
+    author_requires 'Perl::Critic'                      => '0.094';
+    author_requires 'Test::CPAN::Meta'                  => '0.12';
+#   author_requires 'Test::Kwalitee'                    => '0';
+        # always die (but xt/kwalitee.t need it)
+    author_requires 'Test::NoTabs'                      => '0';
+    author_requires 'Test::Perl::Critic'                => '0';
+    author_requires 'Test::Pod'                         => '1.40';
+    author_requires 'Test::Pod::Coverage'               => '1.08';
+    author_requires 'Test::Synopsis'                    => '0.06';
+    author_requires 'Test::UseAllModules'               => '0';
 
 # ================================================================
 # test(s)
 # ================================================================
-    use_test_base;
-    tests           't/*.t';
-    author_tests    'xt';
+    tests                   't/*.t';
+    recursive_author_tests  'xt';
+
+# ================================================================
+# including
+# ================================================================
+    auto_include_deps;
+    # 'auto_include' grabs only immediate dependencies
 
 # ================================================================
 # installation
 # ================================================================
-    auto_include;
-    auto_install;
+#   auto_install;
+    # 'auto_install' is deprecated
 
 # ================================================================
 # writter
 # ================================================================
     WriteAll;
-
-__END__
-
-
-# ****************************************************************
-# POD
-# ****************************************************************
-
-=pod
-
-=head1 NAME
-
-Makefile.PL - Makefile builder for Text-UTX
-
-=head1 SYNOPSIS
-
-    $ cpan -t .
-
-=head1 AUTHOR
-
-=over 4
-
-=item MORIYA Masaki (a.k.a. Gardejo)
-
-C<< <moriya at cpan dot org> >>,
-L<http://ttt.ermitejo.com/>
-
-=back
-
-=head1 COPYRIGHT AND LICENSE
-
-Copyright (c) 2009-2010 by MORIYA Masaki (a.k.a. Gardejo),
-L<http://ttt.ermitejo.com/>.
-
-This distribution is free software;
-you can redistribute it and/or modify it under the same terms as Perl itself.
-See L<perlgpl|perlgpl> and L<perlartistic|perlartistic>.
-
-The full text of the license can be found in the F<LICENSE> file
-included with this distribution.
-
-=cut

@@ -38,39 +38,43 @@ use namespace::clean;
 # ****************************************************************
 
 has 'stream_finder' => (
-    is          => 'rw',
-    isa         => 'Text::UTX::Utility::Class::Finder',
-    lazy_build  => 1,
-    trigger     => sub {
+    is              => 'rw',
+    isa             => 'Text::UTX::Utility::Class::Finder',
+    lazy_build      => 1,
+    trigger         => sub {
         $_[0]->clear_stream_handler;
     },
+    documentation   => '',
 );
 
 has 'stream_handler' => (
-    is          => 'rw',
-    does        => 'Text::UTX::Interface::Handler',
-    init_arg    => undef,
-    predicate   => 'has_stream_handler',
-    writer      => '_set_stream_handler',
-    clearer     => 'clear_stream_handler',
+    is              => 'rw',
+    does            => 'Text::UTX::Interface::Handler',
+    init_arg        => undef,
+    predicate       => 'has_stream_handler',
+    writer          => '_set_stream_handler',
+    clearer         => 'clear_stream_handler',
+    documentation   => '',
 );
 
 has 'format_finder' => (
-    is          => 'rw',
-    isa         => 'Text::UTX::Utility::Class::Finder',
-    lazy_build  => 1,
-    trigger     => sub {
+    is              => 'rw',
+    isa             => 'Text::UTX::Utility::Class::Finder',
+    lazy_build      => 1,
+    trigger         => sub {
         $_[0]->clear_format_handler;
     },
+    documentation   => '',
 );
 
 has 'format_handler' => (
-    is          => 'rw',
-    does        => 'Text::UTX::Interface::Handler',
-    init_arg    => undef,
-    predicate   => 'has_format_handler',
-    writer      => '_set_format_handler',
-    clearer     => 'clear_format_handler',
+    is              => 'rw',
+    does            => 'Text::UTX::Interface::Handler',
+    init_arg        => undef,
+    predicate       => 'has_format_handler',
+    writer          => '_set_format_handler',
+    clearer         => 'clear_format_handler',
+    documentation   => '',
 );
 
 
@@ -227,17 +231,16 @@ blah blah blah
 
 =over 4
 
-=item MORIYA Masaki (a.k.a. Gardejo)
+=item MORIYA Masaki, alias Gardejo
 
 C<< <moriya at cpan dot org> >>,
-L<http://ttt.ermitejo.com/>
+L<http://gardejo.org/>
 
 =back
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2010 by MORIYA Masaki (a.k.a. Gardejo),
-L<http://ttt.ermitejo.com/>.
+Copyright (c) 2010 by MORIYA Masaki, alias Gardejo
 
 This module is free software;
 you can redistribute it and/or modify it under the same terms as Perl itself.

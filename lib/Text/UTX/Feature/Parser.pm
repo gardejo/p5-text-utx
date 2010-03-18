@@ -45,45 +45,49 @@ use namespace::clean;
 # ****************************************************************
 
 has 'parser_class' => (
-    is          => 'rw',
-    isa         => 'Str',
-    lazy_build  => 1,
-    init_arg    => undef,
-    trigger     => sub {
+    is              => 'rw',
+    isa             => 'Str',
+    lazy_build      => 1,
+    init_arg        => undef,
+    trigger         => sub {
         $_[0]->clear_parser;
     },
+    documentation   => '',
 );
 
 has 'parser_version' => (
-    is          => 'rw',
-    isa         => 'Str',
-    predicate   => 'has_parser_version',
-    clearer     => 'clear_parser_version',
+    is              => 'rw',
+    isa             => 'Str',
+    predicate       => 'has_parser_version',
+    clearer         => 'clear_parser_version',
+    documentation   => '',
 );
 
 has 'parser' => (
-    is          => 'rw',
-    does        => 'Text::UTX::Interface::Parser',
-    lazy_build  => 1,
-    handles     => [qw(
+    is              => 'rw',
+    does            => 'Text::UTX::Interface::Parser',
+    lazy_build      => 1,
+    handles         => [qw(
         parse
     )],
+    documentation   => '',
 );
 
 # Note: This attribute is reserved.
 has 'is_strictly_parse' => (
-    traits      => [qw(
+    traits          => [qw(
         Bool
     )],
-    is          => 'rw',
-    isa         => 'Bool',
-    default     => 0,
-    handles     => {
+    is              => 'rw',
+    isa             => 'Bool',
+    default         => 0,
+    handles         => {
         is_lazily_parse   => 'not',
         lazily_parse      => 'unset',
         strictly_parse    => 'set',
         toggle_parse_mode => 'toggle',
     },
+    documentation   => '',
 );
 
 
@@ -220,17 +224,16 @@ blah blah blah
 
 =over 4
 
-=item MORIYA Masaki (a.k.a. Gardejo)
+=item MORIYA Masaki, alias Gardejo
 
 C<< <moriya at cpan dot org> >>,
-L<http://ttt.ermitejo.com/>
+L<http://gardejo.org/>
 
 =back
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2010 by MORIYA Masaki (a.k.a. Gardejo),
-L<http://ttt.ermitejo.com/>.
+Copyright (c) 2010 by MORIYA Masaki, alias Gardejo
 
 This module is free software;
 you can redistribute it and/or modify it under the same terms as Perl itself.

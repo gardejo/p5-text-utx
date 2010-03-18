@@ -38,44 +38,47 @@ use namespace::clean;
 # ****************************************************************
 
 has 'loader_class' => (
-    is          => 'rw',
-    isa         => 'Str',
-    lazy_build  => 1,
-    init_arg    => undef,
-    trigger     => sub {
+    is              => 'rw',
+    isa             => 'Str',
+    lazy_build      => 1,
+    init_arg        => undef,
+    trigger         => sub {
         $_[0]->clear_loader;
         $_[0]->clear_parser_class;
         $_[0]->clear_parser_version;
         $_[0]->clear_parser;
     },
+    documentation   => '',
 );
 
 has 'loader' => (
-    is          => 'rw',
-    does        => 'Text::UTX::Interface::Loader',
-    lazy_build  => 1,
-    handles     => [qw(
+    is              => 'rw',
+    does            => 'Text::UTX::Interface::Loader',
+    lazy_build      => 1,
+    handles         => [qw(
         load
     )],
-    trigger     => sub {
+    trigger         => sub {
         $_[0]->clear_parser_class;
         $_[0]->clear_parser_version;
         $_[0]->clear_parser;
     },
+    documentation   => '',
 );
 
 has 'instream' => (
-    is          => 'rw',
-    isa         => 'Maybe[Str]',
-    init_arg    => undef,
-    lazy_build  => 1,
-    trigger     => sub {
+    is              => 'rw',
+    isa             => 'Maybe[Str]',
+    init_arg        => undef,
+    lazy_build      => 1,
+    trigger         => sub {
         $_[0]->clear_loader_class;
         $_[0]->clear_loader;
         $_[0]->clear_parser_class;
         $_[0]->clear_parser_version;
         $_[0]->clear_parser;
     },
+    documentation   => '',
 );
 
 
@@ -190,17 +193,16 @@ blah blah blah
 
 =over 4
 
-=item MORIYA Masaki (a.k.a. Gardejo)
+=item MORIYA Masaki, alias Gardejo
 
 C<< <moriya at cpan dot org> >>,
-L<http://ttt.ermitejo.com/>
+L<http://gardejo.org/>
 
 =back
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2010 by MORIYA Masaki (a.k.a. Gardejo),
-L<http://ttt.ermitejo.com/>.
+Copyright (c) 2010 by MORIYA Masaki, alias Gardejo
 
 This module is free software;
 you can redistribute it and/or modify it under the same terms as Perl itself.

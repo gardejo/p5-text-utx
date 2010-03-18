@@ -49,23 +49,25 @@ with qw(
 # ****************************************************************
 
 has 'code' => (
-    is          => 'rw',
-    isa         => LanguageCode,
-    coerce      => 1,
-    lazy_build  => 1,
-    trigger     => sub {
+    is              => 'rw',
+    isa             => LanguageCode,
+    coerce          => 1,
+    lazy_build      => 1,
+    trigger         => sub {
         $_[0]->clear_name;
     },
+    documentation   => 'Language code (ISO 639-1 alpha-2)',
 );
 
 has 'name' => (
-    is          => 'rw',
-    isa         => LanguageName,
-    coerce      => 1,
-    lazy_build  => 1,
-    trigger     => sub {
+    is              => 'rw',
+    isa             => LanguageName,
+    coerce          => 1,
+    lazy_build      => 1,
+    trigger         => sub {
         $_[0]->clear_code;
     },
+    documentation   => 'Language name (ISO 639-1)',
 );
 
 
@@ -112,17 +114,16 @@ blah blah blah
 
 =over 4
 
-=item MORIYA Masaki (a.k.a. Gardejo)
+=item MORIYA Masaki, alias Gardejo
 
 C<< <moriya at cpan dot org> >>,
-L<http://ttt.ermitejo.com/>
+L<http://gardejo.org/>
 
 =back
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2009-2010 by MORIYA Masaki (a.k.a. Gardejo),
-L<http://ttt.ermitejo.com/>.
+Copyright (c) 2009-2010 by MORIYA Masaki, alias Gardejo
 
 This module is free software;
 you can redistribute it and/or modify it under the same terms as Perl itself.
